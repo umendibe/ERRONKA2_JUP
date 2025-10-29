@@ -1,0 +1,171 @@
+/* styles2.css: Estiloak X2 fitxategi berrietarako */
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #c0c2cf;
+    background: linear-gradient(120deg, #0f2027, #203a43, #032534);
+    background-attachment: fixed;
+}
+
+.logoa_argazkia {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logoa_argazkia:hover {
+    transform: scale(1.08);
+}
+
+.ZineUsurbil {
+    font-family: Arial, sans-serif;
+    color: #f0efef;
+    margin-left: 16px;
+}
+
+.ZineUsurbil_textua {
+    text-decoration: none;
+    color: #eae1e1;
+}
+
+header,
+.footer_nabigazioa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid white;
+}
+
+.nabigazio_elementuak {
+    padding-left: 130px;
+    display: flex;
+    color: white;
+    gap: 24px;
+    align-items: center;
+}
+
+.nabigazio_elementuak p {
+    margin: 0;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+}
+
+.nabigazio_elementuak p:hover {
+    transform: scale(1.08);
+}
+
+.hamburguesa_menua {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburguesa_menua:hover {
+    transform: scale(1.08);
+}
+
+.nabarmenak {
+    color: white;
+    text-align: center;
+}
+
+.kartelera_pelikulak {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.kartelera_pelikulak img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
+}
+
+.kartelera_pelikulak img:hover {
+    transform: scale(1.08);
+}
+
+.kartelera_pelikulak_lista {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.kartelera_taula,
+td,
+th {
+    color: white;
+    vertical-align: top;
+}
+
+h3 {
+    text-decoration-line: underline;
+}
+
+p {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+    color: white;
+    padding: 20px 0 10px 0;
+    margin-top: 40px;
+}
+
+.copyright_p {
+    color: #f0efef;
+    text-align: right;
+    margin: 16px 0;
+}
+
+.sare_sozialak {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sare_sozialak img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 6px;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+.sare_sozialak img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+footer {
+    border-top: 1px solid white;
+}
+
+details {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+details:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.2);
+}
