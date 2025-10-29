@@ -1,0 +1,143 @@
+/* Estilos optimizados para index.html */
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #c0c2cf;
+    background: #171414;
+    background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
+}
+
+/* Logo */
+.logoa_argazkia {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logoa_argazkia:hover {
+    transform: scale(1.08);
+}
+
+/* Título principal */
+.ZineUsurbil {
+    font-family: Arial, sans-serif;
+    color: #f0efef;
+    margin-left: 16px;
+}
+
+.ZineUsurbil_textua {
+    text-decoration: none;
+    color: #eae1e1;
+}
+
+/* Header y Footer */
+header,
+.footer_nabigazioa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header {
+    border-bottom: 1px solid white;
+}
+
+footer {
+    color: white;
+    padding: 20px 0 10px 0;
+    margin-top: 40px;
+    border-top: 1px solid white;
+}
+
+/* Navegación */
+.nabigazio_elementuak {
+    padding-left: 130px;
+    display: flex;
+    color: white;
+    gap: 24px;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.nabigazio_elementuak p {
+    margin: 0;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+}
+
+.nabigazio_elementuak p:hover {
+    transform: scale(1.08);
+}
+
+/* Menú hamburguesa */
+.hamburguesa_menua {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburguesa_menua:hover {
+    transform: scale(1.08);
+}
+
+/* Sección de películas destacadas */
+.nabarmenak {
+    color: white;
+    text-align: center;
+}
+
+.nabarmenak_pelikulak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.nabarmenak_pelikulak img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
+    transition: transform 0.3s ease;
+}
+
+.nabarmenak_pelikulak img:hover {
+    transform: scale(1.08);
+}
+
+/* Footer - Redes sociales */
+.sare_sozialak {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sare_sozialak img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 6px;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+.sare_sozialak img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.copyright_p {
+    color: #f0efef;
+    text-align: right;
+    margin: 16px 0;
+}
