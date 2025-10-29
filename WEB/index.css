@@ -5,6 +5,7 @@ body {
     background: #c0c2cf;
     background: #171414;
     background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
+    flex-wrap: wrap;
 }
 
 /* Logo */
@@ -47,6 +48,7 @@ footer {
     padding: 20px 0 10px 0;
     margin-top: 40px;
     border-top: 1px solid white;
+    
 }
 
 /* Navegación */
@@ -99,16 +101,19 @@ footer {
     gap: 30px;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Increased to better fit the fixed-size images */
 }
 
 .nabarmenak_pelikulak img {
-    width: 200px;
-    height: 300px;
     display: block;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
     transition: transform 0.3s ease;
+    width: 686px;
+    height: 396px;
+    object-fit: cover; /* This ensures images maintain aspect ratio without distortion */
 }
 
 .nabarmenak_pelikulak img:hover {
@@ -140,4 +145,8 @@ footer {
     color: #f0efef;
     text-align: right;
     margin: 16px 0;
+}
+
+.pelikulak_botoiak {
+    
 }
