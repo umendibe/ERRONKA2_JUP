@@ -113,3 +113,85 @@ footer {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
+
+/* Balorazioak (ratings) form and section styles */
+.balorazioak_zerrenda {
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+
+.botoiak {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0 18px 0;
+}
+
+.botoiak label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+.botoiak input[type="radio"] {
+    display: none;
+}
+
+/* color variants for rating buttons */
+.color1 { background: #d9534f; }
+.color2 { background: #f0ad4e; }
+.color3 { background: #f7d154; color: #111; }
+.color4 { background: #5cb85c; }
+.color5 { background: #428bca; }
+
+.botoiak label:hover {
+    transform: translateY(-3px) scale(1.03);
+    opacity: 0.95;
+}
+
+.idazteko_lekua {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0 18px 0;
+}
+
+.idazteko_input {
+    width: 80%;
+    max-width: 840px;
+    min-height: 120px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.03);
+    color: #f7f7f7;
+    resize: vertical;
+    outline: none;
+}
+
+.idazteko_input::placeholder {
+    color: rgba(255,255,255,0.65);
+}
+
+.bidali {
+    display: block;
+    margin: 8px auto 28px auto;
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 600px) {
+    .nabigazio_elementuak { padding-left: 12px; gap: 8px; flex-wrap: wrap; }
+    .idazteko_input { width: 92%; }
+    .logoa_argazkia { width: 84px; }
+}
