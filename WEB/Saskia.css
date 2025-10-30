@@ -91,18 +91,45 @@ footer {
     margin-top: 6px;
 }
 
-.saskia_edukia .erosi {
-    background-color: #4CAF50;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 40px;
-    height: 40px;
-    
+.erosi {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
-.saskia_edukia .erosi:hover { transform: scale(1.05); }
+
+.erosi img {
+  width: 24px;
+  height: auto;
+}
+
+
+#popup {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  height: 150px;
+}
+
+#popup button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 /* Redes sociales en footer */
 .sare_sozialak { display: flex; justify-content: center; margin-top: 10px; gap: 8px; }
