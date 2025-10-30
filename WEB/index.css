@@ -190,3 +190,16 @@ footer {
     display: inline-block;
     object-fit: contain;
 }
+
+#blackphone2.fade-out {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.tituluak {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+}
