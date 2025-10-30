@@ -12,6 +12,9 @@ dataEguna.addEventListener('input', function() {
 if (eguna !== 6 && eguna !== 0) {
     this.value = ''; 
     alert("Aukeratu asteburuko egun bat."); 
+  }else if(eguna==0){
+    this.value = '';
+    alert("ikuslearen eguna da");
   }
 });
 const txartela = document.getElementById("txartela")
@@ -29,3 +32,4 @@ txartela.addEventListener('change', function() {
 bidali.addEventListener('click', function(){
     txartelakodea.style.display = 'none';
 })
+
