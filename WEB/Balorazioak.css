@@ -1,8 +1,7 @@
-/* styles2.css: Estiloak X2 fitxategi berrietarako */
+/* Pruned styles: only selectors used in Balorazioak.html */
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #c0c2cf;
     background: linear-gradient(120deg, #0f2027, #203a43, #032534);
     background-attachment: fixed;
 }
@@ -75,56 +74,18 @@ header,
     text-align: center;
 }
 
-.kartelera_pelikulak {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
-
-.kartelera_pelikulak img {
-    width: 200px;
-    height: 300px;
-    display: block;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
-}
-
-.kartelera_pelikulak img:hover {
-    transform: scale(1.08);
-}
-
-.kartelera_pelikulak_lista {
-    list-style: none;
-    margin-left: 100px;
-}
-
-.kartelera_taula,
-td,
-th {
-    color: white;
-    vertical-align: top;
-}
-
-h3 {
-    text-decoration-line: underline;
-}
-
 p {
     color: white;
     font-weight: 400;
     text-decoration: none;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     color: white;
     padding: 20px 0 10px 0;
     margin-top: 40px;
+    border-top: 1px solid white;
 }
 
 .copyright_p {
@@ -151,21 +112,4 @@ footer {
 .sare_sozialak img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
-}
-
-footer {
-    border-top: 1px solid white;
-}
-
-details {
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-details:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-details[open] {
-    background: rgba(255, 255, 255, 0.2);
 }
