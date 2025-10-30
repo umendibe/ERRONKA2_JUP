@@ -9,9 +9,8 @@ const dataEguna = document.getElementById("data");
 dataEguna.addEventListener('input', function() {
  const data = new Date (this.value);
  const eguna = data.getDay();
- if(eguna !== 0 && eguna !== 6);{
-    this.value = '';
- alert("Aukeratu asteburuko egun bat.");
- }
-
+if (eguna !== 6 && eguna !== 0) {
+    this.value = ''; 
+    alert("Aukeratu asteburuko egun bat."); 
+  }
 });
