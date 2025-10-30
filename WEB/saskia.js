@@ -14,3 +14,18 @@ if (eguna !== 6 && eguna !== 0) {
     alert("Aukeratu asteburuko egun bat."); 
   }
 });
+const txartela = document.getElementById("txartela")
+const txartelakodea = document.getElementById("txartelakodea")
+const kodeaInput = document.getElementById('kodea');
+const bidali = document.getElementById("bidalikodea")
+txartela.addEventListener('change', function() {
+ if (txartela.value !== "deskontua4" && txartela.value !== "deskontua5") {
+    txartelakodea.style.display = 'block';
+  }  else {
+    txartelakodea.style.display = 'none'; 
+    kodeaInput.value = '';                 
+  }
+})
+bidali.addEventListener('click', function(){
+    txartelakodea.style.display = 'none';
+})
