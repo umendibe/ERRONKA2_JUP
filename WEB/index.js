@@ -8,7 +8,7 @@ const images = [
 
 
 let index = 0;
-const img = document.getElementById('blackphone2');
+const img = document.getElementById('hasierakoArgazkia');
 
 function eguneratuArgazkia() {
     if (!img) return;
