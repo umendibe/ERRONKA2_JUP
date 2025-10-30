@@ -168,11 +168,13 @@ footer {
 
 /* Make the nav buttons visually consistent */
 .pelikulak_botoiak button {
-    background: #428bca;
-    color: #fff;
+    background: transparent;
     border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 8px 12px; 
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
@@ -180,4 +182,11 @@ footer {
 .pelikulak_botoiak button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.pelikulak_botoiak img {
+    width: 34px; 
+    height: 34px;
+    display: inline-block;
+    object-fit: contain;
 }
