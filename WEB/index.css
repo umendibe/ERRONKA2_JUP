@@ -150,3 +150,34 @@ footer {
 .pelikulak_botoiak {
     align-items: center;
 }
+
+/* Card that groups a poster image with its action buttons stacked underneath */
+.pelikula_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* space between image and buttons */
+}
+
+.pelikulak_botoiak {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+/* Make the nav buttons visually consistent */
+.pelikulak_botoiak button {
+    background: #428bca;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.pelikulak_botoiak button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
