@@ -1,4 +1,3 @@
-/* Pruned styles: only selectors used in Balorazioak.html */
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -114,7 +113,7 @@ footer {
     filter: grayscale(0%);
 }
 
-/* Balorazioak (ratings) form and section styles */
+/* Balorazioak style */
 .balorazioak_zerrenda {
     text-align: center;
     color: white;
@@ -138,7 +137,8 @@ footer {
     color: white;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    transition: all 0.3s ease;;
+     border: 2px solid transparent;
     box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
@@ -146,7 +146,8 @@ footer {
     display: none;
 }
 
-/* color variants for rating buttons */
+
+/* botoien koloreak*/
 .color1 { background: #d9534f; }
 .color2 { background: #f0ad4e; }
 .color3 { background: #f7d154; color: #111; }
@@ -189,9 +190,56 @@ footer {
     cursor: pointer;
 }
 
-/* Small responsive tweaks */
+
 @media (max-width: 600px) {
     .nabigazio_elementuak { padding-left: 12px; gap: 8px; flex-wrap: wrap; }
     .idazteko_input { width: 92%; }
     .logoa_argazkia { width: 84px; }
 }
+.pelikula-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pelikula-select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+.pelikula-label {
+    display: block;
+    color: white;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.pelikula-select {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    background: rgba(255,255,255,);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.pelikula-select:hover {
+    border-color: rgb(255, 255, 91);
+    box-shadow: 0 6px 20px rgba(198, 203, 33, 0.99);
+     transform:scale(1.02);
+}
+.pelikula-select option {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+}
+/* Estilo para radio buttons seleccionados */
+
