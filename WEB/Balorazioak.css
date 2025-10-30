@@ -2,8 +2,10 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(120deg, #0f2027, #203a43, #032534);
-    background-attachment: fixed;
+    background: #c0c2cf;
+    background: #171414;
+    background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
+    flex-wrap: wrap;
 }
 
 .logoa_argazkia {
@@ -139,7 +141,7 @@ footer {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .botoiak input[type="radio"] {
@@ -147,11 +149,26 @@ footer {
 }
 
 /* color variants for rating buttons */
-.color1 { background: #d9534f; }
-.color2 { background: #f0ad4e; }
-.color3 { background: #f7d154; color: #111; }
-.color4 { background: #5cb85c; }
-.color5 { background: #428bca; }
+.color1 {
+    background: #d9534f;
+}
+
+.color2 {
+    background: #f0ad4e;
+}
+
+.color3 {
+    background: #f7d154;
+    color: #111;
+}
+
+.color4 {
+    background: #5cb85c;
+}
+
+.color5 {
+    background: #428bca;
+}
 
 .botoiak label:hover {
     transform: translateY(-3px) scale(1.03);
@@ -170,15 +187,15 @@ footer {
     min-height: 120px;
     padding: 12px 14px;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.15);
-    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
     color: #f7f7f7;
     resize: vertical;
     outline: none;
 }
 
 .idazteko_input::placeholder {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .bidali {
@@ -191,7 +208,17 @@ footer {
 
 /* Small responsive tweaks */
 @media (max-width: 600px) {
-    .nabigazio_elementuak { padding-left: 12px; gap: 8px; flex-wrap: wrap; }
-    .idazteko_input { width: 92%; }
-    .logoa_argazkia { width: 84px; }
+    .nabigazio_elementuak {
+        padding-left: 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .idazteko_input {
+        width: 92%;
+    }
+
+    .logoa_argazkia {
+        width: 84px;
+    }
 }
