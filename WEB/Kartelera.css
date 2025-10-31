@@ -1,13 +1,15 @@
-/* styles2.css: Estiloak X2 fitxategi berrietarako */
-
+/* ==========================
+   BODY Y FUENTES
+========================== */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #c0c2cf;
-    background: #171414;
     background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
     flex-wrap: wrap;
 }
 
+/* ==========================
+   LOGO Y TITULOS
+========================== */
 .logoa_argazkia {
     width: 100px;
     height: auto;
@@ -29,6 +31,9 @@ body {
     color: #eae1e1;
 }
 
+/* ==========================
+   HEADER Y NAVEGACION
+========================== */
 header,
 .footer_nabigazioa {
     display: flex;
@@ -71,11 +76,17 @@ header,
     transform: scale(1.08);
 }
 
+/* ==========================
+   SECCIONES PRINCIPALES
+========================== */
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
+/* ==========================
+   TABLAS Y LISTAS DE PELICULAS
+========================== */
 .kartelera_pelikulak {
     display: flex;
     justify-content: flex-start;
@@ -121,17 +132,36 @@ p {
     text-decoration: none;
 }
 
-/* Footer styles */
+/* ==========================
+   DETALLES Y HOVER
+========================== */
+details {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+details:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================
+   FOOTER Y REDES SOCIALES
+========================== */
 footer {
     color: white;
     padding: 20px 0 10px 0;
     margin-top: 40px;
+    border-top: 1px solid white;
 }
 
-.copyright_p {
-    color: #f0efef;
-    text-align: right;
-    margin: 16px 0;
+.footer_nabigazioa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .sare_sozialak {
@@ -154,19 +184,8 @@ footer {
     filter: grayscale(0%);
 }
 
-footer {
-    border-top: 1px solid white;
-}
-
-details {
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-details:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-details[open] {
-    background: rgba(255, 255, 255, 0.2);
+copyright_p {
+    color: #f0efef;
+    text-align: right;
+    margin: 16px 0;
 }
