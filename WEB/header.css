@@ -1,0 +1,52 @@
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu img {
+    width: 30px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.submenu {
+    display: none; /* oculto por defecto */
+    position: absolute;
+    left: 100%; 
+    top: 0;
+    flex-direction: row; /* solo aplica cuando se muestre con JS */
+    gap: 10px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+
+.submenu p {
+    margin: 0;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #f5f5f5;
+    padding: 8px 12px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.submenu a:hover {
+    background-color:#eae1e1;
+    color:#171414;
+}
