@@ -1,5 +1,5 @@
 /* ==========================
-   BODY Y FUENTES
+   BODY
 ========================== */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -8,7 +8,7 @@ body {
 }
 
 /* ==========================
-   LOGO Y TITULOS
+   LOGOA ETA TITULUAK
 ========================== */
 .logoa_argazkia {
     width: 100px;
@@ -32,7 +32,7 @@ body {
 }
 
 /* ==========================
-   HEADER Y NAVEGACION
+   HEADER ETA NABIGAZIOA
 ========================== */
 header,
 .footer_nabigazioa {
@@ -77,7 +77,7 @@ header,
 }
 
 /* ==========================
-   SECCIONES PRINCIPALES
+   ATAL NAGUSIAK
 ========================== */
 .nabarmenak {
     color: white;
@@ -85,7 +85,7 @@ header,
 }
 
 /* ==========================
-   TABLAS Y LISTAS DE PELICULAS
+   TAULAK ETA LISTAK
 ========================== */
 .kartelera_pelikulak {
     display: flex;
@@ -133,7 +133,7 @@ p {
 }
 
 /* ==========================
-   DETALLES Y HOVER
+   DETAILS 
 ========================== */
 details {
     cursor: pointer;
@@ -151,9 +151,6 @@ details[open] {
 /* ==========================
    FOOTER
 ========================== */
-/* ==========================
-   FOOTER
-========================== */
 footer {
     width: 100%;
     background: transparent;
@@ -166,10 +163,10 @@ footer {
 
 .footer_nabigazioa {
     display: flex;
-    flex-wrap: wrap; /* para que los elementos se ajusten en pantallas pequeñas */
-    justify-content: center; /* centra elementos si caben */
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: center;
-    gap: 16px; /* más consistente que 8px */
+    gap: 16px; 
     margin-bottom: 12px;
 }
 
