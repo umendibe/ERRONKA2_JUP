@@ -1,6 +1,6 @@
 
 function myFunction() {
-            window.alert("Sarrera bat erosi duzu");
+            window.alert("eskerrik asko zure baloraziagatik");
         }
 
   
