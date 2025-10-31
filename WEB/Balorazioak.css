@@ -123,31 +123,38 @@ footer {
 }
 
 .botoiak {
+    align-items: center;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 12px 0 18px 0;
+    margin-left: 16px;
+    margin-inline-start: 8px;
 }
 
 .botoiak label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    height: 44px;
-    border-radius: 8px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
     color: white;
-    font-weight: 600;
+    border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;;
-     border: 2px solid transparent;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    transition: transform 0.2s, border 0.2s;
 }
 
 .botoiak input[type="radio"] {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
+.botoiak input[type="radio"]:checked + label {
+    transform: scale(0.7);
+    border: 2px solid #000;
+}
 
 /* botoien koloreak*/
 .color1 { background: #d9534f; }
@@ -157,8 +164,8 @@ footer {
 .color5 { background: #428bca; }
 
 .botoiak label:hover {
-    transform: translateY(-3px) scale(1.03);
     opacity: 0.95;
+    transform: scale(1.1);
 }
 
 .idazteko_lekua {
