@@ -60,23 +60,19 @@ footer {
 .nabigazio_elementuak a { text-decoration: none; color: white; }
 .nabigazio_elementuak p:hover { transform: scale(1.08); }
 
-/* Hamburguesa */
-.hamburguesa_menua { width: 40px; height: auto; cursor: pointer; transition: transform 0.3s ease; }
-.hamburguesa_menua:hover { transform: scale(1.08); }
-
 /* Página: SASKIA */
 .nabarmenak { color: white; text-align: center; }
 
 .saskia_edukia {
-    background: #f0e6e9;
-    background: radial-gradient(circle, rgba(240,230,233,1) 0%, rgba(182,202,222,1) 100%);
+    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
     padding: 30px;
     border-radius: 15px;
     max-width: 600px;
     margin: 30px auto;
     font-family: Arial, sans-serif;
 }
-.saskia_edukia p { margin-bottom: 12px; font-size: 16px; color: black; font-weight: bold; }
+.saskia_edukia p { margin-bottom: 12px; font-size: 16px; color:white; font-weight: bold; }
 
 .saskia_edukia select,
 .saskia_edukia input[type="number"],
@@ -92,7 +88,7 @@ footer {
 }
 
 .erosi {
-  background-color: #4CAF50;
+  background-color:none;
   border: none;
   border-radius: 8px;
   width: 40px;
@@ -112,24 +108,27 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
-  border: 2px solid #4CAF50;
+  background: #504e53;
+  border: 2px solid #4c77af;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   width: 250px;
   height: 150px;
 }
-
-#popup button {
-  margin-top: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  border-radius: 6px;
-  cursor: pointer;
+.botoia{
+    background-color: #504e53;
+    color: white;
+    margin-top: 20%;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 0,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 
 
 /* Redes sociales en footer */

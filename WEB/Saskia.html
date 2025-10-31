@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="header.css">
 	<script src="saskia.js" defer></script>
 	<script src="header.js" defer></script>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
 </head>
 
 <body>
@@ -35,7 +37,6 @@
 
 	<main>
 		<br>
-		<img class="hamburguesa_menua" src="img2/boton_hamburguesa2.png" alt="Hamburguesa menua">
 		<h1 class="nabarmenak">SASKIA</h1>
 		<section class="saskia_edukia">
 			<form>
@@ -65,10 +66,6 @@
 				</p>
 				<br>
 				<p>
-					Data: <input type="date" id="data" name="data" required>
-				</p>
-				<br>
-				<p>
 					Ordua: <input type="time" name="ordua" required>
 				</p>
 				<br>
@@ -88,6 +85,11 @@
 					<button type="button" id="bidalikodea">Bidali</button>
 				</div>
 				<br>
+				<p>
+					Data: <input type="date" id="data" name="data" required>
+				</p>
+				<br>
+				<br>
 				<div class="saskia_edukia">
 					<button type="button" onclick="irekiDialogoa()" class="erosi">
 						<img src="img2/carro.png" alt="Carrito">
@@ -95,7 +97,9 @@
 				</div>
 				<div id="popup">
 					<p>Sarrerak erosi dituzu</p>
-					<button onclick="itxiDialogoa()">x</button>
+					<button onclick="itxiDialogoa()" class="botoia">
+						<span class="material-symbols-outlined">close</span>
+					</button>
 				</div>
 			</form>
 		</section>

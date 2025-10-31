@@ -14,15 +14,15 @@ dataEguna.addEventListener('input', function() {
   const data = new Date(this.value);
   const eguna = data.getDay(); 
 
-   if(eguna !==0 && eguna !== 6){
-      alert("Bakarrik asteburuetan irikitzen dugu.");
-      this.value = "";
   if (txartela.value === "deskontua4") {
     if (eguna !== 0) { 
       alert("Ikuslearen eguna bakarrik igandean egin daiteke!");
       this.value = "";
     }}
-  }
+  if(eguna !==0 && eguna !== 6){
+      alert("Bakarrik asteburuetan irekitzen dugu.");
+      this.value = "";
+    }
 });
 
 const txartelakodea = document.getElementById("txartelakodea");
