@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="eu">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Urko Mendibe Capellán">
-<meta name="description"
-    content="Hona hemen bezeroak eskatutako web aplikazioa. Honekin batera ere mahaigaineko programa bat eskatu digu eta horren ostean datu base bat diseinatzea ere. Hasiera batean orri sinple bat eskatu digu, funtzionala baina sinplea, gehienbat informatiboa. Badago aukera etorkizun batean funtzionalitate gehiago sartzeko nahia edukitzea, horretarako kodea eskuragarri jarriko dugu oztopoak ez aurkitzeko.">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Urko Mendibe Capellán">
+    <meta name="description" content="Web aplikazio informativo bat ZineUsurbil-entzat.">
     <title>Kartelera - ZineUsurbil</title>
     <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
     <link rel="stylesheet" href="Kartelera.css">
@@ -19,9 +18,10 @@
         <a href="index.html"><img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo"></a>
         <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
         <nav class="nabigazio_elementuak">
-
             <div class="menu">
-                <button id="menuButton" onclick="desplegable()"><img src="img2/desplegable_menu.png"></button>
+                <button id="menuButton" onclick="desplegable()">
+                    <img src="img2/desplegable_menu.png" alt="Menu">
+                </button>
                 <div class="submenu" id="submenu">
                     <p><a href="index.html">Orri Nagusia</a></p>
                     <p><a href="kartelera2.html">Kartelera</a></p>
@@ -32,371 +32,243 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <br>
         <h1 class="nabarmenak">KARTELERA</h1>
         <div class="kartelera_pelikulak">
-            <ul class="kartelera_pelikulak_lista">
-                <table class="kartelera_taula">
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/blackphone2.jpg" alt="Blackphone2"><br>
-                        </th>
-                        <th>
-                            <h3 id="blackphone2">Blackphone2</h3>
-                            <p>
-                                The Black Phone (2021) beldurrezko filmaren jarraipena, Joe Hillek, Stephen King
-                                beldurrezko errege eta egile mitikoaren semeak, idatzitako kontakizun labur batean
-                                oinarritua. Historiak soto ilun intsonorizatu batean barneratzen gaitu. Soto horretako
-                                hormak aurretik bertan gatibu egondako biktimen odolez zikinduta daude. Pareta
-                                horietatik zintzilik telefono bat dago. Deskonektatuta dago, baina telefono hori jotzen
-                                hasten denean, mozorrotutako ezbehar batek bahitu eta hil zituen haurren ahotsak entzun
-                                daitezke haren bitartez. Kaptorea bueltan da suspensez, ekintzaz eta izugarrikeriaz
-                                betetako beste entrega batean.
-                            </p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 44 minutu</p>
-                                <p><i>Generoa:</i> Terror, Suspense, Thriller</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=vbjRY7KeZe0"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/springsteen.jpg"
-                                    alt="Springsteen: Deliver Me From Nowhere"><br>
-                        </th>
-                        <th>
-                            <h3 id="springsteen">Springsteen: Deliver Me From Nowhere</h3>
-                            <p>Bruce Springsteenen 'Nebraska' album ospetsuaren sorrera aztertzen du dokumental honek.
-                                1982an etxean grabatutako disko honek artistaren prozesu kreatiboa erakusten du,
-                                barne-bilaera intentsu baten garaian. Abesti gordin eta poetiko hauek bere borroka
-                                pertsonaletatik sortu ziren eta garai hartako Amerikaren islatu ziren.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 58 minutu</p>
-                                <p><i>Generoa:</i> Dokumentala, Musika, Biografia</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=oQXdM3J33No"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- 1. Blackphone2 -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/blackphone2.jpg" alt="Blackphone2"></a>
+                <h3 id="blackphone2">Blackphone2</h3>
+                <p>The Black Phone (2021) beldurrezko filmaren jarraipena...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 44 minutu</p>
+                    <p><i>Generoa:</i> Terror, Suspense, Thriller</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=vbjRY7KeZe0"
+                        title="Trailer Blackphone2" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
 
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/maspalomas.jpg" alt="Maspalomas"><br>
-                        </th>
-                        <th>
-                            <h3 id="maspalomas">Cómo Entrenar a tu Dragón 3</h3>
-                            <p>Turista europar talde bat Maspalomasen (Kanaria Handia) elkartzen da, non haien bizitzak
-                                pasio, sekretu eta harreman korapilatsu sare batean elkar lotzen diren. Eguzkiak eta
-                                hondartzak eszenatoki paradisiakoa sortzen duten bitartean, gatazka pertsonalak eta
-                                drama emozionalak azaleratzen dira, pertsonaia bakoitzaren benetako izaera agerian
-                                utziz.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 58 minutu</p>
-                                <p><i>Generoa:</i> Drama, Suspentsua, Erromantzea</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=nA8n3Hpb1s8"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/chainsawman.jpg" alt="Chainsaw man"><br>
-                        </th>
-                        <th>
-                            <h3 id="chainsawman">Chainsaw man</h3>
-                            <p>Denji gazte pobrea da, aitak utzitako zorrak ordaintzeko deabruen ehiztari gisa lan
-                                egiten duena. Pentsa ezineko gertaera baten ondoren, Chainsaw Devil bihurtzeko ahalmena
-                                lortzen du. Orain, Segurtasun Publikoko Deabruen Ehiztarien taldearekin bat egingo du,
-                                arriskutsuenak diren deabruak ehizatzeko bitartean bere amets bakarra lortzen saiatzeko:
-                                ogi xerra batekin gurina both sides-tik jatea.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 49 minutu</p>
-                                <p><i>Generoa:</i> Akzioa, Abentura, Beldurra, Komedia beltza, Fantasia iluna</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=-KpVet_60Yc"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- 2. Springsteen -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/springsteen.jpg" alt="Springsteen"></a>
+                <h3 id="springsteen">Springsteen: Deliver Me From Nowhere</h3>
+                <p>Bruce Springsteenen 'Nebraska' album ospetsuaren sorrera aztertzen du dokumental honek...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 58 minutu</p>
+                    <p><i>Generoa:</i> Dokumentala, Musika, Biografia</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=oQXdM3J33No"
+                        title="Trailer Springsteen" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
 
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/lacasa.jpg" alt="Capitan America"><br>
-                        </th>
-                        <th>
-                            <h3 id="lacasa">La casa de muñecas de Gabby: La película</h3>
-                            <p>Gabbyk eta bere lagunek etxebizitza magiko batean barneratuko dira, non panpinak bizitzen
-                                hasten diren. Abentura zoragarri honetan, Gabbyk bere ametsetako mundua esploratuko du,
-                                laguntzaile magikoekin batera, panpinen etxebizitza ikusgarrietan zehar. Bidaia honetan,
-                                adiskidetasuna, irudimena eta elkar laguntzaren garrantzia ikasiko dute.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 58 minutu</p>
-                                <p><i>Generoa:</i> Animazioa, Abentura, Musikala, Famililarra</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=speJOtNWaXw"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html"><img src="img2/pelikulak2/crepusculo.jpg"
-                                    alt="Crepusculo ( berrestreinaldia)"><br>
-                        </th>
-                        <th>
-                            <h3 id="Crepusculo">Crepusculo ( berrestreinaldia)</h3>
-                            <p>Bella Swan gazteak Phoenix utzi eta Forks herri euritsura bizitzera doa, bere aita
-                                Charliekin. Han, Edward Cullen ezagutuko du, ikusmiraz beteriko mutil bitxi eta
-                                erakargarria. Baina Edwardek sekretu ilun bat du: banpiroa da. Bien arteko maitasun
-                                erradioaktibo eta arriskutsua hasiko da, bitartean banpiroen eta otso gizakien mundu
-                                arriskutsu batean murgilduz.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 49 minutu</p>
-                                <p><i>Generoa:</i> Fantasia, Erromantzea, Drama, Beldurra</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Z18VTAlUsyg"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#guerreras"><img src="img2/pelikulak2/lasguerreras.jpg"
-                                    alt="Las Guerreras K-pop"><br>
-                        </th>
-                        <th>
-                            <h3 id="guerreras">Las Guerreras K-pop</h3>
-                            <p>Talde femenino korear batek mundu lehiakorrean duen bidaia erakargarria, dantza eta
-                                musika bidez.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 45 minutu</p>
-                                <p><i>Generoa:</i> Drama, Musika, Dokumentala</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250"
-                                    src="https://www.youtube.com/watch?v=nmt594aKD9U&list=RDnmt594aKD9U&start_radio=1"
-                                    title="Las guerreras kpop" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#tom-jerry-aventura"><img src="img2/pelikulak2/tomyjerry.jpg"
-                                    alt="Tom y Jerry: Aventura en el tiempo"><br>
-                        </th>
-                        <th>
-                            <h3 id="tom-jerry-aventura">Tom y Jerry: Aventura en el tiempo</h3>
-                            <p>Tom eta Jerry denboran zeharko bidaia zirraragarri batean abiatzen dira, garai historiko
-                                desberdinetan barrena eta abentura dibertigarriak biziz.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 15 minutu</p>
-                                <p><i>Generoa:</i> Animazioa, Abentura, Komedia, Famililarra</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Nk9BO84ZKPw"
-                                    title="Tom y Jerry: Aventura en el tiempo trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
+            <!-- 3. Maspalomas -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/maspalomas.jpg" alt="Maspalomas"></a>
+                <h3 id="maspalomas">Cómo Entrenar a tu Dragón 3</h3>
+                <p>Turista europar talde bat Maspalomasen elkartzen da...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 58 minutu</p>
+                    <p><i>Generoa:</i> Drama, Suspentsua, Erromantzea</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=nA8n3Hpb1s8"
+                        title="Trailer Maspalomas" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
 
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#tron-ares"><img src="img2/pelikulak2/tron.jpg" alt="Tron: Ares"><br>
-                        </th>
-                        <th>
-                            <h3 id="tron-ares">Tron: Ares</h3>
-                            <p>Programa informatiko aurreratu bat mundu digital batera bidaltzen da, non errealitate
-                                birtualaren eta errealitatearen arteko mugak lausotzen diren. Abentura zibernetiko
-                                honetan, Aresek bere izaera eta helburua aurkitu beharko ditu.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 2h eta 5 minutu</p>
-                                <p><i>Generoa:</i> Zientzia-fikzioa, Akzioa, Abentura, Thriller</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Q1bvwjV5u3Q"
-                                    title="Tron: Ares trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#domingos"><img src="img2/pelikulak2/losdomingos.jpg"
-                                    alt="Los domingos"><br>
-                        </th>
-                        <th>
-                            <h3 id="domingos">Los domingos</h3>
-                            <p>Familia baten eguneroko bizitzako momentu intimoei buruzko drama sentikorra. Igande
-                                arratsalde batean, senideen arteko harremanak, sekretuak eta desirak azaleratzen dira,
-                                elkarrizketa sakonen bidez.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 42 minutu</p>
-                                <p><i>Generoa:</i> Drama, Famililarra</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=fSRrZVzDTVA"
-                                    title="Los domingos trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#caza-brujas"><img src="img2/pelikulak2/cazadebrujas.jpg"
-                                    alt="Caza de brujas"><br>
-                        </th>
-                        <th>
-                            <h3 id="caza-brujas">Caza de brujas</h3>
-                            <p>Erdi Aroan girotutako beldurrezko film bat, non herrixka batean sorginkeriak leporatzen
-                                dizkieten emakume gazte batzuen patua erakusten duen. Susmoak, beldurra eta histeria
-                                kolektiboak herria zatitu eta errukirik gabeko epaiketa bat eragingo dute.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 52 minutu</p>
-                                <p><i>Generoa:</i> Beldurra, Historikoa, Drama</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Hu2GPX9wofQ"
-                                    title="Caza de brujas trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#cuerpos-locos"><img src="img2/pelikulak2/cuerposlocos.jpg"
-                                    alt="Cuervos locos"><br>
-                        </th>
-                        <th>
-                            <h3 id="cuerpos-locos">Cuervos locos</h3>
-                            <p>Gazte talde bat abentura ero eta dibertigarri batean murgiltzen da, udako oporretan
-                                zehar. Istripu barregarriak, maitasun istorioak eta adiskidetasunaren indarra elkarrekin
-                                nahasten dira eguneroko bizitzaren erritmo zoratuan.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 38 minutu</p>
-                                <p><i>Generoa:</i> Komedia, Abentura, Drama</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=4JvJ01naL3Q"
-                                    title="Cuervos locos trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#decorado"><img src="img2/pelikulak2/decorado.jpg" alt="Decorado"><br>
-                        </th>
-                        <th>
-                            <h3 id="decorado">Decorado</h3>
-                            <p>Diseinatzaile gazte baten istorioa, dekorazio munduan bere lekua aurkitu nahian. Bere
-                                ametsak eta errealitatearen arteko talkak bizi ditu, bitartean bere nortasun artistikoa
-                                eta proiektuak garatzen dituen bitartean.</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 47 minutu</p>
-                                <p><i>Generoa:</i> Drama, Komedia, Erromantzea</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=V71F00Hoa2k"
-                                    title="Decorado trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <a href="saskia2.html#exit-8"><img src="img2/pelikulak2/exit8.jpg" alt="Exit 8"><br>
-                        </th>
-                        <th>
-                            <h3 id="exit-8">Exit 8</h3>
-                            <p>Bidaiari bat aireportuko pasabide amaigabe batean harrapatuta geratzen da, non irteera
-                                8ra iristeko ahaleginean errealitatearen eta paranoiaren arteko mugak lausotzen diren.
-                                Atera al daiteke begizta misteriotsu honetatik?</p>
-                            <details>
-                                <summary>Xehetasun gehiago</summary>
-                                <p><i>Iraupena:</i> 1h eta 28 minutu</p>
-                                <p><i>Generoa:</i> Beldurra, Thriller, Misterioa</p>
-                                <p><i>Trailerra: </i></p>
-                                <br>
-                                <iframe width="300" height="250" src="https://www.youtube.com/watch?v=emZZexEJO8c"
-                                    title="Exit 8 trailer" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </details>
-                        </th>
-                    </tr>
-                </table>
-                <footer>
-                    <div class="footer_nabigazioa">
-                        <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
-                        <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index2.html">ZINEUSURBIL</a></h1>
-                        <nav class="nabigazio_elementuak">
-                            <p><a href="index2.html">Orri Nagusia</a></p>
-                            <p><a href="kartelera2.html">Kartelera</a></p>
-                            <p><a href="informazioa2.html">Informazioa</a></p>
-                            <p><a href="balorazioak2.html">Balorazioak</a></p>
-                            <p><a href="Saskia.html">Saskia</a></p>
-                        </nav>
-                    </div>
-                    <div class="sare_sozialak">
-                        <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank"
-                            title="Cinesa Urbil Mapa"><img src="img2/maps2.png" alt="Lokalizazioa"></a>
-                        <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank"
-                            title="Instagram Cinesa"><img class="instagram_logo" src="img2/instagram_logo2.png"
-                                alt="Instagram"></a>
-                        <a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa"><img class="x_logo"
-                                src="img2/x2.png" alt="X"></a>
-                        <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa"><img
-                                class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok"></a>
-                        <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa"><img
-                                class="youtube_logo" src="img2/yt2.png" alt="YouTube"></a>
-                        <a href="https://www.cinesa.es/documentos-legales/aviso-legal/"><img class="copyright"
-                                src="img2/copiryght2.png"></a>
-                        <p class="oher_legalak">Ohar legalak</p>
-                    </div>
-                    <p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
-                </footer>
+            <!-- 4. Chainsaw man -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/chainsawman.jpg" alt="Chainsaw man"></a>
+                <h3 id="chainsawman">Chainsaw man</h3>
+                <p>Denji gazte pobrea da, aitak utzitako zorrak ordaintzeko...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 49 minutu</p>
+                    <p><i>Generoa:</i> Akzioa, Abentura, Beldurra, Komedia beltza, Fantasia iluna</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=-KpVet_60Yc"
+                        title="Trailer Chainsaw man" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 5. La casa de muñecas de Gabby -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/lacasa.jpg" alt="La casa de muñecas de Gabby"></a>
+                <h3 id="lacasa">La casa de muñecas de Gabby: La película</h3>
+                <p>Gabbyk eta bere lagunek etxebizitza magiko batean barneratuko dira...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 58 minutu</p>
+                    <p><i>Generoa:</i> Animazioa, Abentura, Musikala, Famililarra</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=speJOtNWaXw"
+                        title="Trailer Gabby" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 6. Crepusculo -->
+            <div class="pelikula_card">
+                <a href="saskia2.html"><img src="img2/pelikulak2/crepusculo.jpg" alt="Crepusculo"></a>
+                <h3 id="crepusculo">Crepusculo (berrestreinaldia)</h3>
+                <p>Bella Swan gazteak Phoenix utzi eta Forks herri euritsura bizitzera doa...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 49 minutu</p>
+                    <p><i>Generoa:</i> Fantasia, Erromantzea, Drama, Beldurra</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Z18VTAlUsyg"
+                        title="Trailer Crepusculo" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 7. Las Guerreras K-pop -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#guerreras"><img src="img2/pelikulak2/lasguerreras.jpg"
+                        alt="Las Guerreras K-pop"></a>
+                <h3 id="guerreras">Las Guerreras K-pop</h3>
+                <p>Talde femenino korear batek mundu lehiakorrean duen bidaia erakargarria...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 45 minutu</p>
+                    <p><i>Generoa:</i> Drama, Musika, Dokumentala</p>
+                    <iframe width="300" height="250"
+                        src="https://www.youtube.com/watch?v=nmt594aKD9U&list=RDnmt594aKD9U&start_radio=1"
+                        title="Trailer Las Guerreras" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 8. Tom y Jerry: Aventura en el tiempo -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#tom-jerry-aventura"><img src="img2/pelikulak2/tomyjerry.jpg"
+                        alt="Tom y Jerry: Aventura en el tiempo"></a>
+                <h3 id="tom-jerry-aventura">Tom y Jerry: Aventura en el tiempo</h3>
+                <p>Tom eta Jerry denboran zeharko bidaia zirraragarri batean abiatzen dira...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 15 minutu</p>
+                    <p><i>Generoa:</i> Animazioa, Abentura, Komedia, Famililarra</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Nk9BO84ZKPw"
+                        title="Trailer Tom y Jerry" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 9. Tron: Ares -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#tron-ares"><img src="img2/pelikulak2/tron.jpg" alt="Tron: Ares"></a>
+                <h3 id="tron-ares">Tron: Ares</h3>
+                <p>Programa informatiko aurreratu bat mundu digital batera bidaltzen da...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 2h eta 5 minutu</p>
+                    <p><i>Generoa:</i> Zientzia-fikzioa, Akzioa, Abentura, Thriller</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Q1bvwjV5u3Q"
+                        title="Trailer Tron" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 10. Los domingos -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#domingos"><img src="img2/pelikulak2/losdomingos.jpg" alt="Los domingos"></a>
+                <h3 id="domingos">Los domingos</h3>
+                <p>Familia baten eguneroko bizitzako momentu intimoei buruzko drama...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 42 minutu</p>
+                    <p><i>Generoa:</i> Drama, Famililarra</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=fSRrZVzDTVA"
+                        title="Trailer Los domingos" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 11. Caza de brujas -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#caza-brujas"><img src="img2/pelikulak2/cazadebrujas.jpg" alt="Caza de brujas"></a>
+                <h3 id="caza-brujas">Caza de brujas</h3>
+                <p>Erdi Aroan girotutako beldurrezko film bat...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 52 minutu</p>
+                    <p><i>Generoa:</i> Beldurra, Historikoa, Drama</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=Hu2GPX9wofQ"
+                        title="Trailer Caza de brujas" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 12. Cuervos locos -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#cuerpos-locos"><img src="img2/pelikulak2/cuerposlocos.jpg"
+                        alt="Cuervos locos"></a>
+                <h3 id="cuerpos-locos">Cuervos locos</h3>
+                <p>Gazte talde bat abentura ero eta dibertigarri batean murgiltzen da...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 38 minutu</p>
+                    <p><i>Generoa:</i> Komedia, Abentura, Drama</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=4JvJ01naL3Q"
+                        title="Trailer Cuervos locos" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 13. Decorado -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#decorado"><img src="img2/pelikulak2/decorado.jpg" alt="Decorado"></a>
+                <h3 id="decorado">Decorado</h3>
+                <p>Diseinatzaile gazte baten istorioa, dekorazio munduan bere lekua aurkitu nahian...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 47 minutu</p>
+                    <p><i>Generoa:</i> Drama, Komedia</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=4JvJ01naL3Q"
+                        title="Trailer Decorado" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+            <!-- 14. El viaje -->
+            <div class="pelikula_card">
+                <a href="saskia2.html#el-viaje"><img src="img2/pelikulak2/elviaje.jpg" alt="El viaje"></a>
+                <h3 id="el-viaje">El viaje</h3>
+                <p>Familia baten abentura bat, oporretako bidaia batean...</p>
+                <details>
+                    <summary>Xehetasun gehiago</summary>
+                    <p><i>Iraupena:</i> 1h eta 45 minutu</p>
+                    <p><i>Generoa:</i> Abentura, Komedia</p>
+                    <iframe width="300" height="250" src="https://www.youtube.com/watch?v=4JvJ01naL3Q"
+                        title="Trailer El viaje" frameborder="0" allowfullscreen></iframe>
+                </details>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_nabigazioa">
+            <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
+            <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index2.html">ZINEUSURBIL</a></h1>
+            <nav class="nabigazio_elementuak">
+                <p><a href="index2.html">Orri Nagusia</a></p>
+                <p><a href="kartelera2.html">Kartelera</a></p>
+                <p><a href="informazioa2.html">Informazioa</a></p>
+                <p><a href="balorazioak2.html">Balorazioak</a></p>
+                <p><a href="Saskia.html">Saskia</a></p>
+            </nav>
+        </div>
+        <div class="sare_sozialak">
+            <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa"><img
+                    src="img2/maps2.png" alt="Lokalizazioa"></a>
+            <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa"><img
+                    class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram"></a>
+            <a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa"><img class="x_logo"
+                    src="img2/x2.png" alt="X"></a>
+            <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa"><img
+                    class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok"></a>
+            <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa"><img class="youtube_logo"
+                    src="img2/yt2.png" alt="YouTube"></a>
+            <a href="https://www.cinesa.es/documentos-legales/aviso-legal/"><img class="copyright"
+                    src="img2/copiryght2.png"></a>
+            <p class="oher_legalak">Ohar legalak</p>
+        </div>
+        <p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
+    </footer>
 
 </body>
 
