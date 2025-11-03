@@ -1,9 +1,6 @@
-function balorazioMezua() {
-    const mezua = document.getElementById("mezua");
 
-    window.addEventListener("click", () => {
-        mezua.showModal();
-    })
+function myFunction() {
+            window.alert("eskerrik asko zure baloraziagatik");
+        }
 
-}
   
