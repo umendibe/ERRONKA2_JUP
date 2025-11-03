@@ -166,6 +166,29 @@ details summary {
 }
 
 /* ==========================
+   GORA BUELTATU
+========================== */
+#goraBueltatu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+#goraBueltatu:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================
    FOOTER
 ========================== */
 footer {
