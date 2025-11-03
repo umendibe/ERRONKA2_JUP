@@ -41,3 +41,13 @@ txartela.addEventListener('change', function() {
 bidali.addEventListener('click', function(){
   txartelakodea.style.display = 'none';
 });
+
+function balidatuKodea() {
+  const kodea = document.getElementById("bidalikodea");
+ 
+  kodea.addEventListener("click",  () => {
+    alert("DESKONTUA DUZU!");
+  });
+ }
+
+ balidatuKodea();
