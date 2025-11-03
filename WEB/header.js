@@ -3,9 +3,9 @@ function desplegable() {
         const submenu = document.getElementById('submenu');
         const menuIcon = document.querySelector('#menuButton img');
 
-        const isOpen = submenu.style.display === 'flex';
+        const irekita = submenu.style.display === 'flex';
 
-        if (isOpen) {
+        if (irekita) {
             submenu.style.display = 'none';
             menuIcon.style.transform = 'rotate(0deg)'; 
         } else {
