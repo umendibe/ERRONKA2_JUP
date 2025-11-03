@@ -13,7 +13,7 @@
 	<script src="saskia.js" defer></script>
 	<script src="header.js" defer></script>
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check" />
 </head>
 
 <body>
@@ -82,7 +82,9 @@
 				</select>
 				<div id="txartelakodea" style="display: none;">
 					<input type="text" id="kodea" placeholder="Sartu zure txartel kodea:">
-					<button type="button" id="bidalikodea">Bidali</button>
+					<button type="button" id="bidalikodea">
+						<span class="material-symbols-outlined">check</span>
+					</button>
 				</div>
 				<br>
 				<p>
@@ -97,9 +99,7 @@
 				</div>
 				<div id="popup">
 					<p>Sarrerak erosi dituzu</p>
-					<button onclick="itxiDialogoa()" class="botoia">
-						<span class="material-symbols-outlined">close</span>
-					</button>
+					<button onclick="itxiDialogoa()" class="botoia">❌</button>
 				</div>
 			</form>
 		</section>
