@@ -94,6 +94,11 @@ main {
     justify-items: center;
 }
 
+iframe {
+    max-width: 100%;
+    max-height: 200px;
+}
+
 
 .pelikula_card {
     background: rgba(255, 255, 255, 0.05);
