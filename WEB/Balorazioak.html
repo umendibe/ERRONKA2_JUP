@@ -11,7 +11,7 @@
     <script src="Balorazioak.js" defer></script>
     <link rel="stylesheet" href="header.css">
     <script src="header.js" defer></script>
-    <script src="balorazioak.js" defer></script>
+    <script src="alorazioak.js" defer></script>
 
 </head>
 
@@ -37,12 +37,11 @@
 
     <main>
         <br>
-        <img class="hamburguesa_menua" src="img2/boton_hamburguesa2.png" alt="Hamburguesa menua">
         <form class="pelikula-form">
             <div class="pelikula-select-container">
                 <label for="pelikula-select" class="pelikula-label">Aukeratu pelikula:</label>
                 <select id="pelikula-select" name="pelikula_aukera" class="pelikula-select">
-                    <option value="">-- Mesedez aukeratu pelikula bat --</option>
+                    <option value="" disabled selected>-- Mesedez aukeratu pelikula bat --</option>
                     <option value="pelikula1">Bala Perdida</option>
                     <option value="pelikula2">BlackPhone 2</option>
                     <option value="pelikula3">Caza de Brujas</option>
@@ -90,8 +89,9 @@
             <br>
             <br>
             <br>
-            <input class="bidali" type="image" src="img2/bidali.png" alt="Bidali" onclick="bidali()">
-           
+            <button class="bidali" type="button" onclick="bidali()">
+                <img src="img2/bidali.png" alt="Bidali">
+            </button>
         </form>
           <dialog  id="dialogpelikula">Mesedez, aukeratu pelikula bat.
         <button id="botoia1">X</button></dialog>
