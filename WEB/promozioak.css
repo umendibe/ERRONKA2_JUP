@@ -83,18 +83,21 @@ header {
  box-sizing: border-box;
 }
 .erosi_botoia{
-    background-color: #4CAF50; 
+    background-color: #2b579ee9; 
     border: none;
     color: white;
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 10px 0;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+}
+.erosi_botoia:hover {
+    background-color: #6291d7e9;
+    box-shadow: 0 6px 12px rgba(239, 255, 17, 0.38);
+    transform: translateY(-2px); 
 }
 .submenu p {
     margin: 8px 0;
