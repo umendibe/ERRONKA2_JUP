@@ -242,24 +242,36 @@ p {
     transform: scale(1.1);
 }
 
-.botoia1 {
+#botoia1 {
     position: absolute;
     top:10px;
     right: 10px;
+    transition: transform 0.3s ease;
 }
 
+#botoia1:hover {
+    transform: scale(1.1);
+    background-color: rgb(180, 180, 179);
+}
 /* ========================
    Dialog / Modal
 ======================== */
 dialog {
-    border: none;
+    height: 200px;
+    line-height: 200px;   /* igual que la altura */
+    text-align: center;
+    font-weight: bold;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    width: 300px;
-    max-width: 90%;      
-    min-height: 200px;   
 }
+dialog p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;  /* reinicia la altura de línea dentro del p */
+    margin: 0;
+}
+
+
 
 
 /* ==========================
