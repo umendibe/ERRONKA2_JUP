@@ -250,4 +250,66 @@ footer {
     padding: 12px;
     font-size: 14px;
 }
+dialog:not([open]) {
+    display: none;
+}
 
+dialog[open] {
+    display: block;
+}
+
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog div {
+    padding: 25px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+dialog p {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+}
+
+dialog button {
+    background: #428bca;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+dialog button:hover {
+    background: #357ebd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+dialog button:active {
+    transform: translateY(0);
+}
