@@ -41,7 +41,7 @@
             <div class="pelikula-select-container">
                 <label for="pelikula-select" class="pelikula-label">Aukeratu pelikula:</label>
                 <select id="pelikula-select" name="pelikula_aukera" class="pelikula-select">
-                    <option value="">-- Mesedez aukeratu pelikula bat --</option>
+                     <option value="" disabled selected>-- Mesedez aukeratu pelikula bat --</option>
                     <option value="pelikula1">Bala Perdida</option>
                     <option value="pelikula2">BlackPhone 2</option>
                     <option value="pelikula3">Caza de Brujas</option>
@@ -64,7 +64,7 @@
         <section class="balorazioak_zerrenda">
             <h2>Zer iruitu zaizu zure esperientzia gurekin? </h2>
         </section>
-        <form action="balorazioak2.html" method="get">
+        <form>
             <div class="botoiak">
                 <input type="radio" name="balorazioa" value="1" id="balorazioa1">
                 <label class="color1" for="balorazioa1">1</label>
@@ -89,7 +89,11 @@
             <br>
             <br>
             <br>
-            <input class="bidali" type="image" src="img2/bidali.png" alt="Bidali" onclick="myFunction()">
+            <button class="bidali" type="button" id="bidali" onclick="balorazioMezua()"><img src="img2/bidali.png"></button>
+            <dialog id="mezua">
+                <p>Eskerrik asko zure baloraziagatik!</p>
+                <button id="itxi" onclick="document.getElementById('mezua').close();">❌</button>
+            </dialog>
         </form>
     </main>
 

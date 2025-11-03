@@ -1,10 +1,23 @@
-
+/* ========================
+   Global Styles
+======================== */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #c0c2cf;
-    background: #171414;
     background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================
+   Header / Navigation
+======================== */
+header,
+.footer_nabigazioa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid white;
 }
 
 .logoa_argazkia {
@@ -26,14 +39,6 @@ body {
 .ZineUsurbil_textua {
     text-decoration: none;
     color: #eae1e1;
-}
-
-header,
-.footer_nabigazioa {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid white;
 }
 
 .nabigazio_elementuak {
@@ -70,6 +75,9 @@ header,
     transform: scale(1.08);
 }
 
+/* ========================
+   Main / Sections
+======================== */
 .nabarmenak {
     color: white;
     text-align: center;
@@ -81,41 +89,59 @@ p {
     text-decoration: none;
 }
 
-/* Footer */
-footer {
+/* Pelikula Form */
+.pelikula-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.pelikula-select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+
+.pelikula-label {
+    display: block;
     color: white;
-    padding: 20px 0 10px 0;
-    margin-top: 40px;
-    border-top: 1px solid white;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.copyright_p {
-    color: #f0efef;
-    text-align: right;
-    margin: 16px 0;
+.pelikula-select {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.sare_sozialak {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.pelikula-select:hover {
+    border-color: rgb(255, 255, 91);
+    box-shadow: 0 6px 20px rgba(198, 203, 33, 0.99);
+    transform: scale(1.02);
 }
 
-.sare_sozialak img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    margin: 0 6px;
-    filter: grayscale(100%);
-    transition: transform 0.3s ease, filter 0.3s;
+.pelikula-select option {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
 }
 
-.sare_sozialak img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-}
-
-/* Balorazioak style */
+/* ========================
+   Ratings / Buttons
+======================== */
 .balorazioak_zerrenda {
     text-align: center;
     color: white;
@@ -123,8 +149,8 @@ footer {
 }
 
 .botoiak {
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: center;
     margin-left: 16px;
     margin-inline-start: 8px;
@@ -156,18 +182,21 @@ footer {
     border: 2px solid #000;
 }
 
-/* botoien koloreak*/
+.botoiak label:hover {
+    opacity: 0.95;
+    transform: scale(1.1);
+}
+
+/* Button Colors */
 .color1 { background: #d9534f; }
 .color2 { background: #f0ad4e; }
 .color3 { background: #f7d154; color: #111; }
 .color4 { background: #5cb85c; }
 .color5 { background: #428bca; }
 
-.botoiak label:hover {
-    opacity: 0.95;
-    transform: scale(1.1);
-}
-
+/* ========================
+   Textarea / Input
+======================== */
 .idazteko_lekua {
     display: flex;
     justify-content: center;
@@ -191,63 +220,174 @@ footer {
     color: rgba(255, 255, 255, 0.65);
 }
 
+/* Submit Button */
 .bidali {
     display: block;
     margin: 8px auto 28px auto;
-    width: 140px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.bidali img {
+    width: 80px;
     height: auto;
-    cursor: pointer;
-}
-
-
-@media (max-width: 600px) {
-    .nabigazio_elementuak { padding-left: 12px; gap: 8px; flex-wrap: wrap; }
-    .idazteko_input { width: 92%; }
-    .logoa_argazkia { width: 84px; }
-}
-.pelikula-form {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.pelikula-select-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: 400px;
-}
-.pelikula-label {
+    object-fit: contain;
     display: block;
-    color: white;
-    margin-bottom: 12px;
-    font-weight: 600;
-    font-size: 18px;
+    transition: transform 0.3s ease;
 }
-.pelikula-select {
-    width: 100%;
-    padding: 14px 50px 14px 20px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 12px;
-    background: rgba(255,255,255,);
-    font-size: 16px;
-    font-weight: 500;
+
+.bidali img:hover {
+    transform: scale(1.1);
+}
+
+/* ========================
+   Dialog / Modal
+======================== */
+#mezua {
+    width: 500px;
+    height: 100px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(104, 104, 104);
+    border-color: rgb(237, 237, 237);
+    position: relative;
+}
+
+#mezua > p {
+    margin-top: 12px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#itxi {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-color: transparent;
+    transition: transform 0.3s ease;
 }
 
-.pelikula-select:hover {
-    border-color: rgb(255, 255, 91);
-    box-shadow: 0 6px 20px rgba(198, 203, 33, 0.99);
-     transform:scale(1.02);
+#itxi:hover {
+    transform: scale(1.1);
+    background-color: #c0c2cf;
 }
-.pelikula-select option {
-    background: #2c3e50;
+
+/* ========================
+   Footer / Social
+======================== */
+/* ========================
+   Footer / Social
+======================== */
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 12px;
-    font-size: 14px;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Mantén el borde superior */
+    text-align: center;
+    box-sizing: border-box;
 }
 
+.footer_nabigazioa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    border-bottom: none; /* Elimina el borde inferior aquí */
+}
+
+.footer_nabigazioa .logoa_argazkia {
+    width: 100px;
+    height: auto;
+}
+
+.footer_nabigazioa .ZineUsurbil {
+    margin-left: 0;
+}
+
+.footer_nabigazioa .nabigazio_elementuak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a:hover {
+    transform: scale(1.08);
+}
+
+.sare_sozialak {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.sare_sozialak img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.sare_sozialak img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.copyright_p {
+    color: #f0efef;
+    text-align: center;
+    margin: 12px 0 0 0;
+    font-size: 0.9rem;
+}
+
+/* ========================
+   Media Queries
+======================== */
+@media (max-width: 600px) {
+    .nabigazio_elementuak {
+        padding-left: 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .idazteko_input {
+        width: 92%;
+    }
+
+    .logoa_argazkia {
+        width: 84px;
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer_nabigazioa {
+        flex-direction: column;
+    }
+}
