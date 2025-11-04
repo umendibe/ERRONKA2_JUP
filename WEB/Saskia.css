@@ -94,6 +94,10 @@ header {
     font-weight: bold;
 }
 
+.pelikula_aukera, #perkop, .ordua_input, #txartela, #data {
+    cursor: pointer;
+}
+
 .saskia_edukia select,
 .saskia_edukia input[type="number"],
 .saskia_edukia input[type="date"],
