@@ -208,31 +208,67 @@ body p {
 
 /* FOOTER */
 footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 20px 0 10px 0;
-    margin-top: 40px;
-    border-top: 1px solid white;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Mantén el borde superior */
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .footer_nabigazioa {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
+    margin-bottom: 12px;
+    border-bottom: none; /* Elimina el borde inferior aquí */
+}
+
+.footer_nabigazioa .logoa_argazkia {
+    width: 100px;
+    height: auto;
+}
+
+.footer_nabigazioa .ZineUsurbil {
+    margin-left: 0;
+}
+
+.footer_nabigazioa .nabigazio_elementuak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a:hover {
+    transform: scale(1.08);
 }
 
 .sare_sozialak {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
 }
 
 .sare_sozialak img {
     width: 30px;
     height: 30px;
     object-fit: cover;
-    margin: 0 6px;
     filter: grayscale(100%);
-    transition: transform 0.3s ease, filter 0.3s;
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .sare_sozialak img:hover {
@@ -240,12 +276,26 @@ footer {
     filter: grayscale(0%);
 }
 
-.oher_legalak {
-    color: white;
-}
-
 .copyright_p {
     color: #f0efef;
-    text-align: right;
-    margin: 16px 0;
+    text-align: center;
+    margin: 12px 0 0 0;
+    font-size: 0.9rem;
+}
+
+/* FOOTER RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .footer_nabigazioa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nabigazioa .nabigazio_elementuak {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright_p {
+        text-align: center;
+    }
 }
