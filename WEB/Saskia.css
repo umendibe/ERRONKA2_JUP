@@ -14,6 +14,7 @@ body {
     height: auto;
     transition: transform 0.3s ease;
 }
+
 .logoa_argazkia:hover {
     transform: scale(1.08);
 }
@@ -24,29 +25,22 @@ body {
     color: #f0efef;
     margin-left: 16px;
 }
+
 .ZineUsurbil_textua {
     text-decoration: none;
     color: #eae1e1;
 }
 
 /* Header / footer layout */
-header,
-.footer_nabigazioa {
+header {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 header {
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px 16px;
-}
-
-footer {
-    border-top: 1px solid rgba(255,255,255,0.15);
-    color: white;
-    padding: 20px 0 10px 0;
-    margin-top: 40px;
 }
 
 /* Navegación */
@@ -56,27 +50,49 @@ footer {
     gap: 24px;
     align-items: center;
 }
-.nabigazio_elementuak p { margin: 0; padding: 0 8px; }
-.nabigazio_elementuak a { text-decoration: none; color: white; }
-.nabigazio_elementuak p:hover { transform: scale(1.08); }
 
-/* Hamburguesa */
-.hamburguesa_menua { width: 40px; height: auto; cursor: pointer; transition: transform 0.3s ease; }
-.hamburguesa_menua:hover { transform: scale(1.08); }
+.nabigazio_elementuak p {
+    margin: 0;
+    padding: 0 8px;
+}
+
+.nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+}
+
+.nabigazio_elementuak p:hover {
+    transform: scale(1.08);
+}
 
 /* Página: SASKIA */
-.nabarmenak { color: white; text-align: center; }
+.nabarmenak {
+    color: white;
+    text-align: center;
+}
 
 .saskia_edukia {
-    background: #f0e6e9;
-    background: radial-gradient(circle, rgba(240,230,233,1) 0%, rgba(182,202,222,1) 100%);
+    background: rgba(255, 255, 255, 0.08);
     padding: 30px;
     border-radius: 15px;
     max-width: 600px;
     margin: 30px auto;
     font-family: Arial, sans-serif;
 }
-.saskia_edukia p { margin-bottom: 12px; font-size: 16px; color: black; font-weight: bold; }
+
+.saskia_edukia .saskia_edukia {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.saskia_edukia p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
 
 .saskia_edukia select,
 .saskia_edukia input[type="number"],
@@ -91,27 +107,158 @@ footer {
     margin-top: 6px;
 }
 
-.saskia_edukia .erosi {
-    background-color: #4CAF50;
-    padding: 12px 20px;
+.erosi {
+    background-color: none;
     border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     width: 40px;
     height: 40px;
-    
+    cursor: pointer;
 }
-.saskia_edukia .erosi:hover { transform: scale(1.05); }
+
+.erosi img {
+    width: 24px;
+    height: auto;
+}
+
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #504e53;
+    border: 2px solid #4c77af;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+}
+
+.botoia {
+    color: white;
+    margin-top: 10%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translate(350%, 30%);
+}
+
+.botoia:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translate(350%, 30%);
+}
+
+
+#bidalikodea {
+    margin-top: 10px;
+    font-size: 10px;
+    box-sizing: 20px;
+    background-color: #504e53;
+}
 
 /* Redes sociales en footer */
-.sare_sozialak { display: flex; justify-content: center; margin-top: 10px; gap: 8px; }
-.sare_sozialak img { width: 30px; height: 30px; object-fit: cover; filter: grayscale(100%); transition: transform 0.3s ease, filter 0.3s; }
-.sare_sozialak img:hover { transform: scale(1.1); filter: grayscale(0%); }
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    box-sizing: border-box;
+}
 
-.oher_legalak { color: #ddd; margin-left: 8px; }
-.copyright_p { color: #f0efef; text-align: right; margin: 16px 0; }
+.footer_nabigazioa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
 
+.footer_nabigazioa .logoa_argazkia {
+    width: 100px;
+    height: auto;
+}
+
+.footer_nabigazioa .ZineUsurbil {
+    margin-left: 0;
+}
+
+.footer_nabigazioa .nabigazio_elementuak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.footer_nabigazioa .nabigazio_elementuak a:hover {
+    transform: scale(1.08);
+}
+
+.sare_sozialak {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.sare_sozialak img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.sare_sozialak img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.copyright_p {
+    color: #f0efef;
+    text-align: center;
+    margin: 12px 0 0 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer_nabigazioa {
+        flex-direction: column;
+    }
+}
 /* Texto y headings mínimos */
-h1.nabarmenak, p { color: white; }
-
+h1.nabarmenak,
+p {
+    color: white;
+}

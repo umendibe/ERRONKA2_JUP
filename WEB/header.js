@@ -3,9 +3,15 @@ function desplegable() {
         const submenu = document.getElementById('submenu');
         const menuIcon = document.querySelector('#menuButton img');
 
+<<<<<<< HEAD
         const irekita = submenu.style.display === 'flex';
 
         if (irekita) {
+=======
+        const isOpen = submenu.style.display === 'flex';
+
+        if (isOpen) {
+>>>>>>> origin/feature/saskia
             submenu.style.display = 'none';
             menuIcon.style.transform = 'rotate(0deg)'; 
         } else {
