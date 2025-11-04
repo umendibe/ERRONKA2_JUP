@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="eu">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="JUP">
+
+<head>
+	<title>Informazioa - ZineUsurbil</title>
+	<link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
+	<link rel="stylesheet" href="puntuak.css">
+	<link rel="stylesheet" href="header.css">
+	<script src="header.js" defer></script>
+	<script src="puntuak.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo"></a>
+		<h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
+		<nav class="nabigazio_elementuak">
+
+			<div class="menu">
+				<button id="menuButton" onclick="desplegable()"><img src="img2/desplegable_menu.png"></button>
+				<div class="submenu" id="submenu">
+					<p><a href="index.html">Orri Nagusia</a></p>
+					<p><a href="kartelera2.html">Kartelera</a></p>
+					<p><a href="informazioa2.html">Informazioa</a></p>
+					<p><a href="balorazioak2.html">Balorazioak</a></p>
+					<p><a href="Saskia.html">Saskia</a></p>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="nagusia">
+			<div class="puntu-sistema">
+				<div class="puntu-egoera">
+					<div class="puntu-kopurua">
+						<h2>Zure puntuak</h2>
+						<div class="puntu-zenbakia">1,250</div>
+						<p>Puntu hauek erabili ditzakezu sarrerak eta deskontuak lortzeko</p>
+					</div>
+					<div class="puntu-irabazteko">
+						<h3>Puntu gehiago irabazi</h3>
+						<ul>
+							<li>Erosi sarrerak (+10 puntu/sarrera)</li>
+							<li>Erreseina idatzi (+5 puntu)</li>
+							<li>Lagunak gonbidatu (+25 puntu)</li>
+							<li>Astero erabiltzailea izan (+50 puntu)</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="errekompentsak">
+					<h2>Zure puntuak erabili</h2>
+					<div class="errekompentsa-grid">
+						<!-- Sarrerak -->
+						<div class="errekompentsa-elementua">
+							<div class="errekompentsa-argazkia">
+								<img src="img2/zinemasarrera.webp" alt="Zinema sarrera">
+							</div>
+							<div class="errekompentsa-info">
+								<h3>Zinema Sarrera</h3>
+								<p>Pelikula bateko sarrera bat</p>
+								<div class="puntu-kostua">100 puntu</div>
+								<button class="erosi_botoia" onclick="erosiErrekompentsa(100)">Erosi</button>
+							</div>
+						</div>
+
+						<!-- palomitak -->
+						<div class="errekompentsa-elementua">
+							<div class="errekompentsa-argazkia">
+								<img src="img2/palomita.png" alt="Palomita">
+							</div>
+							<div class="errekompentsa-info">
+								<h3>Palomita Txikia</h3>
+								<p>Palomiten saltoki ofizialean hartu behar dira</p>
+								<div class="puntu-kostua">50 puntu</div>
+								<button class="erosi_botoia" onclick="erosiErrekompentsa(50)">Erosi</button>
+							</div>
+						</div>
+
+						<!-- Edaria -->
+						<div class="errekompentsa-elementua">
+							<div class="errekompentsa-argazkia">
+								<img src="img2/edaria.png" alt="Edaria">
+							</div>
+							<div class="errekompentsa-info">
+								<h3>Edaria</h3>
+								<p>Edari fresko bat</p>
+								<div class="puntu-kostua">40 puntu</div>
+								<button class="erosi_botoia" onclick="erosiErrekompentsa(40)">Erosi</button>
+							</div>
+						</div>
+						<!-- Sarrera VIP -->
+						<div class="errekompentsa-elementua">
+							<div class="errekompentsa-argazkia">
+								<img src="img2/vipsarrera.png" alt="VIP Sarrera">
+							</div>
+							<div class="errekompentsa-info">
+								<h3>VIP Sarrera</h3>
+								<p>Eskubide gehiagoko sarrera</p>
+								<div class="puntu-kostua">200 puntu</div>
+								<button class="erosi_botoia" onclick="erosiErrekompentsa(200)">Erosi</button>
+							</div>
+						</div>
+
+						<!-- Merchandising -->
+						<div class="errekompentsa-elementua">
+							<div class="errekompentsa-argazkia">
+								<img src="img2/kamiseta.png" alt="Merchandising">
+							</div>
+							<div class="errekompentsa-info">
+								<h3>Pelikula Kamiseta</h3>
+								<p>Pelikula ofizialeko kamiseta</p>
+								<div class="puntu-kostua">300 puntu</div>
+								<button class="erosi_botoia" onclick="erosiErrekompentsa(300)">Erosi</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</main>
+	<footer>
+		<div class="footer_nabigazioa">
+			<img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
+			<h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index2.html">ZINEUSURBIL</a></h1>
+			<nav class="nabigazio_elementuak">
+				<p><a href="index2.html">Orri Nagusia</a></p>
+				<p><a href="kartelera2.html">Kartelera</a></p>
+				<p><a href="informazioa2.html">Informazioa</a></p>
+				<p><a href="balorazioak2.html">Balorazioak</a></p>
+				<p><a href="saskia2.html">Saskia</a></p>
+			</nav>
+		</div>
+		<div class="sare_sozialak">
+			<a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa"><img
+					src="img2/maps2.png" alt="Lokalizazioa"></a>
+			<a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa"><img
+					class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram"></a>
+			<a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa"><img class="x_logo"
+					src="img2/x2.png" alt="X"></a>
+			<a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa"><img
+					class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok"></a>
+			<a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa"><img class="youtube_logo"
+					src="img2/yt2.png" alt="YouTube"></a>
+			<a href="https://www.cinesa.es/documentos-legales/aviso-legal/"><img class="copyright"
+					src="img2/copiryght2.png"></a>
+			<p class="oher_legalak">Ohar legalak</p>
+		</div>
+		<p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
+	</footer>
+
+</body>
+
+</html>
