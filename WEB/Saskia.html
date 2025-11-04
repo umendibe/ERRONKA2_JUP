@@ -39,9 +39,10 @@
 		<br>
 		<h1 class="nabarmenak">SASKIA</h1>
 		<section class="saskia_edukia">
-			<form>
+			<form id="formulario">
 				<p>
-					Pelikula aukeratu: <select name="pelikula_aukera">
+					Pelikula aukeratu: <select name="pelikula_aukera" required>
+						<option value="" disabled selected>Aukeratu</option>
 						<option value="pelikula1">Bala Perdida</option>
 						<option value="pelikula2">BlackPhone 2</option>
 						<option value="pelikula3">Caza de Brujas</option>
@@ -71,7 +72,8 @@
 				<br>
 				<br>
 				<p>
-					Deskontua aukeratu: <select name="Deskontuak" id="txartela">
+					Deskontua aukeratu: <select name="Deskontuak" id="txartela" required>
+						<option value="" disabled selected>Aukeratu</option>
 						<option value="deskontua1">Gazte txartela</option>
 						<option value="deskontua2">Zine Usurbil txartela</option>
 						<option value="deskontua3">Zaharrentzako deskontua</option>

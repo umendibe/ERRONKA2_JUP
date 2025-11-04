@@ -224,6 +224,15 @@ footer {
     margin-top: 12px;
 }
 
+#formulario input:invalid,
+#formulario select:invalid {
+border: 2px solid rgb(155, 3, 3);
+}
+#formulario input:valid,
+#formulario select:valid {
+  border: 2px solid white;
+}
+
 .sare_sozialak img {
     width: 30px;
     height: 30px;
@@ -257,6 +266,7 @@ footer {
         flex-direction: column;
     }
 }
+
 /* Texto y headings mínimos */
 h1.nabarmenak,
 p {
