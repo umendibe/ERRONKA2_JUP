@@ -35,18 +35,13 @@ public class Aplikazioa {
 
                     bigarrenKasua();
                     break;
-                    
-                case 3:
-                    System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
-                    System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki. \n" +
-                            "Mapseko link-a: https://maps.app.goo.gl/LYmgyRZZ584R61nG9\n");
 
+                case 3:
+                    hirugarrenKasua();
                     break;
 
                 case 4:
-                    System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
-                    System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
-
+                    laugarrenKasua();
                     break;
 
                 case 5:
@@ -158,4 +153,20 @@ public class Aplikazioa {
 
         break;
     }
+
+     public static void hirugarrenKasua() {
+        System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
+        System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki. \n" +
+                "Mapseko link-a: https://maps.app.goo.gl/LYmgyRZZ584R61nG9\n");
+
+    }
+
+    public static void laugarrenKasua() {
+        System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
+                    System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
+    }
 }
+
+
+
+   
