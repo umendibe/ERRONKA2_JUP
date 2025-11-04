@@ -9,7 +9,7 @@ public class Zinema {
         this.gelak = gelak;
     }
 
-    public static ArrayList<String> getPelikulak() {
+    public static ArrayList<String> Pelikulak() {
         ArrayList<String> pelikulak = new ArrayList<>();
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
@@ -27,7 +27,7 @@ public class Zinema {
         return pelikulak;
     }
 
-    public static ArrayList<String> getGelak() {
+    public static ArrayList<String> Gelak() {
         ArrayList<String> gelak = new ArrayList<>();
         gelak.add("Umeen gela");
         gelak.add("Superheroien gela");

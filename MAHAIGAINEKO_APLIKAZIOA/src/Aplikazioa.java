@@ -17,64 +17,19 @@ public class Aplikazioa {
     public static final String ANSI_CYAN = "\u001B[36m";
 
     static Scanner sc = new Scanner(System.in);
-
+    static int aukera;
     public static void main(String[] args) {
         
         boolean errepikatu = true;
 
         while (errepikatu) {
-            System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
-                    "1. Aste eguna \n" +
-                    "2. Pelikulen informazio orokorra \n" +
-                    "3. Kokapena \n" +
-                    "4. Irekiera ordutegia \n" +
-                    "5. Irten" + ANSI_RESET);
-
-            System.out.print("Aukeratu bat: ");
-            int aukera = sc.nextInt();
+            
+            Menua1();
 
             switch (aukera) {
                 case 1:
-                    System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
-                    int aukeraEguna = sc.nextInt();
-
-                    if (aukeraEguna == 1) {
-                        System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
-                        for (int i = 0; i < 7; i++) {
-                            System.out.println(pelikulak.get(i));
-                        }
-                    } else if (aukeraEguna == 2) {
-                        System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
-                        for (int i = 7; i < 15; i++) {
-                            System.out.println(pelikulak.get(i));
-                        }
-                    }
-
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    int aukeraSarrera = sc.nextInt();
-
-                    if (aukeraSarrera == 1) {
-                        for (int i = 0; i < pelikulak.size(); i++) {
-                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
-                        }
-                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
-                        int pelikulaIkusi = sc.nextInt();
-
-                        double prezioa = 8.50;
-                        System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
-                        int pertsonaKop = sc.nextInt();
-
-                        if (pertsonaKop < 1 || pertsonaKop > 4) {
-                            System.out.println(
-                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
-                        } else {
-                            double guztira = prezioa * pertsonaKop;
-                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
-                                    + " pelikula ikusteko sarrera erosi duzu, "
-                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
-                        }
-                    }
-                    break;
+                
+                    lehenKasua();
 
                 case 2:
                     System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + pelikulak + "\n");
@@ -141,5 +96,60 @@ public class Aplikazioa {
             }
         }
         sc.close();
+    }
+
+    public static void Menua1() {
+        System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
+                    "1. Aste eguna \n" +
+                    "2. Pelikulen informazio orokorra \n" +
+                    "3. Kokapena \n" +
+                    "4. Irekiera ordutegia \n" +
+                    "5. Irten" + ANSI_RESET);
+
+            System.out.print("Aukeratu bat: ");
+            aukera = sc.nextInt();
+    }
+
+    public static void lehenKasua() {
+        System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
+                    int aukeraEguna = sc.nextInt();
+
+                    if (aukeraEguna == 1) {
+                        System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
+                        for (int i = 0; i < 7; i++) {
+                            System.out.println(pelikulak.get(i));
+                        }
+                    } else if (aukeraEguna == 2) {
+                        System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
+                        for (int i = 7; i < 15; i++) {
+                            System.out.println(pelikulak.get(i));
+                        }
+                    }
+
+                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+                    int aukeraSarrera = sc.nextInt();
+
+                    if (aukeraSarrera == 1) {
+                        for (int i = 0; i < pelikulak.size(); i++) {
+                            System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
+                        }
+                        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
+                        int pelikulaIkusi = sc.nextInt();
+
+                        double prezioa = 8.50;
+                        System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
+                        int pertsonaKop = sc.nextInt();
+
+                        if (pertsonaKop < 1 || pertsonaKop > 4) {
+                            System.out.println(
+                                    ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
+                        } else {
+                            double guztira = prezioa * pertsonaKop;
+                            System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
+                                    + " pelikula ikusteko sarrera erosi duzu, "
+                                    + guztira + "€ ordaindu behar dira." + ANSI_RESET);
+                        }
+                    }
+                    break;
     }
 }
