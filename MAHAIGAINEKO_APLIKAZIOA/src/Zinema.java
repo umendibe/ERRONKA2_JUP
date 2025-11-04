@@ -1,16 +1,12 @@
 import java.util.ArrayList;
 
-public class Zinema {
-    public static String pelikulak;
-    public static String gelak;
+public class Zinema{
 
-    public Zinema(String pelikulak, String gelak) {
-        this.pelikulak = pelikulak;
-        this.gelak = gelak;
-    }
+    private static ArrayList<String> pelikulak = new ArrayList<>();
+    private static ArrayList<String> gelak = new ArrayList<>();
 
-    public static ArrayList<String> Pelikulak() {
-        ArrayList<String> pelikulak = new ArrayList<>();
+    // Blokea: datuak behin bakarrik kargatzen dira
+    static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
         pelikulak.add("Maspalomas");
@@ -24,16 +20,19 @@ public class Zinema {
         pelikulak.add("Caza de Brujas");
         pelikulak.add("Cuervos Locos");
         pelikulak.add("Decorado");
-        return pelikulak;
-    }
 
-    public static ArrayList<String> Gelak() {
-        ArrayList<String> gelak = new ArrayList<>();
         gelak.add("Umeen gela");
         gelak.add("Superheroien gela");
         gelak.add("Thriller gela");
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
+    }
+
+    public static ArrayList<String> Pelikulak() {
+        return pelikulak;
+    }
+
+    public static ArrayList<String> Gelak() {
         return gelak;
     }
 }
