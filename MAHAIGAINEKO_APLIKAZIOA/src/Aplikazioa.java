@@ -45,6 +45,7 @@ public class Aplikazioa {
                     break;
 
                 case 5:
+
                     bostgarrenKasua();
                     return;
 
@@ -52,13 +53,7 @@ public class Aplikazioa {
                     System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
             }
             if (errepikatu) {
-                System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
-                int jarraitu = sc.nextInt();
-                if (jarraitu != 1) {
-                    System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
-                    errepikatu = false;
-                }
-
+                errepikatzen();
             }
         }
         sc.close();
@@ -167,5 +162,15 @@ public class Aplikazioa {
 
     public static void bostgarrenKasua() {
         System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
+        errepikatu = false;
+    }
+
+public static void errepikatzen() {
+    System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
+                int jarraitu = sc.nextInt();
+                if (jarraitu != 1) {
+                    System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
                     errepikatu = false;
+                }
+
 }
