@@ -41,3 +41,13 @@ txartela.addEventListener('change', function() {
 bidali.addEventListener('click', function(){
   txartelakodea.style.display = 'none';
 });
+
+const pertsonaKopurua = document.getElementById("perkop");
+
+pertsonaKopurua.addEventListener('input', function() {
+  const kopurua = parseInt(this.value);
+  if (kopurua < 1 || kopurua > 4) {
+    alert("Mesedez, sartu 1 eta 4 arteko pertsona kopurua.");
+    this.value = "";
+  }
+});
