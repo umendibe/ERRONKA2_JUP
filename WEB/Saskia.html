@@ -27,7 +27,7 @@
 				<div class="submenu" id="submenu">
 					<p><a href="index.html">Orri Nagusia</a></p>
 					<p><a href="Kartelera.html">Kartelera</a></p>
-					<p><a href="Promozioak.html">Promozioak</a></p>
+					<p><a href="promozioak.html">Promozioak</a></p>
 					<p><a href="Balorazioak.html">Balorazioak</a></p>
 					<p><a href="Saskia.html">Saskia</a></p>
 				</div>
@@ -39,9 +39,10 @@
 		<br>
 		<h1 class="nabarmenak">SASKIA</h1>
 		<section class="saskia_edukia">
-			<form>
+			<form id="formulario">
 				<p>
-					Pelikula aukeratu: <select name="pelikula_aukera">
+					Pelikula aukeratu: <select name="pelikula_aukera" required class="pelikula_aukera">
+						<option value="" disabled selected>Aukeratu</option>
 						<option value="pelikula1">Bala Perdida</option>
 						<option value="pelikula2">BlackPhone 2</option>
 						<option value="pelikula3">Caza de Brujas</option>
@@ -62,16 +63,17 @@
 				<br>
 				<br>
 				<p>
-					Pertsona kopurua: <input type="number" name="pertsona_kopurua" min="1" max="4" required>
+					Pertsona kopurua: <input type="number" name="pertsona_kopurua" id="perkop" min="1" max="4" required>
 				</p>
 				<br>
 				<p>
-					Ordua: <input type="time" name="ordua" required>
+					Ordua: <input type="time" name="ordua" required class="ordua_input">
 				</p>
 				<br>
 				<br>
 				<p>
-					Deskontua aukeratu: <select name="Deskontuak" id="txartela">
+					Deskontua aukeratu: <select name="Deskontuak" id="txartela" required>
+						<option value="" disabled selected>Aukeratu</option>
 						<option value="deskontua1">Gazte txartela</option>
 						<option value="deskontua2">Zine Usurbil txartela</option>
 						<option value="deskontua3">Zaharrentzako deskontua</option>

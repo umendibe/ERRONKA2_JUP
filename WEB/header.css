@@ -21,11 +21,11 @@
 }
 
 .submenu {
-    display: none;
+    display: none; /* oculto por defecto */
     position: absolute;
     left: 100%; 
     top: 0;
-    flex-direction: row;
+    flex-direction: row; /* solo aplica cuando se muestre con JS */
     gap: 10px;
     padding: 5px 10px;
     white-space: nowrap;
