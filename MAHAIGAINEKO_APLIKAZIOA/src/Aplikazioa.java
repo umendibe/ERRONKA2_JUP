@@ -17,10 +17,9 @@ public class Aplikazioa {
 
     static Scanner sc = new Scanner(System.in);
     static int aukera;
+    static boolean errepikatu = true;
 
     public static void main(String[] args) {
-
-        boolean errepikatu = true;
 
         while (errepikatu) {
 
@@ -30,6 +29,7 @@ public class Aplikazioa {
                 case 1:
 
                     lehenKasua();
+                    break;
 
                 case 2:
 
@@ -37,10 +37,12 @@ public class Aplikazioa {
                     break;
 
                 case 3:
+
                     hirugarrenKasua();
                     break;
 
                 case 4:
+
                     laugarrenKasua();
                     break;
 
@@ -53,6 +55,7 @@ public class Aplikazioa {
                     System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
             }
             if (errepikatu) {
+
                 errepikatzen();
             }
         }
@@ -72,18 +75,18 @@ public class Aplikazioa {
     }
 
     public static void lehenKasua() {
-        System.out.println(ANSI_YELLOW + "Aukeratu: (1) Astelehena  + (2) Osteguna" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "Aukeratu: (1) Larunbata  + (2) Igandea" + ANSI_RESET);
         int aukeraEguna = sc.nextInt();
 
         if (aukeraEguna == 1) {
-            System.out.println(ANSI_GREEN + "Asteleheneko pelikulak:" + ANSI_RESET);
-            for (int i = 0; i < 7; i++) {
-                System.out.println(pelikulak.get(i));
+            System.out.println(ANSI_GREEN + "Larunbateko pelikulak:" + ANSI_RESET);
+            for (int i = 0; i < 6; i++) {
+                System.out.println(Zinema.Pelikulak().get(i));
             }
         } else if (aukeraEguna == 2) {
-            System.out.println(ANSI_GREEN + "Osteguneko pelikulak:" + ANSI_RESET);
-            for (int i = 7; i < 15; i++) {
-                System.out.println(pelikulak.get(i));
+            System.out.println(ANSI_GREEN + "Igandeko pelikulak:" + ANSI_RESET);
+            for (int i = 6; i < 13; i++) {
+                System.out.println(Zinema.Pelikulak().get(i));
             }
         }
 
@@ -91,8 +94,8 @@ public class Aplikazioa {
         int aukeraSarrera = sc.nextInt();
 
         if (aukeraSarrera == 1) {
-            for (int i = 0; i < pelikulak.size(); i++) {
-                System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
+            for (int i = 0; i < Zinema.Pelikulak().size(); i++) {
+                System.out.println(ANSI_RED + i + " - " + Zinema.Pelikulak().get(i) + ANSI_RESET);
             }
             System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
             int pelikulaIkusi = sc.nextInt();
@@ -106,26 +109,25 @@ public class Aplikazioa {
                         ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
             } else {
                 double guztira = prezioa * pertsonaKop;
-                System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
+                System.out.println(ANSI_GREEN + Zinema.Pelikulak().get(pelikulaIkusi)
                         + " pelikula ikusteko sarrera erosi duzu, "
                         + guztira + "€ ordaindu behar dira." + ANSI_RESET);
             }
         }
-        break;
     }
 
     public static void bigarrenKasua() {
-        System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + pelikulak + "\n");
-        System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + pelikulak.size() + "\n");
-        System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + gelak + "\n");
-        System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + gelak.size() + "\n");
+        System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + Zinema.Pelikulak() + "\n");
+        System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + Zinema.Pelikulak().size() + "\n");
+        System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + Zinema.Gelak() + "\n");
+        System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + Zinema.Gelak().size() + "\n");
 
         System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
         int aukeraSarrera2 = sc.nextInt();
 
         if (aukeraSarrera2 == 1) {
-            for (int i = 0; i < pelikulak.size(); i++) {
-                System.out.println(ANSI_RED + i + " - " + pelikulak.get(i) + ANSI_RESET);
+            for (int i = 0; i < Zinema.Pelikulak().size(); i++) {
+                System.out.println(ANSI_RED + i + " - " + Zinema.Pelikulak().get(i) + ANSI_RESET);
             }
             System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
             int pelikulaIkusi = sc.nextInt();
@@ -139,13 +141,12 @@ public class Aplikazioa {
                         ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
             } else {
                 double guztira = prezioa * pertsonaKop;
-                System.out.println(ANSI_GREEN + pelikulak.get(pelikulaIkusi)
+                System.out.println(ANSI_GREEN + Zinema.Pelikulak().get(pelikulaIkusi)
                         + " pelikula ikusteko sarrera erosi duzu, "
                         + guztira + "€ ordaindu behar dira." + ANSI_RESET);
             }
         }
 
-        break;
     }
 
     public static void hirugarrenKasua() {
@@ -165,12 +166,12 @@ public class Aplikazioa {
         errepikatu = false;
     }
 
-public static void errepikatzen() {
-    System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
-                int jarraitu = sc.nextInt();
-                if (jarraitu != 1) {
-                    System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
-                    errepikatu = false;
-                }
-
+    public static void errepikatzen() {
+        System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
+        int jarraitu = sc.nextInt();
+        if (jarraitu != 1) {
+            System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
+            errepikatu = false;
+        }
+    }
 }
