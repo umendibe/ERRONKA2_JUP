@@ -6,6 +6,14 @@ public class Zinema{
     private static ArrayList<String> gelak = new ArrayList<>();
 
     // Blokea: datuak behin bakarrik kargatzen dira
+    /**
+     * BIRFAKTORIZAZIOA
+     * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea garbiagoa izan dadin.
+     * Pelikulak ArrayList eta Gelak ArrayList pribatuak static moduan deklaratu dira, behin bakarrik kargatu daitezen.
+     * 2. Pelikulak() eta Gelak() metodo publikoak sortu dira, datu hauek beste klase batzuetatik eskuratu ahal izateko.
+     * - Pelikulak ArrayList -->38. lerroa
+     * - Gelak ArrayList -->43. lerroa
+     */
     static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
