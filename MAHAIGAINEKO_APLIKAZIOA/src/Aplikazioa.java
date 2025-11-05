@@ -27,6 +27,7 @@ public class Aplikazioa {
          * 6. Bostgarren kasua bostgarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 136. lerroan
          * 7. Errepikatzen den galdetegia errepikatzen() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 141. lerroan
          * 8. Sarrerak erosi nahi diren galdetegia sarreraErosi() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 100. lerroan
+         * 9. While bat sortu programa behin eta berriro exekutatzeko --> 32. lerroan
          */
         while (errepikatu) {
 
