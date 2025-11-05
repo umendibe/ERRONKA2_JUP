@@ -5,7 +5,6 @@ public class Zinema{
     private static ArrayList<String> pelikulak = new ArrayList<>();
     private static ArrayList<String> gelak = new ArrayList<>();
 
-    // Blokea: datuak behin bakarrik kargatzen dira
     /**
      * BIRFAKTORIZAZIOA
      * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea garbiagoa izan dadin.
@@ -14,6 +13,7 @@ public class Zinema{
      * - Pelikulak ArrayList -->38. lerroa
      * - Gelak ArrayList -->43. lerroa
      */
+    // Blokea: datuak behin bakarrik kargatzen dira
     static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
