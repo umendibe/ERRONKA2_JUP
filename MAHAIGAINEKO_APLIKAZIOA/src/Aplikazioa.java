@@ -19,13 +19,14 @@ public class Aplikazioa {
     public static void main(String[] args) {
         /**
          * BIRFAKTORIZAZIOA
-         * 1. Menua1() metodoa sortu da menuaren erakusteko. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 60. lerroan
-         * 2. Lehen kasua lehenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 72. lerroan
-         * 3. Bigarren kasua bigarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 115. lerroan
-         * 4. Hirugarren kasua hirugarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 122. lerroan
-         * 5. Laugarren kasua laugarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 127. lerroan
-         * 6. Bostgarren kasua bostgarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 132. lerroan
-         * 7. Errepikatzen den galdetegia errepikatzen() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 137. lerroan
+         * 1. Menua1() metodoa sortu da menuaren erakusteko. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 64. lerroan
+         * 2. Lehen kasua lehenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 76. lerroan
+         * 3. Bigarren kasua bigarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 93. lerroan
+         * 4. Hirugarren kasua hirugarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 126. lerroan
+         * 5. Laugarren kasua laugarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 131. lerroan
+         * 6. Bostgarren kasua bostgarrenKasua() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 136. lerroan
+         * 7. Errepikatzen den galdetegia errepikatzen() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 141. lerroan
+         * 8. Sarrerak erosi nahi diren galdetegia sarreraErosi() metodoan kokatu da. Era honetan main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 100. lerroan
          */
         while (errepikatu) {
 
