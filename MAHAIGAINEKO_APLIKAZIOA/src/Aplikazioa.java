@@ -14,6 +14,7 @@ public class Aplikazioa {
     static Scanner sc = new Scanner(System.in);
     static int aukera;
     static boolean errepikatu = true;
+    static ArrayList<String> lista = Zinema.Pelikulak();
 
     public static void main(String[] args) {
         /**
@@ -33,9 +34,11 @@ public class Aplikazioa {
             switch (aukera) {
                 case 1:
                     lehenKasua();
+                    sarreraErosi();
                     break;
                 case 2:
                     bigarrenKasua();
+                    sarreraErosi();
                     break;
                 case 3:
                     hirugarrenKasua();
@@ -70,8 +73,6 @@ public class Aplikazioa {
     }
 
     public static void lehenKasua() {
-        ArrayList<String> lista = Zinema.Pelikulak();
-
         System.out.println(ANSI_YELLOW + "Aukeratu: (1) Larunbata  + (2) Igandea" + ANSI_RESET);
         int aukeraEguna = sc.nextInt();
 
@@ -86,7 +87,16 @@ public class Aplikazioa {
                 System.out.println(lista.get(i));
             }
         }
+    }
 
+    public static void bigarrenKasua() {
+        System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + Zinema.Pelikulak() + "\n");
+        System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + Zinema.Pelikulak().size() + "\n");
+        System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + Zinema.Gelak() + "\n");
+        System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + Zinema.Gelak().size() + "\n");
+    }
+
+    public static void sarreraErosi() {
         System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
         int aukeraSarrera = sc.nextInt();
 
@@ -110,13 +120,6 @@ public class Aplikazioa {
                         + guztira + "€ ordaindu behar dira." + ANSI_RESET);
             }
         }
-    }
-
-    public static void bigarrenKasua() {
-        System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + Zinema.Pelikulak() + "\n");
-        System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + Zinema.Pelikulak().size() + "\n");
-        System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + Zinema.Gelak() + "\n");
-        System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + Zinema.Gelak().size() + "\n");
     }
 
     public static void hirugarrenKasua() {
