@@ -4,6 +4,7 @@ public class Zinema{
 
     private static ArrayList<String> pelikulak = new ArrayList<>();
     private static ArrayList<String> gelak = new ArrayList<>();
+    private static ArrayList<String> asteburuak = new ArrayList<>();
 
     /**
      * BIRFAKTORIZAZIOA
@@ -34,6 +35,10 @@ public class Zinema{
         gelak.add("Thriller gela");
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
+
+        asteburuak.add("8ko asteburua");
+        asteburuak.add("15eko asteburua");
+        asteburuak.add("22ko asteburua");
     }
 
     public static ArrayList<String> Pelikulak() {
@@ -43,4 +48,9 @@ public class Zinema{
     public static ArrayList<String> Gelak() {
         return gelak;
     }
+
+    public static ArrayList<String> Asteburuak() {
+        return asteburuak;
+    }
+
 }

@@ -75,17 +75,35 @@ public class Aplikazioa {
     }
 
     public static void lehenKasua() {
-        System.out.println(ANSI_YELLOW + "Aukeratu: (1) Larunbata  + (2) Igandea" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "Aukeratu asteburua: (1) 8ko asteburua  + (2) 15eko asteburua  + (3) 22ko asteburua" + ANSI_RESET);
         int aukeraEguna = sc.nextInt();
-
         if (aukeraEguna == 1) {
-            System.out.println(ANSI_GREEN + "Larunbateko pelikulak:" + ANSI_RESET);
+            System.out.println(ANSI_GREEN + "8ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
             for (int i = 0; i < 6; i++) {
                 System.out.println(lista.get(i));
             }
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
+            for (int i = 6; i < 12; i++) {
+                System.out.println(lista.get(i));
+            }
+
         } else if (aukeraEguna == 2) {
-            System.out.println(ANSI_GREEN + "Igandeko pelikulak:" + ANSI_RESET);
-            for (int i = 6; i < lista.size(); i++) {
+            System.out.println(ANSI_GREEN + "15eko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
+            for (int i = 6; i < 12; i++) {
+                System.out.println(lista.get(i));
+            }
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
+            for (int i = 0; i < 6; i++) {
+                System.out.println(lista.get(i));
+            }
+
+        } else if (aukeraEguna == 3) {
+            System.out.println(ANSI_GREEN + "22ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
+            for (int i = 0; i < 6; i++) {
+                System.out.println(lista.get(i));
+            }
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
+            for (int i = 6; i < 12; i++) {
                 System.out.println(lista.get(i));
             }
         }
