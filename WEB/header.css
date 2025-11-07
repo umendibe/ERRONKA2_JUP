@@ -21,11 +21,11 @@
 }
 
 .submenu {
-    display: none; /* oculto por defecto */
+    display: none; 
     position: absolute;
     left: 100%; 
     top: 0;
-    flex-direction: row; /* solo aplica cuando se muestre con JS */
+    flex-direction: row; 
     gap: 10px;
     padding: 5px 10px;
     white-space: nowrap;
@@ -49,4 +49,44 @@
 .submenu a:hover {
     background-color:#eae1e1;
     color:#171414;
+}
+
+/* ==========================
+   RESPONSIVE Pantaila txikiagoaetan
+========================== */
+
+@media screen and (max-width: 1024px) {
+    .menu img {
+        width: 28px;
+    }
+
+    .submenu {
+        left: auto;
+        right: 0;
+        top: 40px;
+        flex-direction: column;
+        background: rgba(20, 20, 40, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .submenu a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu img {
+        width: 26px;
+    }
+
+    .submenu {
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 36px;
+        flex-direction: column;
+        padding: 8px 0;
+    }
 }

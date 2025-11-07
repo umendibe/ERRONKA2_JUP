@@ -150,7 +150,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Mantén el borde superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
     box-sizing: border-box;
 }
@@ -162,7 +162,7 @@ footer {
     align-items: center;
     gap: 16px;
     margin-bottom: 12px;
-    border-bottom: none; /* Elimina el borde inferior aquí */
+    border-bottom: none; 
 }
 
 .footer_nabigazioa .logoa_argazkia {
@@ -219,4 +219,209 @@ footer {
     text-align: center;
     margin: 12px 0 0 0;
     font-size: 0.9rem;
+}
+
+/* ==========================
+   HEADER ETA NABIGAZIOA — RESPONSIVE
+========================== */
+
+/* --- Tablets --- */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .logoa_argazkia {
+        width: 90px;
+    }
+
+    .ZineUsurbil {
+        font-size: 1.5rem;
+    }
+
+    .nabigazio_elementuak {
+        padding-left: 0;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .submenu {
+        left: auto;
+        right: 0;
+        top: 45px;
+        flex-direction: column;
+        background: rgba(20, 20, 40, 0.95);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        min-width: 160px;
+    }
+
+    .submenu a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* --- Mugikor handiak --- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .logoa_argazkia {
+        width: 80px;
+    }
+
+    .ZineUsurbil {
+        margin: 6px 0;
+        font-size: 1.3rem;
+    }
+
+    .nabigazio_elementuak {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu img {
+        width: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        background: rgba(20, 20, 40, 0.9);
+        box-shadow: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+        gap: 8px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .submenu.activo {
+        display: flex;
+    }
+
+    .submenu a {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 14px;
+        border-radius: 6px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .submenu a:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+}
+
+/* --- Mugikor txikiak --- */
+@media screen and (max-width: 430px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .logoa_argazkia {
+        width: 65px;
+        height: auto;
+        margin-bottom: 4px;
+    }
+
+    .ZineUsurbil {
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 4px;
+    }
+
+    .menu img {
+        width: 26px;
+        height: auto;
+    }
+
+    .submenu {
+        width: 100%;
+        background: rgba(20, 20, 40, 0.95);
+        padding: 6px 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .submenu a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nabigazio_elementuak {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding-left: 0;
+    }
+
+    .kolumna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nabarmenak {
+        font-size: 1.3rem;
+        margin: 12px 0;
+    }
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* FOOTER RESPONSIVE */
+@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
+    .footer_nabigazioa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nabigazioa .nabigazio_elementuak {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright_p {
+        text-align: center;
+    }
 }
