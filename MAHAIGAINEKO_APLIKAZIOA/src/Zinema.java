@@ -2,17 +2,17 @@ import java.util.ArrayList;
 
 public class Zinema{
 
+    // Pelikulen izenen zerrenda gordetzeko ArrayList-a
     private static ArrayList<String> pelikulak = new ArrayList<>();
+    
+    // Gelen izenen zerrenda gordetzeko ArrayList-a
     private static ArrayList<String> gelak = new ArrayList<>();
 
-    // Blokea: datuak behin bakarrik kargatzen dira
-    /**
-     * BIRFAKTORIZAZIOA
-     * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea garbiagoa izan dadin.
-     * Pelikulak ArrayList eta Gelak ArrayList pribatuak static moduan deklaratu dira, behin bakarrik kargatu daitezen.
-     * 2. Pelikulak() eta Gelak() metodo publikoak sortu dira, datu hauek beste klase batzuetatik eskuratu ahal izateko.
-     * - Pelikulak ArrayList -->38. lerroa
-     * - Gelak ArrayList -->43. lerroa
+    /*
+     * Bloke estatikoa:
+     * Programa martxan hasten denean behin exekutatzen da.
+     * Hemen pelikulak eta gelak arrayetan gehitzen ditugu.
+     * Horrela ez da beharrezkoa gero berriro datuak betetzea.
      */
     static {
         pelikulak.add("Blackphone 2");
@@ -36,10 +36,12 @@ public class Zinema{
         gelak.add("Komedia gela");
     }
 
+    // Metodoa: pelikulen zerrenda itzultzen du 
     public static ArrayList<String> Pelikulak() {
         return pelikulak;
     }
 
+    // Metodoa: gelen zerrenda itzultzen du
     public static ArrayList<String> Gelak() {
         return gelak;
     }
