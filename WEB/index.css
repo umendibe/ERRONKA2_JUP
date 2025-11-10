@@ -4,7 +4,6 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
-    flex-wrap: wrap;
 }
 
 /* ==========================
@@ -105,8 +104,9 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
     transition: transform 0.3s ease;
-    width: 686px;
-    height: 396px;
+    width: 100%;
+    max-width: 686px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -248,8 +248,23 @@ footer {
     font-size: 0.9rem;
 }
 
-/* FOOTER RESPONSIVE */
-@media screen and (max-width: 768px) {
+/* ==========================
+   DETAILS
+========================== */
+details {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+details:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
     .footer_nabigazioa {
         flex-direction: column;
         align-items: center;
@@ -266,17 +281,210 @@ footer {
 }
 
 /* ==========================
-   DETAILS
+   HEADER ETA NABIGAZIOA — RESPONSIVE
 ========================== */
-details {
-    cursor: pointer;
-    transition: background-color 0.3s;
+
+/* --- Tablets --- */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .logoa_argazkia {
+        width: 90px;
+    }
+
+    .ZineUsurbil {
+        font-size: 1.5rem;
+    }
+
+    .nabigazio_elementuak {
+        padding-left: 0;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .submenu {
+        left: auto;
+        right: 0;
+        top: 45px;
+        flex-direction: column;
+        background: rgba(20, 20, 40, 0.95);
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        min-width: 160px;
+    }
+
+    .submenu a {
+        text-align: center;
+        width: 100%;
+    }
 }
 
-details:hover {
-    background: rgba(255, 255, 255, 0.15);
+/* --- Mugikor handiak --- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .logoa_argazkia {
+        width: 80px;
+    }
+
+    .ZineUsurbil {
+        margin: 6px 0;
+        font-size: 1.3rem;
+    }
+
+    .nabigazio_elementuak {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu img {
+        width: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        background: rgba(20, 20, 40, 0.9);
+        box-shadow: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+        gap: 8px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .submenu.activo {
+        display: flex;
+    }
+
+    .submenu a {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 14px;
+        border-radius: 6px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .submenu a:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
 }
 
-details[open] {
-    background: rgba(255, 255, 255, 0.2);
+/* --- Mugikor txikiak --- */
+@media screen and (max-width: 430px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .logoa_argazkia {
+        width: 65px;
+        height: auto;
+        margin-bottom: 4px;
+    }
+
+    .ZineUsurbil {
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 4px;
+    }
+
+    .menu img {
+        width: 26px;
+        height: auto;
+    }
+
+    .submenu {
+        width: 100%;
+        background: rgba(20, 20, 40, 0.95);
+        padding: 6px 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .submenu a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nabigazio_elementuak {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding-left: 0;
+    }
+
+    .nabarmenak {
+        margin-top: 10px;
+    }
+
+    .nabarmenak_pelikulak img {
+        width: 100%;
+        height: auto;
+        max-width: 380px;
+    }
+
+    .tituluak {
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+
+    #atzera_botoia img {
+        width: 24px;
+        height: auto;
+    }
+
+    #aurrera_botoia img {
+        width: 24px;
+        height: auto;
+    }
+
+    #hasierako_argazkia {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }

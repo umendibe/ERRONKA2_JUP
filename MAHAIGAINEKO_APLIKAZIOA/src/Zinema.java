@@ -7,13 +7,22 @@ public class Zinema{
     
     // Gelen izenen zerrenda gordetzeko ArrayList-a
     private static ArrayList<String> gelak = new ArrayList<>();
+    private static ArrayList<String> asteburuak = new ArrayList<>();
 
     /*
      * Bloke estatikoa:
      * Programa martxan hasten denean behin exekutatzen da.
      * Hemen pelikulak eta gelak arrayetan gehitzen ditugu.
      * Horrela ez da beharrezkoa gero berriro datuak betetzea.
+    /**
+     * BIRFAKTORIZAZIOA
+     * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea garbiagoa izan dadin.
+     * Pelikulak ArrayList eta Gelak ArrayList pribatuak static moduan deklaratu dira, behin bakarrik kargatu daitezen.
+     * 2. Pelikulak() eta Gelak() metodo publikoak sortu dira, datu hauek beste klase batzuetatik eskuratu ahal izateko.
+     * - Pelikulak ArrayList -->38. lerroa
+     * - Gelak ArrayList -->43. lerroa
      */
+    // Blokea: datuak behin bakarrik kargatzen dira
     static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
@@ -34,6 +43,10 @@ public class Zinema{
         gelak.add("Thriller gela");
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
+
+        asteburuak.add("8ko asteburua");
+        asteburuak.add("15eko asteburua");
+        asteburuak.add("22ko asteburua");
     }
 
     // Metodoa: pelikulen zerrenda itzultzen du 
@@ -45,4 +58,9 @@ public class Zinema{
     public static ArrayList<String> Gelak() {
         return gelak;
     }
+
+    public static ArrayList<String> Asteburuak() {
+        return asteburuak;
+    }
+
 }
