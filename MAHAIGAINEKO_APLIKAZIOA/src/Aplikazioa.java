@@ -15,6 +15,7 @@ public class Aplikazioa {
     static int aukera;// Kontsolatik datuak jasotzeko
     static boolean errepikatu = true;// Programa barriro exekutatzeko baimena
     static ArrayList<String> lista = Zinema.Pelikulak();
+    static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
 
     public static void main(String[] args) {
         /**
@@ -80,7 +81,7 @@ public class Aplikazioa {
     }
     // 1. aukera: Aste egunaren arabera pelikulen zerrenda erakutsi eta sarrerak saltzea
     public static void lehenKasua() {
-        System.out.println(ANSI_YELLOW + "Aukeratu asteburua: (1) 8ko asteburua  + (2) 15eko asteburua  + (3) 22ko asteburua" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + " (1) " + listaAsteburuak.get(0) + " (2) " + listaAsteburuak.get(1) + " (3) " + listaAsteburuak.get(2) + ANSI_RESET);
         int aukeraEguna = sc.nextInt();
         if (aukeraEguna == 1) {
             System.out.println(ANSI_GREEN + "8ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
