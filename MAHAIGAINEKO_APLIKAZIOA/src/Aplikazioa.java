@@ -133,7 +133,7 @@ public class Aplikazioa {
     // 4. aukera: Ordutegia
     public static void laugarrenKasua() {
         System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
-        System.out.println("Astelehenak: 12:00 - 00:00 \nOsteguna: 16:00 - 00:00 \n");
+        System.out.println("Larunbatak: 12:00 - 01:00 \nIgandeak: 16:00 - 00:00 \n");
     }
     // 5. aukera: Programa ixteko
     public static void bostgarrenKasua() {
