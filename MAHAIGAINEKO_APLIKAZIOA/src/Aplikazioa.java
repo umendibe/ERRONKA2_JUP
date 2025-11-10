@@ -81,8 +81,12 @@ public class Aplikazioa {
     }
     // 1. aukera: Aste egunaren arabera pelikulen zerrenda erakutsi eta sarrerak saltzea
     public static void lehenKasua() {
+        System.out.println("Aukeratu hilabetea: ");
+        
         System.out.println(ANSI_YELLOW + " (1) " + listaAsteburuak.get(0) + " (2) " + listaAsteburuak.get(1) + " (3) " + listaAsteburuak.get(2) + ANSI_RESET);
         int aukeraEguna = sc.nextInt();
+
+        Zinema data1 = new Zinema();
         if (aukeraEguna == 1) {
             System.out.println(ANSI_GREEN + "8ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
             for (int i = 0; i < 6; i++) {
