@@ -18,9 +18,11 @@ public class Aplikazioa {
 
     static Scanner sc = new Scanner(System.in);// Kontsolatik datuak jasotzeko
     static int aukera;// Kontsolatik datuak jasotzeko
+    static int aukeraSarrera;
     static boolean errepikatu = true;// Programa barriro exekutatzeko baimena
     static ArrayList<String> lista = Zinema.Pelikulak();
     static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
+    static ArrayList<Sarrera> salmentak = new ArrayList<>();
     static List<String> larunbata;
     static List<String> igandea;
     static Map<String, ArrayList<String>> asteburuBakoitzeko = new HashMap<>();
@@ -51,10 +53,14 @@ public class Aplikazioa {
             switch (aukera) {
                 case 1:
                     lehenKasua();
+                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+                    aukeraSarrera = sc.nextInt();
                     sarreraErosi();
                     break;
                 case 2:
                     bigarrenKasua();
+                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+                    aukeraSarrera = sc.nextInt();
                     sarreraErosi();
                     break;
                 case 3:
@@ -64,6 +70,9 @@ public class Aplikazioa {
                     laugarrenKasua();
                     break;
                 case 5:
+                    Saskia();
+                    break;
+                case 6:
                     bostgarrenKasua();// Programa amaitu
                     return;
                 default:
@@ -84,7 +93,8 @@ public class Aplikazioa {
                 "2. Pelikulen informazio orokorra \n" +
                 "3. Kokapena \n" +
                 "4. Irekiera ordutegia \n" +
-                "5. Irten" + ANSI_RESET);
+                "5. Saskia \n" +
+                "6. Irten" + ANSI_RESET);
 
         System.out.print("Aukeratu bat: ");
         aukera = sc.nextInt();
@@ -154,30 +164,53 @@ public class Aplikazioa {
     }
 
     public static void sarreraErosi() {
-        System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-        int aukeraSarrera = sc.nextInt();
 
-        if (aukeraSarrera == 1) {
-            // Pelikulen indizea erakutsi aukeratzeko
-            for (int i = 0; i < lista.size(); i++) {
-                System.out.println(ANSI_RED + i + " - " + lista.get(i) + ANSI_RESET);
-            }
-            System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
-            int pelikulaIkusi = sc.nextInt();
+        if (aukeraSarrera != 1)
+            return;
 
-            double prezioa = 8.50;
-            System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
-            int pertsonaKop = sc.nextInt();
-            // Pertsona kopurua balidatu
-            if (pertsonaKop < 1 || pertsonaKop > 4) {
-                System.out.println(ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
-            } else {
-                double guztira = prezioa * pertsonaKop;
-                System.out.println(ANSI_GREEN + lista.get(pelikulaIkusi)
-                        + " pelikula ikusteko sarrera erosi duzu, "
-                        + guztira + "€ ordaindu behar dira." + ANSI_RESET);
-            }
+        System.out.println("Aukeratu eguna: \n 1. Larunbata \n 2. Igandea");
+        int aukeraEguna = sc.nextInt();
+
+        List<String> egunekoPelikulak;
+        String egunaIzena;
+        if (aukeraEguna == 1) {
+            egunekoPelikulak = larunbata;
+            egunaIzena = "Larunbata";
+        } else if (aukeraEguna == 2) {
+            egunekoPelikulak = igandea;
+            egunaIzena = "Igandea";
+        } else {
+            System.out.println(ANSI_RED + "Egun okerra aukeratu duzu." + ANSI_RESET);
+            return;
         }
+
+        for (int i = 0; i < egunekoPelikulak.size(); i++) {
+            System.out.println(" (" + i + ") " + egunekoPelikulak.get(i));
+        }
+        System.out.println("Zein pelikula ikusi nahi duzu? (Zenbakia aukeratu)");
+        int pelikulaIkusi = sc.nextInt();
+
+        if (pelikulaIkusi < 0 || pelikulaIkusi >= egunekoPelikulak.size()) {
+            System.out.println(ANSI_RED + "Pelikula ez da baliozkoa." + ANSI_RESET);
+            return;
+        }
+
+        double prezioa = 8.50;
+        System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
+        int pertsonaKop = sc.nextInt();
+
+        if (pertsonaKop < 1 || pertsonaKop > 4) {
+            System.out.println(ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
+            return;
+        }
+
+        Sarrera sarrera = new Sarrera(egunekoPelikulak.get(pelikulaIkusi), egunaIzena, pertsonaKop, prezioa);
+
+        salmentak.add(sarrera);
+
+        System.out.println(ANSI_GREEN + sarrera + ANSI_RESET);
+
+        sarrerakErrepikatzen();
     }
 
     // 2. aukera: Pelikulen eta gelen informazio orokorra + salmenta
@@ -214,5 +247,33 @@ public class Aplikazioa {
             System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
             errepikatu = false;
         }
+    }
+
+    public static void sarrerakErrepikatzen() {
+        System.out.println("Beste sarrera bat erosi nahi duzu? bai(1) ez(2) ");
+        int aukeraSarrera = sc.nextInt();
+
+        if (aukeraSarrera == 1) {
+            lehenKasua();
+            sarreraErosi();
+        } else {
+            return;
+        }
+    }
+
+    public static void Saskia() {
+        if (salmentak.isEmpty()) {
+            System.out.println(ANSI_RED + "Salmentarik ez dago." + ANSI_RESET);
+        } else {
+            for (int i = 0; i < salmentak.size(); i++) {
+                System.out.println(ANSI_BLUE + "Sarrera " + (i + 1) + ": \n" + ANSI_RESET + ANSI_GREEN
+                        + salmentak.get(i) + ANSI_RESET);
+            }
+        }
+        double total = 0;
+        for (Sarrera s : salmentak) {
+            total += s.getGuztira();
+        }
+        System.out.println("\nTotal diru-sarrera: " + total + "euro");
     }
 }
