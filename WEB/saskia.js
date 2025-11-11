@@ -46,11 +46,11 @@ bidali.addEventListener('click', function () {
 function balidatuKodea() {
   const kodea = document.getElementById("bidalikodea");
 
-  kodea.addEventListener("click", () => {
-    const valor = kodea.value.trim();
+  bidali.addEventListener("click", () => {
+    const valor = kodeaInput.value.trim();
 
-    if (valor === "") {
-      alert("Hutsik dago!");
+    if (valor === "" || isNaN(Number(valor))) {
+      alert("Ez dago zenbakirik edo balio okerra!");
     } else {
       alert("DESKONTUA DUZU!");
     }
