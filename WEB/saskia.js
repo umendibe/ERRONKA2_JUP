@@ -47,9 +47,17 @@ function balidatuKodea() {
   const kodea = document.getElementById("bidalikodea");
 
   kodea.addEventListener("click", () => {
-    alert("DESKONTUA DUZU!");
+    const valor = kodea.value.trim();
+
+    if (valor === "") {
+      alert("Hutsik dago!");
+    } else {
+      alert("DESKONTUA DUZU!");
+    }
   });
-} balidatuKodea();
+}
+
+balidatuKodea();
 const pertsonaKopurua = document.getElementById("perkop");
 
 pertsonaKopurua.addEventListener('input', function () {
