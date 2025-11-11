@@ -8,6 +8,7 @@ public class Zinema{
     // Gelen izenen zerrenda gordetzeko ArrayList-a
     private static ArrayList<String> gelak = new ArrayList<>();
     private static ArrayList<String> asteburuak = new ArrayList<>();
+    public static ArrayList<String> hilabeteak = new ArrayList<>();
 
     /*
      * Bloke estatikoa:
@@ -44,9 +45,14 @@ public class Zinema{
         gelak.add("Zientzia fikziozko gela");
         gelak.add("Komedia gela");
 
-        asteburuak.add("8ko asteburua");
-        asteburuak.add("15eko asteburua");
-        asteburuak.add("22ko asteburua");
+        asteburuak.add("1. asteburua");
+        asteburuak.add("2. asteburua");
+        asteburuak.add("3. asteburua");
+        asteburuak.add("4. asteburua");
+        asteburuak.add("5. asteburua");
+
+        hilabeteak.add("Azaroa");
+        hilabeteak.add("Abendua");
     }
 
     // Metodoa: pelikulen zerrenda itzultzen du 

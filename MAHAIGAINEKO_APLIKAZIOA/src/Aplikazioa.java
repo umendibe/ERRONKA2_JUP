@@ -1,5 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public class Aplikazioa {
     // Koloreak kontsolarako
@@ -16,6 +21,10 @@ public class Aplikazioa {
     static boolean errepikatu = true;// Programa barriro exekutatzeko baimena
     static ArrayList<String> lista = Zinema.Pelikulak();
     static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
+    static List<String> larunbata;
+    static List<String> igandea;
+    static Map<String, ArrayList<String>> asteburuBakoitzeko = new HashMap<>();
+    static Random random = new Random();
 
     public static void main(String[] args) {
         /**
@@ -38,7 +47,7 @@ public class Aplikazioa {
         while (errepikatu) {// Programa nagusia bueltaka exekutatzen da erabiltzaileak nahi duen arte
 
             Menua1();// Menua erakutsi eta aukera jaso
-        // Menua erakutsi eta aukera jaso
+            // Menua erakutsi eta aukera jaso
             switch (aukera) {
                 case 1:
                     lehenKasua();
@@ -55,7 +64,7 @@ public class Aplikazioa {
                     laugarrenKasua();
                     break;
                 case 5:
-                    bostgarrenKasua();//Programa amaitu
+                    bostgarrenKasua();// Programa amaitu
                     return;
                 default:
                     System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
@@ -67,6 +76,7 @@ public class Aplikazioa {
         }
         sc.close();// Scanner-a itxi
     }
+
     // Menu nagusia inprimatzen du eta aukera jasotzen du
     public static void Menua1() {
         System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
@@ -79,45 +89,68 @@ public class Aplikazioa {
         System.out.print("Aukeratu bat: ");
         aukera = sc.nextInt();
     }
-    // 1. aukera: Aste egunaren arabera pelikulen zerrenda erakutsi eta sarrerak saltzea
+
+    // 1. aukera: Aste egunaren arabera pelikulen zerrenda erakutsi eta sarrerak
+    // saltzea
     public static void lehenKasua() {
         System.out.println("Aukeratu hilabetea: ");
-        
-        System.out.println(ANSI_YELLOW + " (1) " + listaAsteburuak.get(0) + " (2) " + listaAsteburuak.get(1) + " (3) " + listaAsteburuak.get(2) + ANSI_RESET);
-        int aukeraEguna = sc.nextInt();
-
-        Zinema data1 = new Zinema();
-        if (aukeraEguna == 1) {
-            System.out.println(ANSI_GREEN + "8ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
-            for (int i = 0; i < 6; i++) {
-                System.out.println(lista.get(i));
-            }
-            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
-            for (int i = 6; i < 12; i++) {
-                System.out.println(lista.get(i));
-            }
-
-        } else if (aukeraEguna == 2) {
-            System.out.println(ANSI_GREEN + "15eko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
-            for (int i = 6; i < 12; i++) {
-                System.out.println(lista.get(i));
-            }
-            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
-            for (int i = 0; i < 6; i++) {
-                System.out.println(lista.get(i));
-            }
-
-        } else if (aukeraEguna == 3) {
-            System.out.println(ANSI_GREEN + "22ko asteburuko pelikulak: \n Larunbateko pelikulak:" + ANSI_RESET);
-            for (int i = 0; i < 6; i++) {
-                System.out.println(lista.get(i));
-            }
-            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET);
-            for (int i = 6; i < 12; i++) {
-                System.out.println(lista.get(i));
-            }
+        for (int i = 0; i < Zinema.hilabeteak.size(); i++) {
+            System.out.println(" (" + (i + 1) + ") " + Zinema.hilabeteak.get(i));
         }
-        // Sarrerak erosi nahi diren galdetu
+        int aukeraHilabetea = sc.nextInt();
+        System.out.println("Aukeratu asteburua: ");
+        for (int i = 0; i < Zinema.Asteburuak().size(); i++) {
+            System.out.println(" (" + (i + 1) + ") " + Zinema.Asteburuak().get(i));
+        }
+        int aukeraAsteburu = sc.nextInt();
+
+        String kodea = aukeraHilabetea + "-" + aukeraAsteburu;
+
+        ArrayList<String> pelikulakAsteburu;
+
+        if (asteburuBakoitzeko.containsKey(kodea)) {
+            pelikulakAsteburu = asteburuBakoitzeko.get(kodea);
+            igandea = new ArrayList<>(pelikulakAsteburu.subList(0, 6));
+            larunbata = new ArrayList<>(pelikulakAsteburu.subList(6, 12));
+        } else {
+            pelikulakAsteburu = new ArrayList<>();
+
+            ArrayList<String> kopiaLista = new ArrayList<>(lista);
+            Collections.shuffle(kopiaLista, random);
+            larunbata = new ArrayList<>(kopiaLista.subList(0, Math.min(6, kopiaLista.size())));
+
+            Collections.shuffle(kopiaLista, random);
+            igandea = new ArrayList<>(kopiaLista.subList(0, Math.min(6, kopiaLista.size())));
+
+            pelikulakAsteburu.addAll(igandea);
+            pelikulakAsteburu.addAll(larunbata);
+
+            asteburuBakoitzeko.put(kodea, pelikulakAsteburu);
+        }
+        if (aukeraAsteburu < 0 || aukeraAsteburu > 5) {
+            System.out.println(ANSI_RED + "AUKERA EZ DA BALIOZKOA" + ANSI_RESET);
+        } else if (aukeraAsteburu == 1) {
+            System.out.println(
+                    ANSI_GREEN + "1. asteburuko pelikulak: \n Larunbateko pelikulak:\n" + ANSI_RESET + larunbata);
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET + igandea);
+        } else if (aukeraAsteburu == 2) {
+            System.out.println(
+                    ANSI_GREEN + "2. asteburuko pelikulak: \n Larunbateko pelikulak:\n" + ANSI_RESET + larunbata);
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET + igandea);
+        } else if (aukeraAsteburu == 3) {
+            System.out.println(
+                    ANSI_GREEN + "3. asteburuko pelikulak: \n Larunbateko pelikulak:\n" + ANSI_RESET + larunbata);
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET + igandea);
+        } else if (aukeraAsteburu == 4) {
+            System.out.println(
+                    ANSI_GREEN + "4. asteburuko pelikulak: \n Larunbateko pelikulak:\n" + ANSI_RESET + larunbata);
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET + igandea);
+        } else if (aukeraAsteburu == 5) {
+            System.out.println(
+                    ANSI_GREEN + "5. asteburuko pelikulak: \n Larunbateko pelikulak:\n" + ANSI_RESET + larunbata);
+
+            System.out.println(ANSI_GREEN + " \n Igandeko pelikulak:" + ANSI_RESET + igandea);
+        }
     }
 
     public static void sarreraErosi() {
@@ -135,7 +168,7 @@ public class Aplikazioa {
             double prezioa = 8.50;
             System.out.println("Zenbat sarrera erosi nahi dituzu? (1etik 4ra gehienez)");
             int pertsonaKop = sc.nextInt();
-           // Pertsona kopurua balidatu
+            // Pertsona kopurua balidatu
             if (pertsonaKop < 1 || pertsonaKop > 4) {
                 System.out.println(ANSI_RED + "ERROREA: Mesedez 1 eta 4 arteko zenbaki bat sartu." + ANSI_RESET);
             } else {
@@ -146,6 +179,7 @@ public class Aplikazioa {
             }
         }
     }
+
     // 2. aukera: Pelikulen eta gelen informazio orokorra + salmenta
     public static void bigarrenKasua() {
         System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + Zinema.Pelikulak() + "\n");
@@ -159,16 +193,19 @@ public class Aplikazioa {
         System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
         System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki.\n");
     }
+
     // 4. aukera: Ordutegia
     public static void laugarrenKasua() {
         System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
         System.out.println("Larunbatak: 12:00 - 01:00 \nIgandeak: 16:00 - 00:00 \n");
     }
+
     // 5. aukera: Programa ixteko
     public static void bostgarrenKasua() {
         System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
         errepikatu = false;
     }
+
     // Beste ekintza bat egin nahi den galdetus
     public static void errepikatzen() {
         System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
