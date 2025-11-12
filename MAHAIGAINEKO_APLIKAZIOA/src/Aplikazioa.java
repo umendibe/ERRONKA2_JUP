@@ -19,6 +19,7 @@ public class Aplikazioa {
     static Scanner sc = new Scanner(System.in);// Kontsolatik datuak jasotzeko
     static int aukera;// Kontsolatik datuak jasotzeko
     static int aukeraSarrera;
+    static int aukeraHilabetea;
     static boolean errepikatu = true;// Programa barriro exekutatzeko baimena
     static ArrayList<String> lista = Zinema.Pelikulak();
     static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
@@ -53,14 +54,18 @@ public class Aplikazioa {
             switch (aukera) {
                 case 1:
                     lehenKasua();
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    aukeraSarrera = sc.nextInt();
-                    sarreraErosi();
+                    if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+                        break;
+                    } else {
+                        sarrerakGaldera();
+                        sarreraErosi();
+                    }
+
                     break;
                 case 2:
                     bigarrenKasua();
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    aukeraSarrera = sc.nextInt();
+                    sarrerakGaldera();
+                    lehenKasua();
                     sarreraErosi();
                     break;
                 case 3:
@@ -107,16 +112,23 @@ public class Aplikazioa {
         for (int i = 0; i < Zinema.hilabeteak.size(); i++) {
             System.out.println(" (" + (i + 1) + ") " + Zinema.hilabeteak.get(i));
         }
-        int aukeraHilabetea = sc.nextInt();
-        System.out.println("Aukeratu asteburua: ");
+        aukeraHilabetea = sc.nextInt();
+        if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+            System.out
+                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
+                            + ANSI_RESET);
+            return;
+        } else
+            System.out.println("Aukeratu asteburua: ");
         for (int i = 0; i < Zinema.Asteburuak().size(); i++) {
             System.out.println(" (" + (i + 1) + ") " + Zinema.Asteburuak().get(i));
         }
         int aukeraAsteburu = sc.nextInt();
 
-        if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+        if (aukeraAsteburu < 1 || aukeraAsteburu > Zinema.Asteburuak().size()) {
             System.out
-                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU." + ANSI_RESET);
+                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
+                            + ANSI_RESET);
             return;
         }
         String kodea = aukeraHilabetea + "-" + aukeraAsteburu;
@@ -280,5 +292,10 @@ public class Aplikazioa {
             total += s.getGuztira();
         }
         System.out.println("\nTotal diru-sarrera: " + total + "euro");
+    }
+
+    public static void sarrerakGaldera() {
+        System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+        aukeraSarrera = sc.nextInt();
     }
 }
