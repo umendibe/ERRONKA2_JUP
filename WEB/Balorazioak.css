@@ -316,12 +316,8 @@ p {
    Altuerak, lerro-altuerak eta itxura ezartzen ditu */
 dialog {
     height: 200px;
-<<<<<<< HEAD
     line-height: 200px; 
     text-align: center;
-=======
-    line-height: 200px;   
->>>>>>> feature/balorazioaketapuntuak
     font-weight: bold;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.95);
@@ -331,11 +327,7 @@ dialog {
 dialog p {
     display: inline-block;
     vertical-align: middle;
-<<<<<<< HEAD
     line-height: normal; 
-=======
-    line-height: normal;  
->>>>>>> feature/balorazioaketapuntuak
     margin: 0;
 }
 /* ==========================
