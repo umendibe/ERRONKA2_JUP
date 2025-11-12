@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Aplikazioa {
-    // Koloreak kontsolarako
+    /** Koloreak kontsolarako */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
@@ -16,18 +16,32 @@ public class Aplikazioa {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
 
-    static Scanner sc = new Scanner(System.in);// Kontsolatik datuak jasotzeko
-    static int aukera;// Kontsolatik datuak jasotzeko
+    static Scanner sc = new Scanner(System.in);
+    /** Kontsolatik datuak jasotzeko */
+    static int aukera;
+    /** Kontsolatik datuak jasotzeko */
     static int aukeraSarrera;
-    static boolean errepikatu = true;// Programa barriro exekutatzeko baimena
+    /** Sarrerak erosteko aukeraren aldagaia */
+    static boolean errepikatu = true;
+    /** Programa barriro exekutatuko den ala ez adierazten du */
     static ArrayList<String> lista = Zinema.Pelikulak();
+    /** Zinema klaseko pelikulen zerrenda */
     static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
+    /** Zinema klaseko asteburuen zerrenda */
     static ArrayList<Sarrera> salmentak = new ArrayList<>();
+    /** Erositako sarrerak gordetzeko zerrenda */
     static List<String> larunbata;
+    /** Larunbateko pelikulen zerrenda */
     static List<String> igandea;
+    /** Igandeko pelikulen zerrenda */
     static Map<String, ArrayList<String>> asteburuBakoitzeko = new HashMap<>();
+    /** Asteburu bakoitzeko pelikulen map-a */
     static Random random = new Random();
 
+    /** Ausazko zenbakiak sortzeko Random objektua */
+    /**
+     * Programa nagusia: erabiltzaileak menuko aukerak hautatu eta exekutatzen ditu.
+     */
     public static void main(String[] args) {
         /**
          * BIRFAKTORIZAZIOA
@@ -46,10 +60,10 @@ public class Aplikazioa {
          * 7. Errepikatzen den galdetegia errepikatzen() metodoan kokatu da. Era honetan
          * main metodoa garbia eta ulergarria geratzen da lehen bistaz --> 137. lerroan
          */
-        while (errepikatu) {// Programa nagusia bueltaka exekutatzen da erabiltzaileak nahi duen arte
+        while (errepikatu) {/** Programa nagusia bueltaka exekutatzen da erabiltzaileak nahi duen arte */
 
-            Menua1();// Menua erakutsi eta aukera jaso
-            // Menua erakutsi eta aukera jaso
+            Menua1();
+            /** Menua erakutsi eta aukera jaso */
             switch (aukera) {
                 case 1:
                     lehenKasua();
@@ -73,20 +87,23 @@ public class Aplikazioa {
                     Saskia();
                     break;
                 case 6:
-                    bostgarrenKasua();// Programa amaitu
+                    bostgarrenKasua();
+                    /** Programa amaitu */
                     return;
                 default:
                     System.out.println(ANSI_RED + "Aukera ez da baliozkoa!" + ANSI_RESET);
             }
 
             if (errepikatu) {
-                errepikatzen();// Erabiltzaileari jarraitu nahi duen galdetzen zaio
+                errepikatzen();/** Erabiltzaileari jarraitu nahi duen galdetzen zaio */
             }
         }
-        sc.close();// Scanner-a itxi
+        sc.close();/** Scanner-a itxi */
     }
 
-    // Menu nagusia inprimatzen du eta aukera jasotzen du
+    /**
+     * Menu nagusia inprimatzen du eta aukera jasotzen du
+     */
     public static void Menua1() {
         System.out.println(ANSI_CYAN + "\nZein ikusi nahi duzu: \n" +
                 "1. Aste eguna \n" +
@@ -100,8 +117,11 @@ public class Aplikazioa {
         aukera = sc.nextInt();
     }
 
-    // 1. aukera: Aste egunaren arabera pelikulen zerrenda erakutsi eta sarrerak
-    // saltzea
+    /**
+     * 1. aukerari dagokion ekintza: aste egunaren arabera
+     * pelikulen zerrenda
+     * erakutsi eta sarrerak erosteko aukera eskaintzen du.
+     */
     public static void lehenKasua() {
         System.out.println("Aukeratu hilabetea: ");
         for (int i = 0; i < Zinema.hilabeteak.size(); i++) {
@@ -163,6 +183,11 @@ public class Aplikazioa {
         }
     }
 
+    /**
+     * Sarrerak erosteko metodoa, erabiltzaileak eguna, pelikula eta sarrera kopurua
+     * aukeratzen du.
+     */
+
     public static void sarreraErosi() {
 
         if (aukeraSarrera != 1)
@@ -213,33 +238,43 @@ public class Aplikazioa {
         sarrerakErrepikatzen();
     }
 
-    // 2. aukera: Pelikulen eta gelen informazio orokorra + salmenta
+    /**
+     * 2. aukerari dagokion ekintza: Pelikulen eta gelen informazio orokorra erakusten du.
+     * */
     public static void bigarrenKasua() {
         System.out.println(ANSI_BLUE + "\nPelikulen lista: " + ANSI_RESET + Zinema.Pelikulak() + "\n");
         System.out.println(ANSI_PURPLE + "Pelikula kopurua: " + ANSI_RESET + Zinema.Pelikulak().size() + "\n");
         System.out.println(ANSI_BLUE + "Gelak: " + ANSI_RESET + Zinema.Gelak() + "\n");
         System.out.println(ANSI_PURPLE + "Gela kopurua: " + ANSI_RESET + Zinema.Gelak().size() + "\n");
     }
-    // 3. aukera: Kokapena
+    /** 
+     * 3. aukerari dagokion ekintza: zinemaren kokapena erakusten du. 
+     */
 
     public static void hirugarrenKasua() {
         System.out.println(ANSI_CYAN + "\nKokapena:" + ANSI_RESET);
         System.out.println("Usurbilen kokatzen gara, Errekatxiki kalean konkretuki.\n");
     }
 
-    // 4. aukera: Ordutegia
+    /** 
+     * 4. aukerari dagokion ekintza: zinemaren ordutegia erakusten du. 
+     */
     public static void laugarrenKasua() {
         System.out.println(ANSI_GREEN + "Ordutegia:" + ANSI_RESET);
         System.out.println("Larunbatak: 12:00 - 01:00 \nIgandeak: 16:00 - 00:00 \n");
     }
 
-    // 5. aukera: Programa ixteko
+   /** 
+     * 6. aukerari dagokion ekintza: programa amaitzen du eta "Agur!" mezua erakusten du. 
+     */
     public static void bostgarrenKasua() {
         System.out.println(ANSI_RED + "Agur!" + ANSI_RESET);
         errepikatu = false;
     }
 
-    // Beste ekintza bat egin nahi den galdetus
+     /** 
+     * Programa berriro exekutatu nahi den galdetzen du. 
+     */
     public static void errepikatzen() {
         System.out.println(ANSI_YELLOW + "\nBeste zerbait egin nahi duzu? bai(1) ez(2)" + ANSI_RESET);
         int jarraitu = sc.nextInt();
@@ -248,7 +283,9 @@ public class Aplikazioa {
             errepikatu = false;
         }
     }
-
+     /** 
+     * Beste sarrera bat erosi nahi den galdetzen du. 
+     */
     public static void sarrerakErrepikatzen() {
         System.out.println("Beste sarrera bat erosi nahi duzu? bai(1) ez(2) ");
         int aukeraSarrera = sc.nextInt();
@@ -260,7 +297,9 @@ public class Aplikazioa {
             return;
         }
     }
-
+     /** 
+     * Saskian dauden erosketak erakusten ditu eta guztira zenbat diru gastatu den kalkulatzen du. 
+     */
     public static void Saskia() {
         if (salmentak.isEmpty()) {
             System.out.println(ANSI_RED + "Salmentarik ez dago." + ANSI_RESET);
