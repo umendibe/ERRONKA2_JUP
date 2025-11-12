@@ -42,8 +42,9 @@ public class Aplikazioa {
     static int aukeraSarrera;
     /** Sarrera aukeratzeko aldagai globala */
     static boolean errepikatu = true;
-    static int aukeraHilabetea;
     /** Programa barriro exekutatzeko baimena */
+    static int aukeraHilabetea;
+    /** Hilabetea aukeratzeko aldagai globala */
     static ArrayList<String> lista = Zinema.Pelikulak();
     /** Pelikulen zerrenda Zinema.java fitxategitik hartuta */
     static ArrayList<String> listaAsteburuak = Zinema.Asteburuak();
@@ -64,16 +65,18 @@ public class Aplikazioa {
 
     public static void main(String[] args) {
 
-        while (errepikatu) {/* Programa nagusia bueltaka exekutatzen da erabiltzaileak nahi duen arte */
+        while (errepikatu) {/** Programa nagusia bueltaka exekutatzen da erabiltzaileak nahi duen arte */
 
-            Menua1();/* Menua erakutsi eta aukera jaso */
+            Menua1();/** Menua erakutsi eta aukera jaso */
 
             switch (aukera) { /** Aukeraren arabera */
                 /** Lehen kasua : Hilabetea eta asteburua aukeratu, ondoren sarrerak erosteko aukera eman.*/
                 case 1:
                     lehenKasua();
+                    /** Errore kasua */
                     if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
                         break;
+                    /** Bestela sarrerak erosi */
                     } else {
                         sarrerakGaldera();
                         sarreraErosi();
@@ -84,7 +87,7 @@ public class Aplikazioa {
                 case 2:
                     bigarrenKasua();
                     sarrerakGaldera();
-                    lehenKasua();
+                    lehenKasua(); /** Data aukeratzeko */
                     sarreraErosi();
                     break;
                     /** Hirugarren kasua : Kokapena erakutsi.*/
@@ -136,6 +139,7 @@ public class Aplikazioa {
             System.out.println(" (" + (i + 1) + ") " + Zinema.hilabeteak.get(i));
         }
         aukeraHilabetea = sc.nextInt();
+        /** Errore kasua */
         if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
             System.out
                     .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
@@ -147,7 +151,7 @@ public class Aplikazioa {
             System.out.println(" (" + (i + 1) + ") " + Zinema.Asteburuak().get(i));
         }
         int aukeraAsteburu = sc.nextInt();
-
+        /** Errore kasua */
         if (aukeraAsteburu < 1 || aukeraAsteburu > Zinema.Asteburuak().size()) {
             System.out
                     .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
