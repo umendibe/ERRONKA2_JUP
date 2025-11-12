@@ -1,3 +1,15 @@
+/**
+ * Deskribapena:
+ * ZineUsurbil webguneko "Saskia" atalerako estilo-fitxategia.
+ * Web orriaren egitura bisuala, koloreak, tamainak eta erantzun-izaera (responsive design)
+ * definitzen ditu.
+ */
+
+/* ==========================
+   OINARRIZKO ESTILOAK
+========================== */
+
+/* Gorputzaren estilo nagusiak: letra-tipoa, atzeko kolorea eta marjinak */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
@@ -6,7 +18,11 @@ body {
     margin: 0;
 }
 
-/* Logo */
+/* ==========================
+   HEADER ETA LOGOA
+========================== */
+
+/* Logoaren tamaina eta hover efektua */
 .logoa_argazkia {
     width: 100px;
     height: auto;
@@ -17,7 +33,7 @@ body {
     transform: scale(1.08);
 }
 
-/* Título */
+/* ZineUsurbil izenburua eta koloreak */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
@@ -29,17 +45,16 @@ body {
     color: #eae1e1;
 }
 
+/* Header-aren egitura eta lerro bereizlea */
 header {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px 16px;
 }
 
+/* Nabigazio elementuak */
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -61,12 +76,17 @@ header {
     transform: scale(1.08);
 }
 
-/* Página: SASKIA */
+/* ==========================
+   SASKIA ORRIAREN EDUKIA
+========================== */
+
+/* Atalaren izenburua */
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
+/* Formularioaren edukiontzia */
 .saskia_edukia {
     background: rgba(255, 255, 255, 0.08);
     padding: 30px;
@@ -76,6 +96,7 @@ header {
     font-family: Arial, sans-serif;
 }
 
+/* Edukien barneko edukia zentratuta */
 .saskia_edukia .saskia_edukia {
     background-color: transparent;
     padding: 0;
@@ -83,6 +104,7 @@ header {
     justify-content: center;
 }
 
+/* Etiketak */
 .saskia_edukia p {
     margin-bottom: 12px;
     font-size: 16px;
@@ -90,6 +112,7 @@ header {
     font-weight: bold;
 }
 
+/* Aukeratzeko eta input elementuentzako estilo orokorra */
 .pelikula_aukera, #perkop, .ordua_input, #txartela, #data {
     cursor: pointer;
 }
@@ -107,6 +130,7 @@ header {
     margin-top: 6px;
 }
 
+/* Erosketa botoia eta bere irudia */
 .erosi {
     background-color: none;
     border: none;
@@ -121,7 +145,11 @@ header {
     height: auto;
 }
 
+/* ==========================
+   POPUP LEIHOA
+========================== */
 
+/* Popup mezua agertzen den kutxa */
 #popup {
     display: none;
     position: fixed;
@@ -137,6 +165,7 @@ header {
     height: 150px;
 }
 
+/* Popup-eko ixteko botoia */
 .botoia {
     color: white;
     margin-top: 10%;
@@ -160,7 +189,7 @@ header {
     transform: translate(350%, 30%);
 }
 
-
+/* Txartel kodearen bidaltzeko botoia */
 #bidalikodea {
     margin-top: 10px;
     font-size: 10px;
@@ -168,6 +197,11 @@ header {
     background-color: #504e53;
 }
 
+/* ==========================
+   FOOTER ETA SARE SOZIALAK
+========================== */
+
+/* Footer orokorra */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -178,6 +212,7 @@ footer {
     box-sizing: border-box;
 }
 
+/* Footer-eko nabigazioa eta logoak */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -215,6 +250,7 @@ footer {
     transform: scale(1.08);
 }
 
+/* Sare sozialen ikonoen diseinua */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -223,15 +259,17 @@ footer {
     margin-top: 12px;
 }
 
+/* Formularioaren balidazioa: koloreak input egokientzat eta okerrentzat */
 #formulario input:invalid,
 #formulario select:invalid {
-border: 2px solid rgb(155, 3, 3);
+    border: 2px solid rgb(155, 3, 3);
 }
 #formulario input:valid,
 #formulario select:valid {
-  border: 2px solid white;
+    border: 2px solid white;
 }
 
+/* Sare sozialen irudien efektuak */
 .sare_sozialak img {
     width: 30px;
     height: 30px;
@@ -245,6 +283,7 @@ border: 2px solid rgb(155, 3, 3);
     filter: grayscale(0%);
 }
 
+/* Copyright testua */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -253,8 +292,10 @@ border: 2px solid rgb(155, 3, 3);
 }
 
 /* ==========================
-   RESPONSIVE
+   RESPONSIVE DISEINUA
 ========================== */
+
+/* Tablet eta pantaila txikiagoetarako egokitzapena */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -266,283 +307,7 @@ border: 2px solid rgb(155, 3, 3);
     }
 }
 
-.footer_nabigazioa .logoa_argazkia {
-    width: 100px;
-    height: auto;
-}
-
-.footer_nabigazioa .ZineUsurbil {
-    margin-left: 0;
-}
-
-.footer_nabigazioa .nabigazio_elementuak {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: white;
-    gap: 16px;
-    align-items: center;
-}
-
-.footer_nabigazioa .nabigazio_elementuak a {
-    text-decoration: none;
-    color: white;
-    transition: transform 0.3s;
-}
-
-.footer_nabigazioa .nabigazio_elementuak a:hover {
-    transform: scale(1.08);
-}
-
-.sare_sozialak {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-}
-
-.sare_sozialak img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.sare_sozialak img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-}
-
-.copyright_p {
-    color: #f0efef;
-    text-align: center;
-    margin: 12px 0 0 0;
-    font-size: 0.9rem;
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
-    .footer_nabigazioa {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer_nabigazioa .nabigazio_elementuak {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .copyright_p {
-        text-align: center;
-    }
-}
-
-/* ==========================
-   HEADER ETA NABIGAZIOA — RESPONSIVE
-========================== */
-
-/* --- Tablets --- */
-@media screen and (max-width: 1024px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
-
-    .logoa_argazkia {
-        width: 90px;
-    }
-
-    .ZineUsurbil {
-        font-size: 1.5rem;
-    }
-
-    .nabigazio_elementuak {
-        padding-left: 0;
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .submenu {
-        left: auto;
-        right: 0;
-        top: 45px;
-        flex-direction: column;
-        background: rgba(20, 20, 40, 0.95);
-        border-radius: 8px;
-        padding: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        min-width: 160px;
-    }
-
-    .submenu a {
-        text-align: center;
-        width: 100%;
-    }
-}
-
-/* --- Mugikor handiak --- */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-    }
-
-    .logoa_argazkia {
-        width: 80px;
-    }
-
-    .ZineUsurbil {
-        margin: 6px 0;
-        font-size: 1.3rem;
-    }
-
-    .nabigazio_elementuak {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        padding-left: 0;
-        width: 100%;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .menu img {
-        width: 30px;
-        transition: transform 0.3s ease;
-    }
-
-    .submenu {
-        position: static;
-        display: none;
-        background: rgba(20, 20, 40, 0.9);
-        box-shadow: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 0;
-        gap: 8px;
-        border-radius: 6px;
-        width: 100%;
-    }
-
-    .submenu.activo {
-        display: flex;
-    }
-
-    .submenu a {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 8px 14px;
-        border-radius: 6px;
-        width: 90%;
-        text-align: center;
-    }
-
-    .submenu a:hover {
-        background: rgba(255, 255, 255, 0.25);
-    }
-}
-
-/* --- Mugikor txikiak --- */
-@media screen and (max-width: 430px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 6px;
-        padding: 8px 0;
-    }
-
-    .logoa_argazkia {
-        width: 65px;
-        height: auto;
-        margin-bottom: 4px;
-    }
-
-    .ZineUsurbil {
-        font-size: 1.1rem;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 4px;
-    }
-
-    .menu img {
-        width: 26px;
-        height: auto;
-    }
-
-    .submenu {
-        width: 100%;
-        background: rgba(20, 20, 40, 0.95);
-        padding: 6px 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .submenu a {
-        font-size: 0.9rem;
-        padding: 8px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nabigazio_elementuak {
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        padding-left: 0;
-    }
-
-    .nabarmenak {
-        margin-top: 10px;
-    }
-
-    .nabarmenak_pelikulak img {
-        width: 100%;
-        height: auto;
-        max-width: 380px;
-    }
-
-    .tituluak {
-        font-size: 1.4rem;
-        margin-top: 10px;
-    }
-
-    #atzera_botoia img {
-        width: 24px;
-        height: auto;
-    }
-
-    #aurrera_botoia img {
-        width: 24px;
-        height: auto;
-    }
-
-    #hasierako_argazkia {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-
-    }
-}
-
+/* Pantaila guztietarako zabalera muga */
 html, body {
     width: 100%;
     max-width: 100%;
