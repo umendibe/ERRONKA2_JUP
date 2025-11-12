@@ -1,62 +1,80 @@
 /* ==========================
    BODY
 ========================== */
+/* Orrialdearen gorputzaren estilo nagusia */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Testuaren letra tipoa */
+    background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%); /* Atzeko planoa, gradiente erradial batekin */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ==========================
    LOGOA ETA TITULUAK
 ========================== */
+/* Logoa irudi elementua */
 .logoa_argazkia {
-    width: 100px;
+    width: 100px; /* Zabalerarik finkoa */
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Animazioa handitzean */
 }
 
 .logoa_argazkia:hover {
-    transform: scale(1.08);
+    transform: scale(1.08); /* Handitze efektua hoverrean */
 }
 
+/* ZineUsurbil testua */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
-    color: #f0efef;
-    margin-left: 16px;
+    color: #f0efef; /* Testuaren kolorea */
+    margin-left: 16px; /* Ezkerretik tartea */
 }
 
+/* Estilo estekentzat */
 .ZineUsurbil_textua {
-    text-decoration: none;
+    text-decoration: none; /* Azpimarratu gabe */
     color: #eae1e1;
 }
 
 /* ==========================
    HEADER ETA NABIGAZIOA
 ========================== */
+/* Header eta footer nabigazioa lerro batean jarri */
 header,
 .footer_nabigazioa {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* Elementuen arteko tartea */
 }
 
+/* Header berezia */
 header {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid white; /* Lerroa behealdean */
 }
 
+/* Nabigazio elementuak */
 .nabigazio_elementuak {
-    padding-left: 130px;
+    padding-left: 130px; /* Hasierako tartea */
     display: flex;
     color: white;
     gap: 24px;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Animazioa */
 }
 
 .nabigazio_elementuak p {
     margin: 0;
     padding: 0 8px;
-    cursor: pointer;
+    cursor: pointer; /* Kurtsorea aldatzea */
 }
 
 .nabigazio_elementuak a {
@@ -65,9 +83,10 @@ header {
 }
 
 .nabigazio_elementuak p:hover {
-    transform: scale(1.08);
+    transform: scale(1.08); /* Hover efektua */
 }
 
+/* Hamburguesa menua */
 .hamburguesa_menua {
     width: 40px;
     height: auto;
@@ -82,32 +101,34 @@ header {
 /* ==========================
    ATAL NAGUSIAK
 ========================== */
+/* Nabarmenak atal nagusiak */
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
+/* Nabarmenak pelikulak */
 .nabarmenak_pelikulak {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Lerroak automatikoki biraka */
     margin: 0 auto;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1200px; /* Gehienezko zabalera */
 }
 
 .nabarmenak_pelikulak img {
     display: block;
     cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427);
+    border-radius: 8px; /* Borda biribila */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.427); /* Itzal leuna */
     transition: transform 0.3s ease;
     width: 100%;
     max-width: 686px;
     height: auto;
-    object-fit: cover;
+    object-fit: cover; /* Irudiaren proportzioa mantendu */
 }
 
 .nabarmenak_pelikulak img:hover {
@@ -124,6 +145,7 @@ header {
     gap: 12px;
 }
 
+/* Botoien estiloa */
 .pelikulak_botoiak {
     display: flex;
     gap: 12px;
@@ -156,11 +178,13 @@ header {
     object-fit: contain;
 }
 
+/* Fade efektuak */
 #blackphone2.fade-out {
     opacity: 0;
     transform: scale(1.1);
 }
 
+/* Tituluak */
 .tituluak {
     text-align: center;
     margin-top: 15px;
@@ -172,16 +196,19 @@ header {
 /* ==========================
    FOOTER
 ========================== */
+/* Footer nagusia */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Mantén el borde superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Goiko lerroa */
     text-align: center;
     box-sizing: border-box;
+    margin-top: auto;
 }
 
+/* Footer nabigazioa */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -189,7 +216,7 @@ footer {
     align-items: center;
     gap: 16px;
     margin-bottom: 12px;
-    border-bottom: none; /* Elimina el borde inferior aquí */
+    border-bottom: none;
 }
 
 .footer_nabigazioa .logoa_argazkia {
@@ -220,6 +247,7 @@ footer {
     transform: scale(1.08);
 }
 
+/* Sare sozialak */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -232,7 +260,7 @@ footer {
     width: 30px;
     height: 30px;
     object-fit: cover;
-    filter: grayscale(100%);
+    filter: grayscale(100%); /* Monokromo efektua */
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -241,6 +269,7 @@ footer {
     filter: grayscale(0%);
 }
 
+/* Copyright testua */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -251,20 +280,26 @@ footer {
 /* ==========================
    DETAILS
 ========================== */
+/* HTML details elementuak */
 details {
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 details:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15); /* Hover efektua */
 }
 
 details[open] {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Irekitze efektua */
 }
 
+/* ==========================
+   MEDIA QUERIES
+========================== */
+/* Responsive diseinua: tablet eta mugikor handiak */
 @media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
+    /* Footer elementuak zutabean jartzea */
     .footer_nabigazioa {
         flex-direction: column;
         align-items: center;
@@ -478,13 +513,15 @@ details[open] {
         width: 100%;
         height: auto;
         object-fit: cover;
-
     }
 }
 
+/* ==========================
+   HTML ETA BODY ESTILOAK
+========================== */
 html, body {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Horizontal scroll ezabatzea */
 }

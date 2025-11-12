@@ -2,27 +2,50 @@
 <html lang="eu">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="JUP">
-<meta name="description" content="ZineUsurbileko kartelera ataleko orria da hau.">
-    <title>Kartelera - ZineUsurbil</title>
-    <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
+    <!-- ==========================
+         META INFORMAZIOA
+    ========================== -->
+    <meta charset="utf-8"> <!-- Testu karaktere multzoa -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gailu mugikorreko egokitzapena -->
+    <meta name="author" content="JUP"> <!-- Egilearen izena -->
+    <meta name="description" content="ZineUsurbileko kartelera ataleko orria da hau."> <!-- Orriaren deskribapena -->
+    
+    <title>Kartelera - ZineUsurbil</title> <!-- Orriaren izenburua -->
+    <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png"> <!-- Favicon -->
+    
+    <!-- Estilo orriak -->
     <link rel="stylesheet" href="Kartelera.css">
     <link rel="stylesheet" href="header.css">
+    
+    <!-- JavaScript fitxategiak -->
     <script src="header.js" defer></script>
     <script src="Kartelera.js" defer></script>
 </head>
 
 <body>
+    <!-- ==========================
+         HEADER (Goiburua)
+    ========================== -->
     <header>
-        <a href="index.html"><img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo"></a>
-        <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
+        <!-- Logoa eta esteka nagusia -->
+        <a href="index.html">
+            <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
+        </a>
+        
+        <!-- Webguneko izena -->
+        <h1 class="ZineUsurbil">
+            <a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a>
+        </h1>
+        
+        <!-- Nabigazio menu nagusia -->
         <nav class="nabigazio_elementuak">
             <div class="menu">
+                <!-- Menu botoia (hamburguesa) -->
                 <button id="menuButton" onclick="desplegable()">
                     <img src="img2/desplegable_menu.png" alt="Menu">
                 </button>
+                
+                <!-- Submenua (deskargagarria) -->
                 <div class="submenu" id="submenu">
                     <p><a href="index.html">Orri Nagusia</a></p>
                     <p><a href="Kartelera.html">Kartelera</a></p>
@@ -34,11 +57,19 @@
         </nav>
     </header>
 
+    <!-- ==========================
+         MAIN (Edukia nagusia)
+    ========================== -->
     <main>
+        <!-- Orrialdearen izenburua -->
         <h1 class="nabarmenak">KARTELERA</h1>
+        
+        <!-- Pelikulen zerrenda -->
         <div class="kartelera_pelikulak">
 
-            <!-- 1. Blackphone2 -->
+            <!-- ==========================
+                 1. Blackphone2
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/blackphone2.jpg" alt="Blackphone2"></a>
                 <h3 id="blackphone2">Blackphone2</h3>
@@ -54,7 +85,9 @@
                 </details>
             </div>
 
-            <!-- 2. Springsteen -->
+            <!-- ==========================
+                 2. Springsteen
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/springsteen.jpg" alt="Springsteen"></a>
                 <h3 id="springsteen">Springsteen: Deliver Me From Nowhere</h3>
@@ -70,7 +103,9 @@
                 </details>
             </div>
 
-            <!-- 3. Maspalomas -->
+            <!-- ==========================
+                 3. Maspalomas
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/maspalomas.jpg" alt="Maspalomas"></a>
                 <h3 id="maspalomas">Maspalomas</h3>
@@ -86,7 +121,9 @@
                 </details>
             </div>
 
-            <!-- 4. Chainsaw man -->
+            <!-- ==========================
+                 4. Chainsaw Man
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/chainsawman.jpg" alt="Chainsaw man"></a>
                 <h3 id="chainsawman">Chainsaw man</h3>
@@ -102,7 +139,9 @@
                 </details>
             </div>
 
-            <!-- 5. La casa de muñecas de Gabby -->
+            <!-- ==========================
+                 5. La Casa de Muñecas de Gabby
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/lacasa.jpg" alt="La casa de muñecas de Gabby"></a>
                 <h3 id="lacasa">La casa de muñecas de Gabby: La película</h3>
@@ -118,7 +157,9 @@
                 </details>
             </div>
 
-            <!-- 6. Crepusculo -->
+            <!-- ==========================
+                 6. Crepusculo
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/crepusculo.jpg" alt="Crepusculo"></a>
                 <h3 id="crepusculo">Crepusculo (berrestreinaldia)</h3>
@@ -134,7 +175,9 @@
                 </details>
             </div>
 
-            <!-- 7. Las Guerreras K-pop -->
+            <!-- ==========================
+                 7. Las Guerreras K-pop
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/lasguerreras.jpg" alt="Las Guerreras K-pop"></a>
                 <h3 id="guerreras">Las Guerreras K-pop</h3>
@@ -150,7 +193,9 @@
                 </details>
             </div>
 
-            <!-- 8. Tom y Jerry: Aventura en el tiempo -->
+            <!-- ==========================
+                 8. Tom y Jerry: Aventura en el tiempo
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/tomyjerry.jpg"
                         alt="Tom y Jerry: Aventura en el tiempo"></a>
@@ -167,7 +212,9 @@
                 </details>
             </div>
 
-            <!-- 9. Tron: Ares -->
+            <!-- ==========================
+                 9. Tron: Ares
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/tron.jpg" alt="Tron: Ares"></a>
                 <h3 id="tron-ares">Tron: Ares</h3>
@@ -183,7 +230,9 @@
                 </details>
             </div>
 
-            <!-- 10. Los domingos -->
+            <!-- ==========================
+                 10. Los domingos
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/losdomingos.jpg" alt="Los domingos"></a>
                 <h3 id="domingos">Los domingos</h3>
@@ -199,7 +248,9 @@
                 </details>
             </div>
 
-            <!-- 11. Caza de brujas -->
+            <!-- ==========================
+                 11. Caza de brujas
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/cazadebrujas.jpg" alt="Caza de brujas"></a>
                 <h3 id="caza-brujas">Caza de brujas</h3>
@@ -215,7 +266,9 @@
                 </details>
             </div>
 
-            <!-- 12. Cuervos locos -->
+            <!-- ==========================
+                 12. Cuervos locos
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/cuerposlocos.jpg" alt="Cuervos locos"></a>
                 <h3 id="cuerpos-locos">Cuervos locos</h3>
@@ -231,14 +284,17 @@
                 </details>
             </div>
 
-            <!-- 13. Decorado -->
+            <!-- ==========================
+                 13. Decorado
+            ========================== -->
             <div class="pelikula_card">
                 <a href="Saskia.html"><img src="img2/pelikulak2/decorado.jpg" alt="Decorado"></a>
                 <h3 id="decorado">Decorado</h3>
                 <p>Diseinatzaile gazte baten istorioa, dekorazio munduan bere lekua aurkitu nahian...</p>
                 <details>
                     <summary>Xehetasun gehiago</summary>
-                    <p><i>Iraupena:</i> 1h eta 47 minutu</p>
+                    <p><i>Iraupena:</i> 1h eta 47 minutu</p
+
                     <p><i>Generoa:</i> Drama, Komedia</p>
                     <iframe src="https://www.youtube.com/embed/V71F00Hoa2k?si=Ahxifc6Q47jJeZw0"
                         title="YouTube video player" frameborder="0"
