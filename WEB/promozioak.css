@@ -1,3 +1,14 @@
+/**
+ * Deskribapena:
+ * ZineUsurbil webguneko orri nagusia, menuak, mapa eta footer
+ * elementuen estiloak definitzen ditu.
+ */
+
+/* ==========================
+   BODY ETA OINARRIZKO ESTILOAK
+========================== */
+
+/* Gorputz nagusiaren letra-tipoa, atzeko kolorea eta flex-wrap ezarpena */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
@@ -6,6 +17,11 @@ body {
     flex-wrap: wrap;
 }
 
+/* ==========================
+   HEADER ETA NABIGAZIOA
+========================== */
+
+/* Header-aren estiloa: flex lerroa, lerro arteko tartea eta azpimarrak */
 header {
     display: flex;
     align-items: center;
@@ -13,6 +29,7 @@ header {
     border-bottom: 1px solid white;
 }
 
+/* Logoaren tamaina eta efektuak */
 .logoa_argazkia {
     width: 100px;
     height: auto;
@@ -23,6 +40,7 @@ header {
     transform: scale(1.08);
 }
 
+/* ZineUsurbil titulua kolore eta letra ezarpenekin */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
@@ -34,6 +52,7 @@ header {
     color: #eae1e1;
 }
 
+/* Nabigazio elementuak */
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -58,18 +77,24 @@ header {
     transform: scale(1.08);
 }
 
-/* MENÚ DESPLEGABLE */
+/* ==========================
+   MENÚ DESPLEGABLE
+========================== */
+
+/* Menu botoien estiloa */
 .menu button {
     background: none;
     border: none;
     cursor: pointer;
 }
+
+/* Nagusia edukiontziaren estiloa eta paragrafuak */
 .nagusia {
     display: flex; 
-  gap: 16px;
+    gap: 16px;
     flex-wrap: nowrap;
-   
 }
+
 .nagusia p {
     color: white;
     line-height: 1.6;
@@ -77,12 +102,16 @@ header {
     margin: 20px auto;
     padding: 0 20px;
 }
-.kolumna{
- flex:1;
- min-width:0;
- box-sizing: border-box;
+
+/* Kolumna elementuak edukien antolaketa */
+.kolumna {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
-.erosi_botoia{
+
+/* Erosketa botoia estiloak */
+.erosi_botoia {
     background-color: #2b579ee9; 
     border: none;
     color: white;
@@ -94,20 +123,29 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .erosi_botoia:hover {
     background-color: #6291d7e9;
     box-shadow: 0 6px 12px rgba(239, 255, 17, 0.38);
     transform: translateY(-2px); 
 }
+
+/* Submenu paragrafuak tarteak */
 .submenu p {
     margin: 8px 0;
 }
 
+/* ==========================
+   NABARMENAK ETA MAPA
+========================== */
+
+/* Nabarmenak izenburuaren estiloa */
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
+/* Mapa eta testu atalaren estiloa */
 .mapa_eta_testua {
     display: flex;
     align-items: center;
@@ -117,6 +155,7 @@ header {
     margin: 30px auto;
 }
 
+/* Mapa elementuak */
 .maps {
     align-content: center;
     display: flex;
@@ -128,6 +167,7 @@ header {
     border-radius: 10px;
 }
 
+/* Testuaren estiloa maparen ondoan */
 .mapa_testua {
     max-width: 600px;
     line-height: 1.6;
@@ -144,7 +184,11 @@ header {
     color: white;
 }
 
-/* FOOTER */
+/* ==========================
+   FOOTER
+========================== */
+
+/* Footer orokorra */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -155,6 +199,7 @@ footer {
     box-sizing: border-box;
 }
 
+/* Footer nabigazioa */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +238,7 @@ footer {
     transform: scale(1.08);
 }
 
+/* Sare sozialen estiloak */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -214,6 +260,7 @@ footer {
     filter: grayscale(0%);
 }
 
+/* Copyright testua */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -222,7 +269,7 @@ footer {
 }
 
 /* ==========================
-   HEADER ETA NABIGAZIOA — RESPONSIVE
+   RESPONSIVE DESIGN
 ========================== */
 
 /* --- Tablets --- */
@@ -290,47 +337,6 @@ footer {
         padding-left: 0;
         width: 100%;
     }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .menu img {
-        width: 30px;
-        transition: transform 0.3s ease;
-    }
-
-    .submenu {
-        position: static;
-        display: none;
-        background: rgba(20, 20, 40, 0.9);
-        box-shadow: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 0;
-        gap: 8px;
-        border-radius: 6px;
-        width: 100%;
-    }
-
-    .submenu.activo {
-        display: flex;
-    }
-
-    .submenu a {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 8px 14px;
-        border-radius: 6px;
-        width: 90%;
-        text-align: center;
-    }
-
-    .submenu a:hover {
-        background: rgba(255, 255, 255, 0.25);
-    }
 }
 
 /* --- Mugikor txikiak --- */
@@ -355,34 +361,6 @@ footer {
         padding: 0;
     }
 
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 4px;
-    }
-
-    .menu img {
-        width: 26px;
-        height: auto;
-    }
-
-    .submenu {
-        width: 100%;
-        background: rgba(20, 20, 40, 0.95);
-        padding: 6px 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .submenu a {
-        font-size: 0.9rem;
-        padding: 8px 0;
-        width: 100%;
-        text-align: center;
-    }
-
     .nabigazio_elementuak {
         flex-direction: column;
         align-items: center;
@@ -403,13 +381,14 @@ footer {
     }
 }
 
+/* Gorputz eta HTML zabalera ezarpen orokorra */
 html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* FOOTER RESPONSIVE */
+/* Footer responsive ezarpenak */
 @media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
     .footer_nabigazioa {
         flex-direction: column;
