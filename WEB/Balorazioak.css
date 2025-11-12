@@ -267,7 +267,7 @@ p {
 ======================== */
 dialog {
     height: 200px;
-    line-height: 200px;   /* igual que la altura */
+    line-height: 200px; 
     text-align: center;
     font-weight: bold;
     border-radius: 8px;
@@ -276,7 +276,7 @@ dialog {
 dialog p {
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;  /* reinicia la altura de línea dentro del p */
+    line-height: normal; 
     margin: 0;
 }
 
@@ -291,7 +291,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Mantén el borde superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
     text-align: center;
     box-sizing: border-box;
 }
