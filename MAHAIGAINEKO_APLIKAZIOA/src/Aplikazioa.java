@@ -114,6 +114,11 @@ public class Aplikazioa {
         }
         int aukeraAsteburu = sc.nextInt();
 
+        if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+            System.out
+                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU." + ANSI_RESET);
+            return;
+        }
         String kodea = aukeraHilabetea + "-" + aukeraAsteburu;
 
         ArrayList<String> pelikulakAsteburu;
