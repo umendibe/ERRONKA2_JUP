@@ -1,3 +1,10 @@
+/* =======================================================
+   MENU NAGUSIA
+   Deskribapena:
+   - Menu nagusia flex kontenedor gisa jartzen da.
+   - Elementuak lerroan eta bertikalean erdian lerrokatzen dira.
+   - Kurtsorea "pointer" bihurtzen da botoien gainean.
+======================================================= */
 .menu {
     position: relative;
     display: flex;
@@ -5,6 +12,13 @@
     cursor: pointer;
 }
 
+/* =======================================================
+   MENU BOTOIA
+   Deskribapena:
+   - Botoiak estilo minimalista du (atzealdea eta border gabe).
+   - Flex erabilita, botoiko edukiak lerrokatuta daude.
+   - Kurtsorea "pointer" bihurtzen da klik egiteko moduan.
+======================================================= */
 .menu button {
     background: none;
     border: none;
@@ -14,12 +28,26 @@
     cursor: pointer;
 }
 
+/* =======================================================
+   MENU IRUDIA
+   Deskribapena:
+   - Menuan agertzen den irudia tamaina konstantean.
+   - Transformazio trantsizioak.
+======================================================= */
 .menu img {
     width: 30px; 
     height: auto;
     transition: transform 0.3s ease;
 }
 
+/* =======================================================
+   SUBMENU OINARRIZKO ESTILOAK
+   Deskribapena:
+   - Submenu hasieran ezkutatuta dago.
+   - Menu nagusiaren eskuinera azaltzen da.
+   - Flex erabilita elementuak horizontalki banatzen dira.
+   - Gap, padding eta z-index erabilita espazioa eta hierarkia kudeatzen dira.
+======================================================= */
 .submenu {
     display: none; 
     position: absolute;
@@ -32,11 +60,12 @@
     z-index: 10;
 }
 
-
+/* Submenu paragrafoen margina ezabatu */
 .submenu p {
     margin: 0;
 }
 
+/* Submenu estekak estiloztatzea */
 .submenu a {
     text-decoration: none;
     color: #f5f5f5;
@@ -46,15 +75,19 @@
     transition: background-color 0.2s;
 }
 
+/* Hover efektua submenu esteketan */
 .submenu a:hover {
-    background-color:#eae1e1;
-    color:#171414;
+    background-color: #eae1e1;
+    color: #171414;
 }
 
-/* ==========================
-   RESPONSIVE Pantaila txikiagoaetan
-========================== */
-
+/* =======================================================
+   RESPONSIVE: Pantaila 1024px baino txikiagoa
+   Deskribapena:
+   - Irudiaren tamaina pixka bat murrizten da.
+   - Submenu eskuinean agertzen da, zutabean.
+   - Kolorea eta box-shadow gehitu, estilo modernoagoa.
+======================================================= */
 @media screen and (max-width: 1024px) {
     .menu img {
         width: 28px;
@@ -76,6 +109,12 @@
     }
 }
 
+/* =======================================================
+   RESPONSIVE: Pantaila 768px baino txikiagoa
+   Deskribapena:
+   - Irudiaren tamaina pixka bat murrizten da.
+   - Submenu zutabe moduan posizionatzen da, padding egokituta.
+======================================================= */
 @media screen and (max-width: 768px) {
     .menu img {
         width: 26px;
