@@ -1,29 +1,45 @@
 import java.util.ArrayList;
 
-public class Zinema{
+/**
+ * Zinema klaseak zinemaren oinarrizko datuak gordetzen ditu:
+ * pelikulen, gelen, asteburuen eta hilabeteen zerrendak.
+ *
+ * Klase honek datuak kargatzen ditu behin soilik (bloke estatiko baten bidez)
+ * eta beste klaseek (adib. Aplikazioa) informazio hori eskuratu ahal izango
+ * dute
+ * metodo publikoen bidez.
+ * 
+ */
 
-    // Pelikulen izenen zerrenda gordetzeko ArrayList-a
+public class Zinema {
+
+    /** Pelikulen izenen zerrenda gordetzeko ArrayList-a */
     private static ArrayList<String> pelikulak = new ArrayList<>();
-    
-    // Gelen izenen zerrenda gordetzeko ArrayList-a
+
+    /** Gelen izenen zerrenda gordetzeko ArrayList-a */
     private static ArrayList<String> gelak = new ArrayList<>();
+    /** Asteburuen zerrenda gordetzeko ArrayList-a */
     private static ArrayList<String> asteburuak = new ArrayList<>();
+    /** Hilabeten zerrenda gordetzeko ArrayList-a */
     public static ArrayList<String> hilabeteak = new ArrayList<>();
 
     /*
      * Bloke estatikoa:
      * Programa martxan hasten denean behin exekutatzen da.
+     * 
      * Hemen pelikulak eta gelak arrayetan gehitzen ditugu.
      * Horrela ez da beharrezkoa gero berriro datuak betetzea.
-    /**
+     *
      * BIRFAKTORIZAZIOA
-     * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea garbiagoa izan dadin.
-     * Pelikulak ArrayList eta Gelak ArrayList pribatuak static moduan deklaratu dira, behin bakarrik kargatu daitezen.
-     * 2. Pelikulak() eta Gelak() metodo publikoak sortu dira, datu hauek beste klase batzuetatik eskuratu ahal izateko.
+     * 1. Pelikulen eta gelen datuak Zinema klasean kokatu dira, Aplikazioa klasea
+     * garbiagoa izan dadin.
+     * Pelikulak ArrayList eta Gelak ArrayList pribatuak static moduan deklaratu
+     * dira, behin bakarrik kargatu daitezen.
+     * 2. Pelikulak() eta Gelak() metodo publikoak sortu dira, datu hauek beste
+     * klase batzuetatik eskuratu ahal izateko.
      * - Pelikulak ArrayList -->38. lerroa
      * - Gelak ArrayList -->43. lerroa
      */
-    // Blokea: datuak behin bakarrik kargatzen dira
     static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
@@ -55,16 +71,17 @@ public class Zinema{
         hilabeteak.add("Abendua");
     }
 
-    // Metodoa: pelikulen zerrenda itzultzen du 
+    /** Metodoa: pelikulen zerrenda itzultzen du */
     public static ArrayList<String> Pelikulak() {
         return pelikulak;
     }
 
-    // Metodoa: gelen zerrenda itzultzen du
+    /** Metodoa: gelen zerrenda itzultzen du */
     public static ArrayList<String> Gelak() {
         return gelak;
     }
 
+    /** Metodoa: gelen zerrenda itzultzen du */
     public static ArrayList<String> Asteburuak() {
         return asteburuak;
     }
