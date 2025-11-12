@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Zinema{
 
-    // Pelikulen izenen zerrenda gordetzeko ArrayList-a
+    /** Pelikulen izenen zerrenda gordetzeko ArrayList-a */
     private static ArrayList<String> pelikulak = new ArrayList<>();
     
-    // Gelen izenen zerrenda gordetzeko ArrayList-a
+    /** Gelen izenen zerrenda gordetzeko ArrayList-a */
     private static ArrayList<String> gelak = new ArrayList<>();
     private static ArrayList<String> asteburuak = new ArrayList<>();
     public static ArrayList<String> hilabeteak = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Zinema{
      * - Pelikulak ArrayList -->38. lerroa
      * - Gelak ArrayList -->43. lerroa
      */
-    // Blokea: datuak behin bakarrik kargatzen dira
+    /** Blokea: datuak behin bakarrik kargatzen dira */
     static {
         pelikulak.add("Blackphone 2");
         pelikulak.add("Springsteen: Deliver Me From Nowhere");
@@ -55,16 +55,16 @@ public class Zinema{
         hilabeteak.add("Abendua");
     }
 
-    // Metodoa: pelikulen zerrenda itzultzen du 
+    /** Metodoa: pelikulen zerrenda itzultzen du */
     public static ArrayList<String> Pelikulak() {
         return pelikulak;
     }
 
-    // Metodoa: gelen zerrenda itzultzen du
+    /** Metodoa: gelen zerrenda itzultzen du */
     public static ArrayList<String> Gelak() {
         return gelak;
     }
-
+    /** Metodoa: asteburuen zerrenda itzultzen du */    
     public static ArrayList<String> Asteburuak() {
         return asteburuak;
     }
