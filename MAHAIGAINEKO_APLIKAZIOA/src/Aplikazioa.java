@@ -42,6 +42,7 @@ public class Aplikazioa {
     static int aukeraSarrera;
     /** Sarrera aukeratzeko aldagai globala */
     static boolean errepikatu = true;
+    static int aukeraHilabetea;
     /** Programa barriro exekutatzeko baimena */
     static ArrayList<String> lista = Zinema.Pelikulak();
     /** Pelikulen zerrenda Zinema.java fitxategitik hartuta */
@@ -71,15 +72,19 @@ public class Aplikazioa {
                 /** Lehen kasua : Hilabetea eta asteburua aukeratu, ondoren sarrerak erosteko aukera eman.*/
                 case 1:
                     lehenKasua();
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    aukeraSarrera = sc.nextInt();
-                    sarreraErosi();
+                    if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+                        break;
+                    } else {
+                        sarrerakGaldera();
+                        sarreraErosi();
+                    }
+
                     break;
                     /** Bigarren kasua : Pelikulen eta gelen informazio orokorra erakutsi eta sarrerak erosteko aukera eman.*/
                 case 2:
                     bigarrenKasua();
-                    System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
-                    aukeraSarrera = sc.nextInt();
+                    sarrerakGaldera();
+                    lehenKasua();
                     sarreraErosi();
                     break;
                     /** Hirugarren kasua : Kokapena erakutsi.*/
@@ -130,14 +135,25 @@ public class Aplikazioa {
         for (int i = 0; i < Zinema.hilabeteak.size(); i++) {
             System.out.println(" (" + (i + 1) + ") " + Zinema.hilabeteak.get(i));
         }
-        int aukeraHilabetea = sc.nextInt();
-        System.out.println("Aukeratu asteburua: ");
-        /** Asteburuak erakutsi */
+        aukeraHilabetea = sc.nextInt();
+        if (aukeraHilabetea < 1 || aukeraHilabetea > Zinema.hilabeteak.size()) {
+            System.out
+                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
+                            + ANSI_RESET);
+            return;
+        } else
+            System.out.println("Aukeratu asteburua: ");
         for (int i = 0; i < Zinema.Asteburuak().size(); i++) {
             System.out.println(" (" + (i + 1) + ") " + Zinema.Asteburuak().get(i));
         }
         int aukeraAsteburu = sc.nextInt();
-        /** Asteburuaren kodea sortu, mapa sortzeko */
+
+        if (aukeraAsteburu < 1 || aukeraAsteburu > Zinema.Asteburuak().size()) {
+            System.out
+                    .println(ANSI_RED + "HILABETE OKERRA AUKERATU DUZU. MESDEZ HILABETE BALIOZKO BAT AUKERATU."
+                            + ANSI_RESET);
+            return;
+        }
         String kodea = aukeraHilabetea + "-" + aukeraAsteburu;
 
         ArrayList<String> pelikulakAsteburu;
@@ -307,5 +323,10 @@ public class Aplikazioa {
             total += s.getGuztira();
         }
         System.out.println("\nTotal diru-sarrera: " + total + "euro");
+    }
+
+    public static void sarrerakGaldera() {
+        System.out.println(ANSI_YELLOW + "Sarrerak erosi nahi al dituzu? bai(1) ez(2)" + ANSI_RESET);
+        aukeraSarrera = sc.nextInt();
     }
 }
