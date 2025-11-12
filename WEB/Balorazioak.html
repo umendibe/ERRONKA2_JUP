@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="eu">
+<!-- 
+    Dokumentuaren karaktere-jokoa eta kodifikazioa
+    UTF-8 erabiltzen du euskal karaktereak ondo bistaratzeko
+-->
 <meta charset="utf-8">
+<!-- 
+    Ikuspegiaren konfigurazioa gailu mugikorretarako
+    Gailuaren zabalerara egokitzen da eta hasierako eskala ezartzen du
+-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Dokumentuaren egilearen informazioa -->
 <meta name="author" content="JUP">
+<!-- Orriaren deskribapena bilatzaileentzat -->
 <meta name="description" content="ZineUsurbileko balorazioen ataleko orria da hau.">
 
 <head>
+    <!-- Orriaren titulua nabigatzailearen fitxan erakutsiko dena -->
     <title>Balorazioak - ZineUsurbil</title>
+    <!-- Favicona nabigatzailearen fitxan erakusteko -->
     <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
+    <!-- Estilo-orriak kargatzeko etiketak -->
     <link rel="stylesheet" href="Balorazioak.css">
     <link rel="stylesheet" href="header.css">
+    <!-- JavaScript fitxategiak kargatzeko etiketak -->
+    <!-- defer atributua erabiltzen da HTML-a erabat kargatu ondoren scriptak exekutatzeko -->
     <script src="header.js" defer></script>
     <script src="balorazioak.js" defer></script>
 
 </head>
 
 <body>
-    
+    <!-- Goiburuko atala nabigazioarekin -->
     <header>
+        <!-- Logotipoa orri nagusirako esteka gisa -->
         <a href="index.html"><img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo"></a>
+        <!-- Webgunearen izenburua -->
         <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
+        <!-- Nabigazio menua -->
         <nav class="nabigazio_elementuak">
 
+            <!-- Menu desplegablea gailu mugikorretarako -->
             <div class="menu">
+                <!-- Menu botoia desplegablea aktibatzeko -->
                 <button id="menuButton" onclick="desplegable()"><img src="img2/desplegable_menu.png"></button>
+                <!-- Azpimenu desplegablea -->
                 <div class="submenu" id="submenu">
+                    <!-- Nabigazio estekak -->
                     <p><a href="index.html">Orri Nagusia</a></p>
                     <p><a href="Kartelera.html">Kartelera</a></p>
                     <p><a href="promozioak.html">Promozioak</a></p>
@@ -35,13 +57,19 @@
         </nav>
     </header>
 
+    <!-- Eduki nagusiaren atala -->
     <main>
         <br>
+        <!-- Pelikula aukeratzeko formularioa -->
         <form class="pelikula-form">
             <div class="pelikula-select-container">
+                <!-- Etiketa pelikula hautatzailearentzat -->
                 <label for="pelikula-select" class="pelikula-label">Aukeratu pelikula:</label>
+                <!-- Pelikula hautatzailearen zerrenda -->
                 <select id="pelikula-select" name="pelikula_aukera" class="pelikula-select">
+                    <!-- Lehenetsitako aukera desgaitua -->
                     <option value="" disabled selected>-- Mesedez aukeratu pelikula bat --</option>
+                    <!-- Pelikula aukerak -->
                     <option value="pelikula1">Bala Perdida</option>
                     <option value="pelikula2">BlackPhone 2</option>
                     <option value="pelikula3">Caza de Brujas</option>
@@ -60,52 +88,86 @@
                 </select>
                 
         </form>
+        <!-- Balorazioen atalaren izenburua -->
         <h1 class="nabarmenak">BALORAZIOAK</h1>
+        <!-- Balorazioen edukiontzia -->
         <section class="balorazioak_zerrenda">
             <h2>Zer iruitu zaizu zure esperientzia gurekin? </h2>
         </section>
+        <!-- Balorazioa bidaltzeko formularioa -->
         <form action="balorazioak2.html" method="get">
+            <!-- Balorazio botoien edukiontzia (1-5) -->
             <div class="botoiak">
+                <!-- 1. balorazio aukera -->
                 <input type="radio" name="balorazioa" value="1" id="balorazioa1">
                 <label class="color1" for="balorazioa1">1</label>
 
+                <!-- 2. balorazio aukera -->
                 <input type="radio" name="balorazioa" value="2" id="balorazioa2">
                 <label class="color2" for="balorazioa2">2</label>
 
+                <!-- 3. balorazio aukera -->
                 <input type="radio" name="balorazioa" value="3" id="balorazioa3">
                 <label class="color3" for="balorazioa3">3</label>
 
+                <!-- 4. balorazio aukera -->
                 <input type="radio" name="balorazioa" value="4" id="balorazioa4">
                 <label class="color4" for="balorazioa4">4</label>
 
+                <!-- 5. balorazio aukera -->
                 <input type="radio" name="balorazioa" value="5" id="balorazioa5">
                 <label class="color5" for="balorazioa5">5</label>
             </div>
 
-
+            <!-- Testua idazteko eremuaren edukiontzia -->
             <div class="idazteko_lekua">
+                <!-- Testu-eremua erabiltzailearen iruzkinak jasotzeko -->
                 <textarea class="idazteko_input" placeholder="Idatzi hemen..."></textarea>
             </div>
             <br>
             <br>
             <br>
+            <!-- Bidaltzeko botoia -->
+            <!-- type="button" erabiltzen da formularioa automatikoki bidali ez dadin -->
             <button class="bidali" type="button" onclick="bidali()">
                 <img src="img2/bidali.png" alt="Bidali">
             </button>
         </form>
-          <dialog  id="dialogpelikula">Mesedez, aukeratu pelikula bat.
-        <button id="botoia1">❌</button></dialog>
-          <dialog  id="dialogbalorazioa">Mesedez, aukeratu balorazio bat (1-5).
-        <button id="botoia1">❌</button> </dialog>
-        <dialog  id="dialogeskerrak">Eskerrik asko zure iritziagatik
-        <button id="botoia1">❌</button></dialog>
+        
+        <!-- Elkarrizketa-leihoak (modalak) erabiltzaileari mezuak erakusteko -->
+        
+        <!-- Pelikula bat aukeratzeko eskatzen duen elkarrizketa-leihoa -->
+        <dialog id="dialogpelikula">
+            Mesedez, aukeratu pelikula bat.
+            <!-- Elkarrizketa-leihoa ixteko botoia -->
+            <button id="botoia1">❌</button>
+        </dialog>
+        
+        <!-- Balorazio bat aukeratzeko eskatzen duen elkarrizketa-leihoa -->
+        <dialog id="dialogbalorazioa">
+            Mesedez, aukeratu balorazio bat (1-5).
+            <!-- Elkarrizketa-leihoa ixteko botoia -->
+            <button id="botoia1">❌</button>
+        </dialog>
+        
+        <!-- Eskerrak emateko elkarrizketa-leihoa balorazioa ondo bidali ondoren -->
+        <dialog id="dialogeskerrak">
+            Eskerrik asko zure iritziagatik
+            <!-- Elkarrizketa-leihoa ixteko botoia -->
+            <button id="botoia1">❌</button>
+        </dialog>
 
     </main>
 
+    <!-- Oinaren atala -->
     <footer>
+        <!-- Oineko nabigazioa -->
         <div class="footer_nabigazioa">
+            <!-- Logotipoa -->
             <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
+            <!-- Webgunearen izenburua -->
             <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
+            <!-- Oineko nabigazio menua -->
             <nav class="nabigazio_elementuak">
                 <p><a href="index.html">Orri Nagusia</a></p>
                 <p><a href="Kartelera.html">Kartelera</a></p>
@@ -114,21 +176,36 @@
                 <p><a href="Saskia.html">Saskia</a></p>
             </nav>
         </div>
+        <!-- Sare sozialetako estekak -->
         <div class="sare_sozialak">
-            <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa"><img
-                    src="img2/maps2.png" alt="Lokalizazioa"></a>
-            <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa"><img
-                    class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram"></a>
-            <a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa"><img class="x_logo"
-                    src="img2/x2.png" alt="X"></a>
-            <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa"><img
-                    class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok"></a>
-            <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa"><img class="youtube_logo"
-                    src="img2/yt2.png" alt="YouTube"></a>
-            <a href="https://www.cinesa.es/documentos-legales/aviso-legal/"><img class="copyright"
-                    src="img2/copiryght2.png"></a>
+            <!-- Google Maps esteka lokalizazioa erakusteko -->
+            <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa">
+                <img src="img2/maps2.png" alt="Lokalizazioa">
+            </a>
+            <!-- Instagram esteka -->
+            <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa">
+                <img class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram">
+            </a>
+            <!-- X (Twitter) esteka -->
+            <a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa">
+                <img class="x_logo" src="img2/x2.png" alt="X">
+            </a>
+            <!-- TikTok esteka -->
+            <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa">
+                <img class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok">
+            </a>
+            <!-- YouTube esteka -->
+            <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa">
+                <img class="youtube_logo" src="img2/yt2.png" alt="YouTube">
+            </a>
+            <!-- Lege-oharren esteka -->
+            <a href="https://www.cinesa.es/documentos-legales/aviso-legal/">
+                <img class="copyright" src="img2/copiryght2.png">
+            </a>
+            <!-- Lege-oharren testua -->
             <p class="oher_legalak">Ohar legalak</p>
         </div>
+        <!-- Copyright oharra -->
         <p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
     </footer>
 

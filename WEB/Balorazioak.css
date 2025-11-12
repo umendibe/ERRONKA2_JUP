@@ -1,3 +1,6 @@
+
+/* Oinarrizko estiloak gorputzarentzat
+   Letra-tipoa, atzeko planoa eta margenak ezartzen ditu */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: radial-gradient(circle, rgba(23, 20, 20, 1) 0%, rgba(14, 24, 66, 1) 100%);
@@ -7,8 +10,11 @@ body {
 }
 
 /* ========================
-   Header / Navigation
+   Goiburua / Nabigazioa
 ======================== */
+
+/* Goiburuaren eta oineko nabigazioaren estilo nagusia
+   Elementuen kokapena eta tartea ezartzen ditu */
 header,
 .footer_nabigazioa {
     display: flex;
@@ -16,28 +22,33 @@ header,
     gap: 8px;
     border-bottom: 1px solid white;
 }
-
+/* Logoaren irudiaren estiloak
+   Tamaina eta trantsizio efektuak ezartzen ditu */
 .logoa_argazkia {
     width: 100px;
     height: auto;
     transition: transform 0.3s ease;
 }
-
+/* Logoaren hover efektua
+   Sagua gainean jarriz gero handitze efektua */
 .logoa_argazkia:hover {
     transform: scale(1.08);
 }
-
+/* ZineUsurbil izenaren estiloak
+   Letra-tipoa, kolorea eta margenak ezartzen ditu */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
     margin-left: 16px;
 }
-
+/* ZineUsurbil testuaren estiloa
+   Testu-dekorazioa eta kolorea ezartzen ditu */
 .ZineUsurbil_textua {
     text-decoration: none;
     color: #eae1e1;
 }
-
+/* Nabigazio elementuen estilo nagusia
+   Kokapena, tartea eta kolorea ezartzen ditu */
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -45,40 +56,50 @@ header,
     gap: 24px;
     align-items: center;
 }
-
+/* Nabigazio paragrafoen estiloak
+   Margenak, betegarriak eta kurtsore mota ezartzen ditu */
 .nabigazio_elementuak p {
     margin: 0;
     padding: 0 8px;
     cursor: pointer;
 }
-
+/* Nabigazio esteken estiloak
+   Testu-dekorazioa eta kolorea ezartzen ditu */
 .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
 }
-
+/* Nabigazio elementuen hover efektua
+   Sagua gainean jarriz gero handitze efektua */
 .nabigazio_elementuak p:hover {
     transform: scale(1.08);
 }
-
+/* Hamburguesa menuaren ikonoaren estiloak
+   Tamaina, kurtsorea eta trantsizioa ezartzen ditu */
 .hamburguesa_menua {
     width: 40px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
+/* Hamburguesa menuaren hover efektua
+   Sagua gainean jarriz gero handitze efektua */
 .hamburguesa_menua:hover {
     transform: scale(1.08);
 }
 
 /* ========================
-   Main / Sections
+   Eduki Nagusia / Atalak
 ======================== */
+
+/* Nabarmendako atalaren estiloak
+   Kolorea eta testu-lerrokadura ezartzen ditu */
 .nabarmenak {
     color: white;
     text-align: center;
 }
+/* Paragrafo orokorren estiloak
+   Kolorea, pisu tipografikoa eta testu-dekorazioa ezartzen ditu */
 
 p {
     color: white;
@@ -86,21 +107,26 @@ p {
     text-decoration: none;
 }
 
-/* Pelikula Form */
+/* Pelikula Inprimakia */
+
+/* Pelikula aukeraketa inprimakiaren estilo nagusia
+   Zabalera maximoa, margenak eta lerrokadura ezartzen ditu */
 .pelikula-form {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
     text-align: center;
 }
-
+/* Pelikula hautatzailearen edukiontziaren estiloak
+   Kokapen erlatiboa eta tamaina ezartzen ditu */
 .pelikula-select-container {
     position: relative;
     display: inline-block;
     width: 100%;
     max-width: 400px;
 }
-
+/* Pelikula etiketaren estiloak
+   Erakutsi modua, kolorea eta tipografia ezartzen ditu */
 .pelikula-label {
     display: block;
     color: white;
@@ -108,7 +134,8 @@ p {
     font-weight: 600;
     font-size: 18px;
 }
-
+/* Pelikula hautatzailearen estiloak
+   Betegarriak, ertzak, atzeko planoa eta trantsizioak ezartzen ditu */
 .pelikula-select {
     width: 100%;
     padding: 14px 50px 14px 20px;
@@ -123,13 +150,14 @@ p {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     color: white;
 }
-
+/* Pelikula hautatzailearen hover efektua
+   Ertz-kolorea eta itzala aldatzen ditu */
 .pelikula-select:hover {
     border-color: rgb(255, 255, 91);
     box-shadow: 0 6px 20px rgba(198, 203, 33, 0.99);
-    transform: scale(1.02);
 }
-
+/* Pelikula aukeren estiloak
+   Atzeko planoa, kolorea eta betegarriak ezartzen ditu */
 .pelikula-select option {
     background: #2c3e50;
     color: white;
@@ -138,14 +166,18 @@ p {
 }
 
 /* ========================
-   Ratings / Buttons
+   Balorazioak / Botoiak
 ======================== */
+
+/* Balorazioen zerrendaren estiloak
+   Testu-lerrokadura eta margenak ezartzen ditu */
 .balorazioak_zerrenda {
     text-align: center;
     color: white;
     margin: 20px auto;
 }
-
+/* Botoien edukiontziaren estiloak
+   Kokapena eta lerrokadura ezartzen ditu */
 .botoiak {
     display: flex;
     align-items: center;
@@ -153,7 +185,8 @@ p {
     margin-left: 16px;
     margin-inline-start: 8px;
 }
-
+/* Balorazio botoien etiketaren estiloak
+   Tamaina, lerro-altuera eta itxura ezartzen ditu */
 .botoiak label {
     display: inline-block;
     width: 50px;
@@ -167,25 +200,28 @@ p {
     cursor: pointer;
     transition: transform 0.2s, border 0.2s;
 }
-
+/* Ezkututako erradio botoien estiloak
+   Erakutsi gabe utzi baina eskuragarri */
 .botoiak input[type="radio"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
-
+/* Hautatutako balorazio botoiaren estiloak
+   Tamaina eta ertza aldatzen ditu */
 .botoiak input[type="radio"]:checked + label {
     transform: scale(0.7);
     border: 2px solid #000;
 }
-
+/* Balorazio botoien hover efektua
+   Opakutasuna eta tamaina aldatzen ditu */
 .botoiak label:hover {
     opacity: 0.95;
     transform: scale(1.1);
 }
 
-/* Button Colors */
+/* Botoien koloreak */
 .color1 { background: #d9534f; }
 .color2 { background: #f0ad4e; }
 .color3 { background: #f7d154; color: #111; }
@@ -193,14 +229,18 @@ p {
 .color5 { background: #428bca; }
 
 /* ========================
-   Textarea / Input
+   Testu-eremua / Sarrera
 ======================== */
+
+/* Idazteko eremuaren edukiontziaren estiloak
+   Kokapena eta margenak ezartzen ditu */
 .idazteko_lekua {
     display: flex;
     justify-content: center;
     margin: 8px 0 18px 0;
 }
-
+/* Idazteko eremuaren estiloak
+   Tamaina, betegarriak eta itxura ezartzen ditu */
 .idazteko_input {
     width: 80%;
     max-width: 840px;
@@ -213,12 +253,14 @@ p {
     resize: vertical;
     outline: none;
 }
-
+/* Idazteko eremuaren placeholder estiloak
+   Kolorea ezartzen du */
 .idazteko_input::placeholder {
     color: rgba(255, 255, 255, 0.65);
 }
 
-/* Submit Button */
+/* Bidaltzeko botoiaren estiloak
+   Kokapena eta itxura ezartzen ditu */
 .bidali {
     display: block;
     margin: 8px auto 28px auto;
@@ -227,7 +269,8 @@ p {
     background: none;
     cursor: pointer;
 }
-
+/* Bidaltzeko botoiaren irudiaren estiloak
+   Tamaina eta trantsizioak ezartzen ditu */
 .bidali img {
     width: 40px;
     height: auto;
@@ -237,47 +280,53 @@ p {
     background-color: transparent;
     border-radius: 40%;
 }
-
+/* Bidaltzeko botoiaren hover efektua
+   Handitze efektua eta atzeko planoa ezartzen ditu */
 .bidali img:hover {
     transform: scale(1.1);
     background-color: rgba(163, 152, 152, 0.2);
 }
-
+/* Botoi bereziaren estiloak
+   Kokapen absolutua eta efektuak ezartzen ditu */
 #botoia1 {
     position: absolute;
     top:10px;
     right: 10px;
     transition: transform 0.3s ease;
 }
-
+/* Botoi bereziaren hover efektua
+   Handitze efektua eta atzeko planoa ezartzen ditu */
 #botoia1:hover {
     transform: scale(1.1);
     background-color: rgb(180, 180, 179);
 }
 /* ========================
-   Dialog / Modal
+   Elkarrizketa-leihoa / Modala
 ======================== */
+
+/* Elkarrizketa-leihoaren estilo orokorrak
+   Altuerak, lerro-altuerak eta itxura ezartzen ditu */
 dialog {
     height: 200px;
-    line-height: 200px;   /* igual que la altura */
-    text-align: center;
+    line-height: 200px;   
     font-weight: bold;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.95);
 }
+/* Elkarrizketa-leihoaren paragrafo estiloak
+   Lerrokatzea eta margenak ezartzen ditu */
 dialog p {
     display: inline-block;
     vertical-align: middle;
-    line-height: normal;  /* reinicia la altura de línea dentro del p */
+    line-height: normal;  
     margin: 0;
 }
-
-
-
-
 /* ==========================
-   FOOTER
+   OINA
 ========================== */
+
+/* Oinaren estilo orokorrak
+   Zabalera, atzeko planoa eta betegarriak ezartzen ditu */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -287,7 +336,8 @@ footer {
     text-align: center;
     box-sizing: border-box;
 }
-
+/* Oineko nabigazioaren estiloak
+   Kokapena eta tartea ezartzen ditu */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -297,16 +347,19 @@ footer {
     margin-bottom: 12px;
     border-bottom: none; 
 }
-
+/* Oineko logoaren estiloak
+   Tamaina ezartzen du */
 .footer_nabigazioa .logoa_argazkia {
     width: 100px;
     height: auto;
 }
-
+/* Oineko izenaren estiloak
+   Margenak kentzen ditu */
 .footer_nabigazioa .ZineUsurbil {
     margin-left: 0;
 }
-
+/* Oineko nabigazio elementuen estiloak
+   Kokapena eta tartea ezartzen ditu */
 .footer_nabigazioa .nabigazio_elementuak {
     display: flex;
     flex-wrap: wrap;
@@ -315,17 +368,20 @@ footer {
     gap: 16px;
     align-items: center;
 }
-
+/* Oineko nabigazio esteken estiloak
+   Testu-dekorazioa eta efektuak ezartzen ditu */
 .footer_nabigazioa .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
 }
-
+/* Oineko nabigazio esteken hover efektua
+   Handitze efektua ezartzen du */
 .footer_nabigazioa .nabigazio_elementuak a:hover {
     transform: scale(1.08);
 }
-
+/* Sare sozialen ikonoen edukiontziaren estiloak
+   Kokapena eta tartea ezartzen ditu */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -333,7 +389,8 @@ footer {
     gap: 10px;
     margin-top: 12px;
 }
-
+/* Sare sozialen ikonoen estiloak
+   Tamaina eta efektuak ezartzen ditu */
 .sare_sozialak img {
     width: 30px;
     height: 30px;
@@ -341,12 +398,14 @@ footer {
     filter: grayscale(100%);
     transition: transform 0.3s, filter 0.3s;
 }
-
+/* Sare sozialen ikonoen hover efektua
+   Handitze eta kolore efektuak ezartzen ditu */
 .sare_sozialak img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
-
+/* Copyright testuaren estiloak
+   Kolorea eta testu-lerrokadura ezartzen ditu */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -354,7 +413,10 @@ footer {
     font-size: 0.9rem;
 }
 
-/* FOOTER RESPONSIVE */
+/* OINAREN ERANTZUNAKORTASUNA */
+
+/* Mugikor eta tabletentzako estiloak
+   Edukiontziaren norabidea eta lerrokadura egokitzen ditu */
 @media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
     .footer_nabigazioa {
         flex-direction: column;
@@ -565,7 +627,8 @@ footer {
         height: auto;
     }
 }
-
+/* HTML eta gorputz elementuentzako estilo orokorrak
+   Zabalera eta gainezkatzea kontrolatzen ditu */
 html, body {
     width: 100%;
     max-width: 100%;

@@ -1,8 +1,8 @@
 function bidali() {
-    // Prevenir que el formulario se envíe
+    /**  Formularioa bidaltzea ekiditen du*/
     event.preventDefault();
 
-    // Baloreak lortu
+    /**  Baloreak lortu*/
     const pelikulaSelect = document.getElementById('pelikula-select');
     const pelikulaAukera = pelikulaSelect.value;
     const balorazioa = document.querySelector('input[name="balorazioa"]:checked');
@@ -10,7 +10,7 @@ function bidali() {
     const c3 = document.getElementById("dialogbalorazioa");
     const c2 = document.getElementById("botoia1");
     
-    // Balidazioak
+    /**Balidazioak */ 
      if (!pelikulaAukera) {
         irekiDialogo('dialogpelikula');
         return; 
@@ -26,7 +26,7 @@ function bidali() {
 
    
 
-    // Formularioa reiniziatu bidaltzean
+    /** Formularioa reiniziatu bidaltzean*/ 
     document.querySelector('.pelikula-form').reset();
     document.querySelector('.idazteko_input').value = "";
        const radioButtons = document.querySelectorAll('input[name="balorazioa"]');
@@ -38,10 +38,10 @@ function bidali() {
 
 function irekiDialogo(dialogoId) {
     const dialog = document.getElementById(dialogoId);
-    dialog.showModal(); // Abrir el diálogo
+    dialog.showModal(); /**dialogoa ireki */
 }
 
 function itxiDialogo(dialogoId) {
     const dialog = document.getElementById(dialogoId);
-    dialog.close(); // Cerrar el diálogo
+    dialog.close(); /**dialogoa itxi */
 }

@@ -1,3 +1,13 @@
+/**
+ * CSS fitxategia: ZineUsurbil webguneko estilo orokorrak
+ * Helburua: Webgunearen itxura eta erabilgarritasuna definitzea
+ * Bertsioa: 1.0
+ */
+
+/**
+ * Oinarrizko estiloak gorputzarentzat
+ * Atzeko planoa gradientearekin eta letra-tipoa ezartzen ditu
+ */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
@@ -6,6 +16,10 @@ body {
     flex-wrap: wrap;
 }
 
+/**
+ * Goiburuaren estilo nagusia
+ * Elementuen kokapena eta ertzaren marra ezartzen ditu
+ */
 header {
     display: flex;
     align-items: center;
@@ -13,27 +27,47 @@ header {
     border-bottom: 1px solid white;
 }
 
+/**
+ * Logoaren irudiaren estiloak
+ * Tamaina eta trantsizio efektuak ezartzen ditu
+ */
 .logoa_argazkia {
     width: 100px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
+/**
+ * Logoaren hover efektua
+ * Sagua gainean dagoenean handitze efektua
+ */
 .logoa_argazkia:hover {
     transform: scale(1.08);
 }
 
+/**
+ * ZineUsurbil izenaren estiloak
+ * Letra-tipoa, kolorea eta margenak ezartzen ditu
+ */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
     margin-left: 16px;
 }
 
+/**
+ * ZineUsurbil testuaren estiloa
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
 .ZineUsurbil_textua {
     text-decoration: none;
     color: #eae1e1;
 }
 
+/**
+ * Nabigazio elementuen estilo nagusia
+ * Kokapena, tartea eta kolorea ezartzen ditu
+ */
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -43,33 +77,57 @@ header {
     transition: transform 0.3s ease;
 }
 
+/**
+ * Nabigazio esteken estiloak
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
 .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
 }
 
+/**
+ * Nabigazio paragrafoen estiloak
+ * Margenak, betegarriak eta kurtsore mota ezartzen ditu
+ */
 .nabigazio_elementuak p {
     margin: 0;
     padding: 0 8px;
     cursor: pointer;
 }
 
+/**
+ * Nabigazio elementuen hover efektua
+ * Sagua gainean dagoenean handitze efektua
+ */
 .nabigazio_elementuak p:hover {
     transform: scale(1.08);
 }
 
-/* MENÚ DESPLEGABLE */
+/**
+ * Menu desplegablearen botoiaren estiloak
+ * Atzeko planoa eta ertzak kentzen ditu
+ */
 .menu button {
     background: none;
     border: none;
     cursor: pointer;
 }
+
+/**
+ * Eduki nagusiaren edukiontzia
+ * Kokapena eta tartea ezartzen ditu
+ */
 .nagusia {
     display: flex; 
-  gap: 16px;
+    gap: 16px;
     flex-wrap: nowrap;
-   
 }
+
+/**
+ * Eduki nagusiko paragrafoen estiloak
+ * Kolorea, lerro-altuera eta zabalera ezartzen ditu
+ */
 .nagusia p {
     color: white;
     line-height: 1.6;
@@ -77,12 +135,22 @@ header {
     margin: 20px auto;
     padding: 0 20px;
 }
-.kolumna{
- flex:1;
- min-width:0;
- box-sizing: border-box;
+
+/**
+ * Zutabeen estiloak
+ * Malgutasuna eta tamaina minimoa ezartzen ditu
+ */
+.kolumna {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
-.erosi_botoia{
+
+/**
+ * Erosi botoiaren estilo nagusiak
+ * Kolorea, betegarriak eta trantsizioak ezartzen ditu
+ */
+.erosi_botoia {
     background-color: #2b579ee9; 
     border: none;
     color: white;
@@ -94,57 +162,47 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+/**
+ * Erosi botoiaren hover efektua
+ * Kolorea, itzala eta mugimendua aldatzen ditu
+ */
 .erosi_botoia:hover {
     background-color: #6291d7e9;
     box-shadow: 0 6px 12px rgba(239, 255, 17, 0.38);
     transform: translateY(-2px); 
 }
+
+/**
+ * Azpimenuaren paragrafoen estiloak
+ * Goiko eta beheko margenak ezartzen ditu
+ */
 .submenu p {
     margin: 8px 0;
 }
 
+/**
+ * Nabarmendako atalaren estiloak
+ * Kolorea eta testu-lerrokadura ezartzen ditu
+ */
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
-.mapa_eta_testua {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 30px auto;
-}
-
-.maps {
-    align-content: center;
-    display: flex;
-}
-
-.mapa_eta_testua .maps iframe {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
-.mapa_testua {
-    max-width: 600px;
-    line-height: 1.6;
-}
-
-.mapa_testua p {
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-}
-
+/**
+ * Zutabeetako esteken estiloak
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
 .kolumna a {
     text-decoration: none;
     color: white;
 }
 
-/* FOOTER */
+/**
+ * Oinaren estilo orokorrak
+ * Zabalera, atzeko planoa eta betegarriak ezartzen ditu
+ */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -155,6 +213,10 @@ footer {
     box-sizing: border-box;
 }
 
+/**
+ * Oineko nabigazioaren estiloak
+ * Kokapena, tartea eta lerrokadura ezartzen ditu
+ */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -165,15 +227,27 @@ footer {
     border-bottom: none; 
 }
 
+/**
+ * Oineko logoaren estiloak
+ * Tamaina ezartzen du
+ */
 .footer_nabigazioa .logoa_argazkia {
     width: 100px;
     height: auto;
 }
 
+/**
+ * Oineko izenaren estiloak
+ * Margenak kentzen ditu
+ */
 .footer_nabigazioa .ZineUsurbil {
     margin-left: 0;
 }
 
+/**
+ * Oineko nabigazio elementuen estiloak
+ * Kokapena, tartea eta kolorea ezartzen ditu
+ */
 .footer_nabigazioa .nabigazio_elementuak {
     display: flex;
     flex-wrap: wrap;
@@ -183,16 +257,28 @@ footer {
     align-items: center;
 }
 
+/**
+ * Oineko nabigazio esteken estiloak
+ * Testu-dekorazioa eta efektuak ezartzen ditu
+ */
 .footer_nabigazioa .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
 }
 
+/**
+ * Oineko nabigazio esteken hover efektua
+ * Handitze efektua ezartzen du
+ */
 .footer_nabigazioa .nabigazio_elementuak a:hover {
     transform: scale(1.08);
 }
 
+/**
+ * Sare sozialen edukiontziaren estiloak
+ * Kokapena, tartea eta malgutasuna ezartzen ditu
+ */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -201,6 +287,10 @@ footer {
     margin-top: 12px;
 }
 
+/**
+ * Sare sozialen ikonoen estiloak
+ * Tamaina, egokitzea eta efektuak ezartzen ditu
+ */
 .sare_sozialak img {
     width: 30px;
     height: 30px;
@@ -209,11 +299,19 @@ footer {
     transition: transform 0.3s, filter 0.3s;
 }
 
+/**
+ * Sare sozialen ikonoen hover efektua
+ * Handitze eta kolore efektuak ezartzen ditu
+ */
 .sare_sozialak img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
 
+/**
+ * Copyright testuaren estiloak
+ * Kolorea, testu-lerrokadura eta tamaina ezartzen ditu
+ */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -221,11 +319,44 @@ footer {
     font-size: 0.9rem;
 }
 
+/**
+ * HTML eta gorputz elementuentzako estilo orokorrak
+ * Zabalera eta gainezkatzea kontrolatzen ditu
+ */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* ==========================
-   HEADER ETA NABIGAZIOA — RESPONSIVE
+   ERANTZUNAKORTASUN MEDIA QUERIES
 ========================== */
 
-/* --- Tablets --- */
+/**
+ * Oinaren erantzuankortasuna gailu txikientzat
+ * Edukiontziaren norabidea eta lerrokadura egokitzen ditu
+ */
+@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
+    .footer_nabigazioa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nabigazioa .nabigazio_elementuak {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright_p {
+        text-align: center;
+    }
+}
+
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna tableterako
+ * Tamainak, tartea eta menu desplegablea egokitzen ditu
+ */
 @media screen and (max-width: 1024px) {
     header {
         flex-wrap: wrap;
@@ -265,7 +396,10 @@ footer {
     }
 }
 
-/* --- Mugikor handiak --- */
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna mugikor handientzat
+ * Norabidea, tamainak eta menuaren egitura egokitzen ditu
+ */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -333,7 +467,10 @@ footer {
     }
 }
 
-/* --- Mugikor txikiak --- */
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna mugikor txikientzat
+ * Tamaina txikiagoak eta egitura sinpleagoa ezartzen ditu
+ */
 @media screen and (max-width: 430px) {
     header {
         flex-direction: column;
@@ -400,28 +537,5 @@ footer {
     .nabarmenak {
         font-size: 1.3rem;
         margin: 12px 0;
-    }
-}
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* FOOTER RESPONSIVE */
-@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
-    .footer_nabigazioa {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer_nabigazioa .nabigazio_elementuak {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .copyright_p {
-        text-align: center;
     }
 }
