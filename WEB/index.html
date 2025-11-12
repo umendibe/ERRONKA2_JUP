@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="eu">
+<!--
+  Fitxategi honen dokumentazioa / Documentación del archivo:
+  - Orri nagusia da ZineUsurbil web aplikazioarentzat.
+  - Egilea: JUP
+  - Deskribapena: Bezeroak eskatu duen web aplikazioaren hasierako orria.
+  - Egiturak:
+    * Head: CSS, JS eta favicon loturak.
+    * Body: Header (nabigazioa eta logotipoa), Main (pelikula nabarmenak), Footer (nabigazioa, sare sozialak eta ohar legalak).
+-->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="JUP">
@@ -8,23 +18,31 @@
 
 <head>
     <title>ZineUsurbil</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
+    <!-- Estilo orokorra eta header CSS -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="header.css">
+    <!-- Script dinamikoa -->
     <script src="index.js" defer></script>
     <script src="header.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Header / Goiburua -->
     <header>
+        <!-- Logo eta izenburua -->
         <a href="index.html"><img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo"></a>
         <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
-        <nav class="nabigazio_elementuak">
 
+        <!-- Nabigazio elementuak -->
+        <nav class="nabigazio_elementuak">
             <div class="menu">
+                <!-- Menu tolesgarri botoia -->
                 <button id="menuButton" onclick="desplegable()"><img src="img2/desplegable_menu.png"></button>
                 <div class="submenu" id="submenu">
+                    <!-- Menu estekak -->
                     <p><a href="index.html">Orri Nagusia</a></p>
                     <p><a href="Kartelera.html">Kartelera</a></p>
                     <p><a href="promozioak.html">Promozioak</a></p>
@@ -35,28 +53,37 @@
         </nav>
     </header>
 
+    <!-- Main / Eduki nagusia -->
     <main>
         <br>
         <h1 class="nabarmenak">NABARMENAK</h1>
-        <br>
-        <br>
+        <br><br>
         <div class="nabarmenak_pelikulak">
             <div class="pelikula_card">
-                <a href="Kartelera.html"><img id="hasierakoArgazkia" src="img2/pelikulak2/blackphone2_handia.png"
-                        alt="Blackphone 2"></a>
+                <!-- Pelikula nagusiaren irudia eta esteka Kartelera-ra -->
+                <a href="Kartelera.html">
+                    <img id="hasierakoArgazkia" src="img2/pelikulak2/blackphone2_handia.png" alt="Blackphone 2">
+                </a>
                 <div id="tituluak" class="tituluak"></div>
+
+                <!-- Pelikula nabarmenak aldatzeko botoiak -->
                 <section class="pelikulak_botoiak">
-                    <button id="atzera_botoia" onclick="atzeraIrudia()"><img src="img2/flecha_izquierda.png"
-                            alt="Aurreko pelikula"></button>
-                    <button id="aurrera_botoia" onclick="hurrengoIrudia()"><img src="img2/flecha_derecha.png"
-                            alt="Hurrengo pelikula"></button>
+                    <button id="atzera_botoia" onclick="atzeraIrudia()">
+                        <img src="img2/flecha_izquierda.png" alt="Aurreko pelikula">
+                    </button>
+                    <button id="aurrera_botoia" onclick="hurrengoIrudia()">
+                        <img src="img2/flecha_derecha.png" alt="Hurrengo pelikula">
+                    </button>
                 </section>
             </div>
         </div>
     </main>
-    <br>
-    <br>
+
+    <br><br>
+
+    <!-- Footer / Beheko zatia -->
     <footer>
+        <!-- Footer nabigazioa -->
         <div class="footer_nabigazioa">
             <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
             <h1 class="ZineUsurbil"><a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a></h1>
@@ -68,22 +95,34 @@
                 <p><a href="Saskia.html">Saskia</a></p>
             </nav>
         </div>
+
+        <!-- Sare sozialak -->
         <div class="sare_sozialak">
-            <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa"><img
-                    src="img2/maps2.png" alt="Lokalizazioa"></a>
-            <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa"><img
-                    class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram"></a>
+            <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa">
+                <img src="img2/maps2.png" alt="Lokalizazioa">
+            </a>
+            <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa">
+                <img class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram">
+            </a>
             <a href="https://x.com/Cinesa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"
-                title="X (Twitter) Cinesa"><img class="x_logo" src="img2/x2_.png" alt="X"></a>
-            <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa"><img
-                    class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok"></a>
-            <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa"><img class="youtube_logo"
-                    src="img2/yt2.png" alt="YouTube"></a>
-            <a href="https://www.cinesa.es/documentos-legales/aviso-legal/"><img class="copyright"
-                    src="img2/copiryght2.png"></a>
+                title="X (Twitter) Cinesa">
+                <img class="x_logo" src="img2/x2_.png" alt="X">
+            </a>
+            <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa">
+                <img class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok">
+            </a>
+            <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa">
+                <img class="youtube_logo" src="img2/yt2.png" alt="YouTube">
+            </a>
+            <a href="https://www.cinesa.es/documentos-legales/aviso-legal/">
+                <img class="copyright" src="img2/copiryght2.png">
+            </a>
             <p class="oher_legalak">Ohar legalak</p>
         </div>
-        <p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
+
+        <p class="copyright_p">
+            © 2025 Cinesa. Eskubide guztiak erreserbatuta
+        </p>
     </footer>
 
 </body>
