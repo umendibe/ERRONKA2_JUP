@@ -1,3 +1,6 @@
+/* ==========================
+   PUNTU SISTEMA ESTILOAK
+/* Oinarrizko estiloak gorputzarentzat */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
@@ -6,6 +9,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Goiburuaren estilo nagusia */
 header {
     display: flex;
     align-items: center;
@@ -13,6 +17,7 @@ header {
     border-bottom: 1px solid white;
 }
 
+/* Logoaren estiloak */
 .logoa_argazkia {
     width: 100px;
     height: auto;
@@ -23,6 +28,7 @@ header {
     transform: scale(1.08);
 }
 
+/* ZineUsurbil izenaren estiloak */
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
@@ -34,6 +40,7 @@ header {
     color: #eae1e1;
 }
 
+/* Nabigazio elementuen estiloak */
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -58,55 +65,71 @@ header {
     transform: scale(1.08);
 }
 
-/* MENÚ DESPLEGABLE */
+/* Menu desplegablearen estiloak */
 .menu button {
     background: none;
     border: none;
     cursor: pointer;
 }
+
+/* Eduki nagusiaren edukiontzia */
 .nagusia {
     display: flex; 
-  gap: 16px;
+    gap: 16px;
     flex-wrap: nowrap;
-   
 }
+
+/* Testu orokorren estiloak */
 body p {
     color: white;
     line-height: 1.6;
 }
-.puntu-kostua{
+
+/* Puntu sisteman erabiltzen diren estiloak */
+
+/* Puntu kopuruaren estiloak */
+.puntu-kostua {
     color: #f0efef;
     font-weight: bold;
     margin-top: 16px;
 }
+
 .errekompentsa-info h3 {
     color: #f0efef;
     margin-bottom: 8px;
 }
-.puntu-irabazteko h3{
+
+.puntu-irabazteko h3 {
     color: #f0efef;
     margin-bottom: 8px;
 }
-.puntu-irabazteko li{
+
+.puntu-irabazteko li {
     color: #f0efef;
     margin-bottom: 4px;
 }
-.puntu-kopurua h2{
+
+.puntu-kopurua h2 {
     color: #f0efef;
     margin-bottom: 8px;
 }
-.puntu-zenbakia{
+
+.puntu-zenbakia {
     color: #f0efef;
     font-size: 24px;
     font-weight: bold;
 }
-.errekompentsak h2{
+
+.errekompentsak h2 {
     color: #f0efef;
     margin-bottom: 16px;
 }
+
 .submenu p {
     margin: 8px 0;
 }
+
+/* Errekompentsen sareta */
 .errekompentsa-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,6 +141,7 @@ body p {
     box-sizing: border-box;
 }
 
+/* Errekompentsa elementu bakoitzaren estiloak */
 .errekompentsa-elementua {
     display: flex;
     align-items: center;
@@ -131,6 +155,7 @@ body p {
     min-height: 140px; 
 }
 
+/* Errekompentsen irudien estiloak */
 .errekompentsa-argazkia {
     flex-shrink: 0;
     width: 80px;
@@ -144,6 +169,7 @@ body p {
     border-radius: 8px;
 }
 
+/* Errekompentsen informazioaren estiloak */
 .errekompentsa-info {
     flex-grow: 1;
     min-width: 0; 
@@ -163,6 +189,7 @@ body p {
     word-wrap: break-word;
 }
 
+/* Puntu kostuaren estiloak */
 .puntu-kostua {
     font-weight: bold;
     color: #ffd700;
@@ -170,6 +197,7 @@ body p {
     font-size: 16px;
 }
 
+/* Erosi botoiaren estiloak */
 .erosi_botoia {
     background-color: #2b579ee9;
     border: none;
@@ -190,6 +218,7 @@ body p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Puntu sistemaren edukiontzi nagusia */
 .nagusia {
     width: 100%;
     display: flex;
@@ -204,7 +233,7 @@ body p {
     box-sizing: border-box;
 }
 
-/* FOOTER */
+/* Oinaren estiloak */
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -215,6 +244,7 @@ footer {
     box-sizing: border-box;
 }
 
+/* Oineko nabigazioaren estiloak */
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +283,7 @@ footer {
     transform: scale(1.08);
 }
 
+/* Sare sozialen estiloak */
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -274,6 +305,7 @@ footer {
     filter: grayscale(0%);
 }
 
+/* Copyright testuaren estiloak */
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -281,7 +313,11 @@ footer {
     font-size: 0.9rem;
 }
 
-/* FOOTER RESPONSIVE */
+/* ==========================
+   ERANTZUNAKORTASUNA
+========================== */
+
+/* Oinaren erantzuankortasuna */
 @media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
     .footer_nabigazioa {
         flex-direction: column;
@@ -297,11 +333,10 @@ footer {
         text-align: center;
     }
 }
-/* ==========================
-   HEADER ETA NABIGAZIOA — RESPONSIVE
-========================== */
 
-/* --- Tablets --- */
+/* Goiburuaren eta nabigazioaren erantzuankortasuna */
+
+/* Tabletarako estiloak */
 @media screen and (max-width: 1024px) {
     header {
         flex-wrap: wrap;
@@ -341,7 +376,7 @@ footer {
     }
 }
 
-/* --- Mugikor handiak --- */
+/* Mugikor handientzako estiloak */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -409,7 +444,7 @@ footer {
     }
 }
 
-/* --- Mugikor txikiak --- */
+/* Mugikor txikientzako estiloak */
 @media screen and (max-width: 430px) {
     header {
         flex-direction: column;
@@ -471,7 +506,7 @@ footer {
         margin: 12px 0;
     }
 
-    .errekompentsa-elementua{
+    .errekompentsa-elementua {
         font-size: 1rem;
         margin: 8px 0;
         display: flex;
@@ -480,6 +515,7 @@ footer {
     }
 }
 
+/* HTML eta gorputz elementuentzako estilo orokorrak */
 html, body {
     width: 100%;
     max-width: 100%;

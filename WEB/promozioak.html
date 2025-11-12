@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="eu">
+<!-- 
+    Promozioen orria - ZineUsurbil zinema-aretoaren eskaintza bereziak
+    Erabiltzaileek promozio eta deskontu ezberdinak ikusi ditzakete
+-->
+
+<!-- Karaktere-jokoa eta kodifikazioa -->
 <meta charset="utf-8">
+<!-- Ikuspegiaren konfigurazioa gailu mugikorretarako -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Orriaren egilearen eta deskribapenaren informazioa -->
 <meta name="author" content="JUP">
 <meta name="description" content="ZineUsurbileko promozioen ataleko orria da hau.">
 
 <head>
-	<title>Promozioak - ZineUsurbil</title>
-	<link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
-	<link rel="stylesheet" href="promozioak.css">
-	<link rel="stylesheet" href="header.css">
-	<script src="header.js" defer></script>
+    <!-- Orriaren titulua eta ikonoa -->
+    <title>Informazioa - ZineUsurbil</title>
+    <link rel="icon" type="image/x-icon" href="img2/logo_zineusurbil2.png">
+    
+    <!-- Estilo-orriak -->
+    <link rel="stylesheet" href="promozioak.css">
+    <link rel="stylesheet" href="header.css">
+    
+    <!-- JavaScript fitxategia -->
+    <script src="header.js" defer></script>
 </head>
 
 <body>
-    <!-- ==========================
-         HEADER
-         - Logo eta webgunearen izena
-         - Nabigazio elementuak
-         - Menu desplegable botoia mugikorretarako
-    ========================== -->
+    <!-- GOIBURUA: Logoarekin eta nabigazio-menua -->
     <header>
-        <!-- Logo link -->
+        <!-- Logotipoa orri nagusirako esteka -->
         <a href="index.html">
             <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
         </a>
-        <!-- Webgunearen izena -->
+        <!-- Webgunearen izenburua -->
         <h1 class="ZineUsurbil">
             <a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a>
         </h1>
-        <!-- Nabigazioa -->
+        
+        <!-- NABIGAZIO-MENUA: Gailu mugikorretarako menu desplegablea -->
         <nav class="nabigazio_elementuak">
             <div class="menu">
-                <!-- Menu botoia mugikorretarako -->
+                <!-- Menu botoia (hamburguesa) -->
                 <button id="menuButton" onclick="desplegable()">
-                    <img src="img2/desplegable_menu.png">
+                    <img src="img2/desplegable_menu.png" alt="Menua">
                 </button>
+                <!-- Azpimenu desplegablea -->
                 <div class="submenu" id="submenu">
                     <p><a href="index.html">Orri Nagusia</a></p>
                     <p><a href="Kartelera.html">Kartelera</a></p>
@@ -47,54 +57,54 @@
         </nav>
     </header>
 
-    <!-- ==========================
-         MAIN
-         - Promozio atal nagusia
-         - Kolumnak promozio bakoitzerako
-         - Mapa eta testua
-    ========================== -->
+    <!-- EDUKI NAGUSIA: Promozioen informazioa -->
     <main>
         <br>
+        <!-- Orriaren izenburu nagusia -->
         <h1 class="nabarmenak">PROMOZIOAK</h1>
         <br>
         <br>
         <br>
+        
+        <!-- Promozioen edukiontzi nagusia -->
         <div class="nagusia">
 
-            <!-- Ikuslearen eguna promozioa -->
+            <!-- 1. PROMOZIOA: Ikuslearen eguna -->
             <div class="kolumna">
+                <!-- Promozioaren izenburua -->
                 <h1 class="nabarmenak">Ikuslearen eguna</h1>
-                <p>
-                    Zine usurbilen igandero sarrerak erdi prezioan ditu,
-                    aukera ezin hobea familia eta lagunekin gerturatzeko.
-                </p>
+                <!-- Promozioaren deskribapena -->
+                <p>Zine usurbilen igandero sarrerak erdi
+                    prezioan ditu, aukera ezin hobea familia eta lagunekin gerturatzeko.</p>
+                <!-- Erosi botoia saskira joateko -->
                 <button class="erosi_botoia">
                     <a href="Saskia.html">Erosi Sarrerak</a>
                 </button>
             </div>
 
-            <!-- ZineUsurbil txartela promozioa -->
+            <!-- 2. PROMOZIOA: ZineUsurbil txartela -->
             <div class="kolumna">
+                <!-- Promozioaren izenburua -->
                 <h1 class="nabarmenak">ZineUsurbil txartela</h1>
-                <p>
-                    Erosketa bakoitzak puntuak gehitzen ditu,
-                    eta sarreren edo konboen truke truka ditzakezu.
-                    Eskatu txartela fisikoki zinean edo online erregistratu
-                    eta hasi promozio esklusiboez gozatzen.
-                </p>
+                <!-- Promozioaren deskribapena -->
+                <p> Erosketa bakoitzak puntuak gehitzen ditu, eta sarreren edo konboen truke truka ditzakezu. Eskatu
+                    txartela
+                    fisikoki zinean edo online erregistratu eta hasi promozio esklusiboez gozatzen.</p>
+                <!-- Puntuak aldatzeko botoia -->
                 <button class="erosi_botoia">
                     <a href="puntuak.html">Puntuak aldatu</a>
                 </button>
             </div>
 
-            <!-- Gazte txartela promozioa -->
+            <!-- 3. PROMOZIOA: Gazte txartela -->
             <div class="kolumna">
-                <h1 class="nabarmenak">Gazte txartela</h1>
-                <p>
-                    Gazte txartelarekin hainbat deskontu aurki ditzakezu astean zehar.
-                    Data garrantzitsuetan (pelikula baten estrenoan...) deskontuak handiagoak dira,
-                    beraz zatoz zure gazte txartelarekin.
-                </p>
+                <!-- Promozioaren izenburua -->
+                <h1 class="nabarmenak"> Gazte txartela</h1>
+                <!-- Promozioaren deskribapena -->
+                <p>Gazte txartelarekin hainbat deskontu aurki ditzakezu astean zehar. Data garrantzitsuetan
+                    (pelikula baten estrenoan...) deskontuak handiagoak dira, beraz zatoz zure gazte
+                    txartelarekin.</p>
+                <!-- Erosi botoia saskira joateko -->
                 <button class="erosi_botoia">
                     <a href="Saskia.html">Erosi Sarrerak</a>
                 </button>
@@ -134,12 +144,18 @@
          - Sare sozialak
          - Ohar legalak eta copyright
     ========================== -->
+
+    <!-- OINA: Informazio legalarekin eta sare sozialetako estekak -->
     <footer>
+        <!-- Oineko nabigazioa -->
         <div class="footer_nabigazioa">
+            <!-- Logotipoa -->
             <img class="logoa_argazkia" src="img2/logo_zineusurbil2.png" alt="ZineUsurbil logo">
+            <!-- Webgunearen izenburua -->
             <h1 class="ZineUsurbil">
                 <a class="ZineUsurbil_textua" href="index.html">ZINEUSURBIL</a>
             </h1>
+            <!-- Oineko nabigazio menua -->
             <nav class="nabigazio_elementuak">
                 <p><a href="index.html">Orri Nagusia</a></p>
                 <p><a href="Kartelera.html">Kartelera</a></p>
@@ -148,30 +164,37 @@
                 <p><a href="Saskia.html">Saskia</a></p>
             </nav>
         </div>
-
-        <!-- Sare sozialak -->
+        
+        <!-- SARE SOZIALAK: Kanpo estekak -->
         <div class="sare_sozialak">
+            <!-- Google Maps lokalizaziorako -->
             <a href="https://maps.app.goo.gl/LYmgyRZZ584R61nG9" target="_blank" title="Cinesa Urbil Mapa">
                 <img src="img2/maps2.png" alt="Lokalizazioa">
             </a>
+            <!-- Instagram -->
             <a href="https://www.instagram.com/cinesa.es/?hl=es" target="_blank" title="Instagram Cinesa">
                 <img class="instagram_logo" src="img2/instagram_logo2.png" alt="Instagram">
             </a>
+            <!-- X (Twitter) -->
             <a href="https://x.com/Cinesa" target="_blank" title="X (Twitter) Cinesa">
                 <img class="x_logo" src="img2/x2.png" alt="X">
             </a>
+            <!-- TikTok -->
             <a href="https://www.tiktok.com/@cinesa.es?lang=es" target="_blank" title="TikTok Cinesa">
                 <img class="tik_tok_logo" src="img2/tiktok2.png" alt="Tik Tok">
             </a>
+            <!-- YouTube -->
             <a href="https://www.youtube.com/@cinesa" target="_blank" title="YouTube Cinesa">
                 <img class="youtube_logo" src="img2/yt2.png" alt="YouTube">
             </a>
+            <!-- Lege-oharrak -->
             <a href="https://www.cinesa.es/documentos-legales/aviso-legal/">
-                <img class="copyright" src="img2/copiryght2.png">
+                <img class="copyright" src="img2/copiryght2.png" alt="Copyright">
             </a>
             <p class="oher_legalak">Ohar legalak</p>
         </div>
-
+        
+        <!-- Copyright informazioa -->
         <p class="copyright_p">© 2025 Cinesa. Eskubide guztiak erreserbatuta</p>
     </footer>
 

@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Deskribapena:
  * ZineUsurbil webguneko orri nagusia, menuak, mapa eta footer
  * elementuen estiloak definitzen ditu.
@@ -9,6 +10,17 @@
 ========================== */
 
 /* Gorputz nagusiaren letra-tipoa, atzeko kolorea eta flex-wrap ezarpena */
+=======
+ * CSS fitxategia: ZineUsurbil webguneko estilo orokorrak
+ * Helburua: Webgunearen itxura eta erabilgarritasuna definitzea
+ * Bertsioa: 1.0
+ */
+
+/**
+ * Oinarrizko estiloak gorputzarentzat
+ * Atzeko planoa gradientearekin eta letra-tipoa ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #c0c2cf;
@@ -17,11 +29,18 @@ body {
     flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 /* ==========================
    HEADER ETA NABIGAZIOA
 ========================== */
 
 /* Header-aren estiloa: flex lerroa, lerro arteko tartea eta azpimarrak */
+=======
+/**
+ * Goiburuaren estilo nagusia
+ * Elementuen kokapena eta ertzaren marra ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 header {
     display: flex;
     align-items: center;
@@ -29,30 +48,59 @@ header {
     border-bottom: 1px solid white;
 }
 
+<<<<<<< HEAD
 /* Logoaren tamaina eta efektuak */
+=======
+/**
+ * Logoaren irudiaren estiloak
+ * Tamaina eta trantsizio efektuak ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .logoa_argazkia {
     width: 100px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
+/**
+ * Logoaren hover efektua
+ * Sagua gainean dagoenean handitze efektua
+ */
 .logoa_argazkia:hover {
     transform: scale(1.08);
 }
 
+<<<<<<< HEAD
 /* ZineUsurbil titulua kolore eta letra ezarpenekin */
+=======
+/**
+ * ZineUsurbil izenaren estiloak
+ * Letra-tipoa, kolorea eta margenak ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .ZineUsurbil {
     font-family: Arial, sans-serif;
     color: #f0efef;
     margin-left: 16px;
 }
 
+/**
+ * ZineUsurbil testuaren estiloa
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
 .ZineUsurbil_textua {
     text-decoration: none;
     color: #eae1e1;
 }
 
+<<<<<<< HEAD
 /* Nabigazio elementuak */
+=======
+/**
+ * Nabigazio elementuen estilo nagusia
+ * Kokapena, tartea eta kolorea ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .nabigazio_elementuak {
     padding-left: 130px;
     display: flex;
@@ -62,39 +110,72 @@ header {
     transition: transform 0.3s ease;
 }
 
+/**
+ * Nabigazio esteken estiloak
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
 .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
 }
 
+/**
+ * Nabigazio paragrafoen estiloak
+ * Margenak, betegarriak eta kurtsore mota ezartzen ditu
+ */
 .nabigazio_elementuak p {
     margin: 0;
     padding: 0 8px;
     cursor: pointer;
 }
 
+/**
+ * Nabigazio elementuen hover efektua
+ * Sagua gainean dagoenean handitze efektua
+ */
 .nabigazio_elementuak p:hover {
     transform: scale(1.08);
 }
 
+<<<<<<< HEAD
 /* ==========================
    MENÚ DESPLEGABLE
 ========================== */
 
 /* Menu botoien estiloa */
+=======
+/**
+ * Menu desplegablearen botoiaren estiloak
+ * Atzeko planoa eta ertzak kentzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .menu button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* Nagusia edukiontziaren estiloa eta paragrafuak */
+=======
+/**
+ * Eduki nagusiaren edukiontzia
+ * Kokapena eta tartea ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .nagusia {
     display: flex; 
     gap: 16px;
     flex-wrap: nowrap;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Eduki nagusiko paragrafoen estiloak
+ * Kolorea, lerro-altuera eta zabalera ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .nagusia p {
     color: white;
     line-height: 1.6;
@@ -103,14 +184,28 @@ header {
     padding: 0 20px;
 }
 
+<<<<<<< HEAD
 /* Kolumna elementuak edukien antolaketa */
+=======
+/**
+ * Zutabeen estiloak
+ * Malgutasuna eta tamaina minimoa ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .kolumna {
     flex: 1;
     min-width: 0;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* Erosketa botoia estiloak */
+=======
+/**
+ * Erosi botoiaren estilo nagusiak
+ * Kolorea, betegarriak eta trantsizioak ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .erosi_botoia {
     background-color: #2b579ee9; 
     border: none;
@@ -124,27 +219,49 @@ header {
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Erosi botoiaren hover efektua
+ * Kolorea, itzala eta mugimendua aldatzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .erosi_botoia:hover {
     background-color: #6291d7e9;
     box-shadow: 0 6px 12px rgba(239, 255, 17, 0.38);
     transform: translateY(-2px); 
 }
 
+<<<<<<< HEAD
 /* Submenu paragrafuak tarteak */
+=======
+/**
+ * Azpimenuaren paragrafoen estiloak
+ * Goiko eta beheko margenak ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .submenu p {
     margin: 8px 0;
 }
 
+<<<<<<< HEAD
 /* ==========================
    NABARMENAK ETA MAPA
 ========================== */
 
 /* Nabarmenak izenburuaren estiloa */
+=======
+/**
+ * Nabarmendako atalaren estiloak
+ * Kolorea eta testu-lerrokadura ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .nabarmenak {
     color: white;
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* Mapa eta testu atalaren estiloa */
 .mapa_eta_testua {
     display: flex;
@@ -179,16 +296,29 @@ header {
     color: white;
 }
 
+=======
+/**
+ * Zutabeetako esteken estiloak
+ * Testu-dekorazioa eta kolorea ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .kolumna a {
     text-decoration: none;
     color: white;
 }
 
+<<<<<<< HEAD
 /* ==========================
    FOOTER
 ========================== */
 
 /* Footer orokorra */
+=======
+/**
+ * Oinaren estilo orokorrak
+ * Zabalera, atzeko planoa eta betegarriak ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -199,7 +329,14 @@ footer {
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* Footer nabigazioa */
+=======
+/**
+ * Oineko nabigazioaren estiloak
+ * Kokapena, tartea eta lerrokadura ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .footer_nabigazioa {
     display: flex;
     flex-wrap: wrap;
@@ -210,15 +347,27 @@ footer {
     border-bottom: none; 
 }
 
+/**
+ * Oineko logoaren estiloak
+ * Tamaina ezartzen du
+ */
 .footer_nabigazioa .logoa_argazkia {
     width: 100px;
     height: auto;
 }
 
+/**
+ * Oineko izenaren estiloak
+ * Margenak kentzen ditu
+ */
 .footer_nabigazioa .ZineUsurbil {
     margin-left: 0;
 }
 
+/**
+ * Oineko nabigazio elementuen estiloak
+ * Kokapena, tartea eta kolorea ezartzen ditu
+ */
 .footer_nabigazioa .nabigazio_elementuak {
     display: flex;
     flex-wrap: wrap;
@@ -228,17 +377,32 @@ footer {
     align-items: center;
 }
 
+/**
+ * Oineko nabigazio esteken estiloak
+ * Testu-dekorazioa eta efektuak ezartzen ditu
+ */
 .footer_nabigazioa .nabigazio_elementuak a {
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
 }
 
+/**
+ * Oineko nabigazio esteken hover efektua
+ * Handitze efektua ezartzen du
+ */
 .footer_nabigazioa .nabigazio_elementuak a:hover {
     transform: scale(1.08);
 }
 
+<<<<<<< HEAD
 /* Sare sozialen estiloak */
+=======
+/**
+ * Sare sozialen edukiontziaren estiloak
+ * Kokapena, tartea eta malgutasuna ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .sare_sozialak {
     display: flex;
     justify-content: center;
@@ -247,6 +411,10 @@ footer {
     margin-top: 12px;
 }
 
+/**
+ * Sare sozialen ikonoen estiloak
+ * Tamaina, egokitzea eta efektuak ezartzen ditu
+ */
 .sare_sozialak img {
     width: 30px;
     height: 30px;
@@ -255,12 +423,23 @@ footer {
     transition: transform 0.3s, filter 0.3s;
 }
 
+/**
+ * Sare sozialen ikonoen hover efektua
+ * Handitze eta kolore efektuak ezartzen ditu
+ */
 .sare_sozialak img:hover {
     transform: scale(1.1);
     filter: grayscale(0%);
 }
 
+<<<<<<< HEAD
 /* Copyright testua */
+=======
+/**
+ * Copyright testuaren estiloak
+ * Kolorea, testu-lerrokadura eta tamaina ezartzen ditu
+ */
+>>>>>>> feature/balorazioaketapuntuak
 .copyright_p {
     color: #f0efef;
     text-align: center;
@@ -268,11 +447,48 @@ footer {
     font-size: 0.9rem;
 }
 
+/**
+ * HTML eta gorputz elementuentzako estilo orokorrak
+ * Zabalera eta gainezkatzea kontrolatzen ditu
+ */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* ==========================
+<<<<<<< HEAD
    RESPONSIVE DESIGN
+=======
+   ERANTZUNAKORTASUN MEDIA QUERIES
+>>>>>>> feature/balorazioaketapuntuak
 ========================== */
 
-/* --- Tablets --- */
+/**
+ * Oinaren erantzuankortasuna gailu txikientzat
+ * Edukiontziaren norabidea eta lerrokadura egokitzen ditu
+ */
+@media screen and (max-width: 430px),(max-width: 768px), (max-width: 1024px) {
+    .footer_nabigazioa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_nabigazioa .nabigazio_elementuak {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .copyright_p {
+        text-align: center;
+    }
+}
+
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna tableterako
+ * Tamainak, tartea eta menu desplegablea egokitzen ditu
+ */
 @media screen and (max-width: 1024px) {
     header {
         flex-wrap: wrap;
@@ -312,7 +528,10 @@ footer {
     }
 }
 
-/* --- Mugikor handiak --- */
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna mugikor handientzat
+ * Norabidea, tamainak eta menuaren egitura egokitzen ditu
+ */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -339,7 +558,10 @@ footer {
     }
 }
 
-/* --- Mugikor txikiak --- */
+/**
+ * Goiburuaren eta nabigazioaren erantzuankortasuna mugikor txikientzat
+ * Tamaina txikiagoak eta egitura sinpleagoa ezartzen ditu
+ */
 @media screen and (max-width: 430px) {
     header {
         flex-direction: column;
@@ -379,6 +601,7 @@ footer {
         font-size: 1.3rem;
         margin: 12px 0;
     }
+<<<<<<< HEAD
 }
 
 /* Gorputz eta HTML zabalera ezarpen orokorra */
@@ -404,3 +627,6 @@ html, body {
         text-align: center;
     }
 }
+=======
+}
+>>>>>>> feature/balorazioaketapuntuak
